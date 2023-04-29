@@ -5,8 +5,7 @@ header {
   left: 0;
   right: 0;
   padding: 10px 10%;
-  background-color: #202020;
-  background-opacity: 0'
+  background-color: #8000FF;
 }
 footer {
   position: static;
@@ -14,12 +13,13 @@ footer {
   justify-content: space-between;
   align-items: left;
   padding: 20px 10%;
-  background-color: #202020;
+  border-radius: 20px 20px 0 0;
+  background-color: #8000FF;
 }
 body {
   font-family: Montserrat;
   background: #101010;
-  background: linear-gradient(90deg, #26004D, #101010, #26004D);
+  background: linear-gradient(90deg, #50009F, #101010, #50009F);
   background-size: 200% 200%;
   animation: Gradient 20s ease infinite;
   margin: 0 auto;
@@ -49,10 +49,10 @@ body {
   border-radius: 10px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #DDDDDD80;
+  background: #FFFFFF60;
 }
 ::-webkit-scrollbar-thumb:active {
-  background: #BBBBBB80;
+  background: #FFFFFF40;
 }
 .image {
   border: 3px solid;
@@ -175,7 +175,7 @@ hr {
 }
 .button {
   border-radius: 1000px;
-  background-color: #00000040;
+  background-color: #00000000;
   margin: 10px 5px 10px 5px;
   display: flex;
   color: white;
@@ -186,7 +186,7 @@ hr {
 }
 .cirbutton {
   border-radius: 50%;
-  background-color: #00000040;
+  background-color: #00000000;
   width: 65px;
   height: 65px;
   margin: 10px 5px 10px 5px;
@@ -202,7 +202,7 @@ hr {
 }
 .headerbutton {
   border-radius: 1000px;
-  background-color: #00000040;
+  background-color: #00000000;
   height: 45px;
   margin: 10px 0 10px 10px;
   display: flex;
@@ -216,7 +216,7 @@ hr {
 }
 .footercirbutton {
   border-radius: 50%;
-  background-color: #00000040;
+  background-color: #00000000;
   width: 45px;
   height: 45px;
   margin: 20px 10px 10px 0;
@@ -230,13 +230,23 @@ hr {
   cursor: pointer;
   transition: transform .2s ease-out;
 }
-.button:hover, .cirbutton:hover, .headerbutton:hover, .footercirbutton:hover {
+.button:hover, .cirbutton:hover {
   background-color: #8000FF;
   transform: scale(1.05);
   transition: .2s;
 }
-.button:hover, .cirbutton:active, .headerbutton:active, .footercirbutton:active {
+.button:hover, .cirbutton:active {
   background-color: #6900D0;
+  transform: scale(0.95);
+  transition: .2s;
+}
+.headerbutton:hover, .footercirbutton:hover {
+  background-color: #00000040;
+  transform: scale(1.05);
+  transition: .2s;
+}
+.headerbutton:active, .footercirbutton:active {
+  background-color: #00000080;
   transform: scale(0.95);
   transition: .2s;
 }
