@@ -5,6 +5,7 @@ header {
   left: 0;
   right: 0;
   padding: 10px 10%;
+  border-radius: 0 0 20px 20px;
   background-color: #8000FF;
 }
 footer {
