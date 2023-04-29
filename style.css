@@ -8,6 +8,7 @@ header {
   border-radius: 0 0 20px 20px;
   background-color: #8000FF;
   filter: drop-shadow(0 0 20px #00000080);
+  z-index: 1;
 }
 footer {
   position: static;
@@ -18,6 +19,7 @@ footer {
   border-radius: 20px 20px 0 0;
   background-color: #8000FF;
   filter: drop-shadow(0 0 20px #00000080);
+  z-index: 1;
 }
 body {
   font-family: Montserrat;
@@ -56,12 +58,6 @@ body {
 }
 ::-webkit-scrollbar-thumb:active {
   background: #FFFFFF40;
-}
-.image {
-  border: 3px solid;
-  border-radius: 20px;
-  margin-right: 20px;
-  margin-left: 20px;
 }
 h1 {
   font-family: Montserrat;
@@ -149,24 +145,16 @@ hr {
   flex-flow: column;
   text-align: center;
 }
-.banner3 {
-  background: linear-gradient(#10101080, #10101080),url(https://upload.wikimedia.org/wikipedia/commons/1/1d/Ellen_Sep_9_1983_0600Z.png);
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  -webkit-background-size: cover;
-  background-size: cover;
-  width: 100%;
-  height: 100vh;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  display: -o-flex;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-flow: column;
-  text-align: center;
+.image {
+  border: 3px solid;
+  border-radius: 20px;
+  margin-right: 20px;
+  margin-left: 20px;
+  transition: transform .2s ease-out;
+}
+.image:hover {
+  transform: scale(1.01);
+  transition: .2s;
 }
 .stuff {
   padding: 50px 100px 50px 100px;
@@ -177,7 +165,7 @@ hr {
   text-align: center;
 }
 .button {
-  border-radius: 1000px;
+  border-radius: 5rem;
   background-color: #00000000;
   margin: 10px 5px 10px 5px;
   display: flex;
@@ -204,7 +192,7 @@ hr {
   transition: transform .2s ease-out;
 }
 .headerbutton {
-  border-radius: 1000px;
+  border-radius: 5rem;
   background-color: #00000000;
   height: 45px;
   margin: 10px 0 10px 10px;
