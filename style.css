@@ -24,7 +24,7 @@ body {
   background: #101010;
   background: linear-gradient(90deg, #50009F, #000000, #000000, #50009F);
   background-size: 200% 200%;
-  animation: Gradient 20s ease infinite;
+  animation: Gradient 20s ease-in-out infinite;
   margin: 0 auto;
   display: flex;
   justify-content: center;
