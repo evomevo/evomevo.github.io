@@ -153,11 +153,11 @@ hr {
   transition: transform .2s ease-out;
 }
 .image:hover {
-  transform: scale(1.01);
+  transform: scale(1.02);
   transition: .2s;
 }
 .image:active {
-  transform: scale(0.99);
+  transform: scale(0.98);
   transition: .2s;
 }
 .stuff {
