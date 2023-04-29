@@ -7,6 +7,7 @@ header {
   padding: 10px 10%;
   border-radius: 0 0 20px 20px;
   background-color: #8000FF;
+  filter: drop-shadow(0 0 20px #00000080);
 }
 footer {
   position: static;
@@ -16,6 +17,7 @@ footer {
   padding: 20px 10%;
   border-radius: 20px 20px 0 0;
   background-color: #8000FF;
+  filter: drop-shadow(0 0 20px #00000080);
 }
 body {
   font-family: Montserrat;
