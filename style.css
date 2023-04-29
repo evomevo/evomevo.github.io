@@ -156,6 +156,10 @@ hr {
   transform: scale(1.01);
   transition: .2s;
 }
+.image:active {
+  transform: scale(0.99);
+  transition: .2s;
+}
 .stuff {
   padding: 50px 100px 50px 100px;
   display: flex;
