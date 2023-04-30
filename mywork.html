@@ -25,44 +25,142 @@
     </div>
     <div class="stuff">
       <h2>Graphics Design</h2>
-      <section class="slider-container">
-        <div class="slider-wrapper">
-          <div class="slider-graphicsdesign">
-            <img id="slide-a1" alt="wedery April 2023 logo" src="img/wedery.png">
-            <img id="slide-a2" alt="evomevo short logo" src="img/evoshort.png">
-            <img id="slide-a3" alt="welle" src="img/welle.png" >
-            <img id="slide-a4" alt="Weathery logo revamp" src="img/weatherylogorevamp.png">
-            <img id="slide-a5" alt="Weather icons" src="img/weathericons.png">
-            <img id="slide-a6" alt="Icon pack" src="img/iconpack.png">
-            <img id="slide-a7" alt="TRIA concept logo" src="img/triaconceptlogo.png">
-          </div>
-          <div class="slider-nav">
-            <a href="#slide-a1"></a>
-            <a href="#slide-a2"></a>
-            <a href="#slide-a3"></a>
-            <a href="#slide-a4"></a>
-            <a href="#slide-a5"></a>
-            <a href="#slide-a6"></a>
-            <a href="#slide-a7"></a>
-          </div>
+      <div class="slideshow-container">        
+        <div class="mySlides fade">
+          <div class="numbertext">1 / 7</div>
+          <img class="slide-img" src="img/wedery.png" style="width:100%">
+          <div class="text">wedery April 2023 logo</div>
+        </div>        
+        <div class="mySlides fade">
+          <div class="numbertext">2 / 7</div>
+          <img class="slide-img" src="img/evoshort.png" style="width:100%">
+          <div class="text">evomevo short logo</div>
+        </div>        
+        <div class="mySlides fade">
+          <div class="numbertext">3 / 7</div>
+          <img class="slide-img" src="img/welle.png" style="width:100%">
+          <div class="text">welle</div>
+        </div>        
+        <div class="mySlides fade">
+          <div class="numbertext">4 / 7</div>
+          <img class="slide-img" src="img/weatherylogorevamp.png" style="width:100%">
+          <div class="text">Weathery logo revamp</div>
         </div>
-      </section>
+        <div class="mySlides fade">
+          <div class="numbertext">5 / 7</div>
+          <img class="slide-img" src="img/weathericons.png" style="width:100%">
+          <div class="text">Weather icons</div>
+        </div>
+        <div class="mySlides fade">
+          <div class="numbertext">6 / 7</div>
+          <img class="slide-img" src="img/iconpack.png" style="width:100%">
+          <div class="text">Icon pack</div>
+        </div>
+        <div class="mySlides fade">
+          <div class="numbertext">7 / 7</div>
+          <img class="slide-img" src="img/triaconceptlogo.png" style="width:100%">
+          <div class="text">TRIA concept logo</div>
+        </div>
+        </div>
+        <br>
+        <div class="controls">
+          <a class="prev" onclick="plusSlides(-1)" style="margin: 0 20px 0 20px;"><i class="fa-sharp fa-solid fa-chevron-left fa-xl" style="color: #ffffff;"></i></a>
+          <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+            <span class="dot" onclick="currentSlide(5)"></span>
+            <span class="dot" onclick="currentSlide(6)"></span>
+            <span class="dot" onclick="currentSlide(7)"></span>
+          </div>
+          <a class="next" onclick="plusSlides(1)" style="margin: 0 20px 0 20px;"><i class="fa-sharp fa-solid fa-chevron-right fa-xl" style="color: #ffffff;"></i></a>
+        </div>
+        <script>
+          let slideIndex = 1;
+          showSlides(slideIndex);
+        
+          function plusSlides(n) {
+            showSlides(slideIndex += n);
+          }
+        
+          function currentSlide(n) {
+            showSlides(slideIndex = n);
+          }
+
+          function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {slideIndex = 1}    
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none";  
+            }
+            for (i = 0; i < dots.length; i++) {
+              dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";  
+            dots[slideIndex-1].className += " active";
+          }
+        </script>
       <hr>
       <h2>Photography</h2>
-      <section class="slider-container">
-        <div class="slider-wrapper">
-          <div class="slider-photography">
-            <img id="slide-b1" alt="Manila CItyscape" src="img/manilacityscape.jpg">
-            <img id="slide-b2" alt="Aura am BGC"src="img/auraambgc.jpg">
-            <img id="slide-b3" alt="Taytay Sky" src="img/taytaysky.jpg">
-          </div>
-          <div class="slider-nav">
-            <a href="#slide-b1"></a>
-            <a href="#slide-b2"></a>
-            <a href="#slide-b3"></a>
-          </div>
+      <div class="slideshow-container">        
+        <div class="mySlidesB fade">
+          <div class="numbertext">1 / 3</div>
+          <img class="slide-img" src="img/manilacityscape.png" style="width:100%">
+          <div class="text">Manila Cityspace</div>
+        </div>        
+        <div class="mySlidesB fade">
+          <div class="numbertext">2 / 3</div>
+          <img class="slide-img" src="img/auraambgc.png" style="width:100%">
+          <div class="text">Aura am BGC</div>
+        </div>        
+        <div class="mySlidesB fade">
+          <div class="numbertext">3 / 3</div>
+          <img class="slide-img" src="img/taytaysky.png" style="width:100%">
+          <div class="text">Taytay Sky</div>
+        </div>        
         </div>
-      </section>
+        <br>
+        <div class="controls">
+          <a class="prev" onclick="plusSlidesB(-1)" style="margin: 0 20px 0 20px;"><i class="fa-sharp fa-solid fa-chevron-left fa-xl" style="color: #ffffff;"></i></a>
+          <div style="text-align:center">
+            <span class="dotB" onclick="currentSlideB(1)"></span>
+            <span class="dotB" onclick="currentSlideB(2)"></span>
+            <span class="dotB" onclick="currentSlideB(3)"></span>
+          </div>
+          <a class="next" onclick="plusSlidesB(1)" style="margin: 0 20px 0 20px;"><i class="fa-sharp fa-solid fa-chevron-right fa-xl" style="color: #ffffff;"></i></a>
+        </div>
+        <script>
+          let slideIndexB = 1;
+          showSlidesB(slideIndexB);
+          
+          function plusSlidesB(n) {
+            showSlidesB(slideIndexB += n);
+          }
+          
+          function currentSlideB(n) {
+            showSlidesB(slideIndexB = n);
+          }
+          
+          function showSlidesB(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlidesB");
+            let dots = document.getElementsByClassName("dotB");
+            if (n > slides.length) {slideIndexB = 1}    
+            if (n < 1) {slideIndexB = slides.length}
+            for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none";  
+            }
+            for (i = 0; i < dots.length; i++) {
+              dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndexB-1].style.display = "block";  
+            dots[slideIndexB-1].className += " active";
+          }
+        </script>
       <hr>
       <p>You may check out more of my work over on wedery by clicking the icons below.</p>
       <div style="display: flex;">
