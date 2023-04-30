@@ -137,9 +137,16 @@ hr {
   background-color: #FFF;
   opacity: 0.75;
   transition: opacity ease 250ms;
+  transition: transform .2s ease-out;
 }
 .slider-nav a:hover {
   opacity: 1;
+  transform: scale(1.2);
+  transition: .2s;
+}
+.slider-nav a:active {
+  transform: scale(0.8);
+  transition: .2s;
 }
 .slider-graphicsdesign {
   display: flex;
