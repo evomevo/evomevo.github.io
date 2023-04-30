@@ -6,9 +6,13 @@ header {
   right: 0;
   padding: 10px 10%;
   border-radius: 0 0 1rem 1rem;
-  background-color: #8000FF;
-  filter: drop-shadow(0 0 20px #00000080);
+  background-color: #8000FF00;
+  filter: drop-shadow(0 0 20px #000000);
   z-index: 2;
+  transition: background-color 0.2s ease-in-out;
+}
+header.scrolled {
+  background-color: #8000FFFF;
 }
 footer {
   position: relative;
@@ -18,7 +22,7 @@ footer {
   padding: 20px 10%;
   border-radius: 1rem 1rem 0 0;
   background-color: #8000FF;
-  filter: drop-shadow(0 0 20px #00000080);
+  filter: drop-shadow(0 0 20px #000000);
   z-index: 2;
 }
 body {
