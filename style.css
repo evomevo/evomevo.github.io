@@ -161,6 +161,7 @@ hr {
   border-radius: 1rem;
   border: 3px solid;
   background-color: #00000080;
+  transition: transform .2s ease-out;
   -ms-overflow-style: none; /* Hides IE and Edge scrollbar */
   scrollbar-width: none; /* Hides Firefox scrollbar */
 }
@@ -173,6 +174,7 @@ hr {
   border-radius: 1rem;
   border: 3px solid;
   background-color: #00000080;
+  transition: transform .2s ease-out;
   -ms-overflow-style: none; /* Hides IE and Edge scrollbar */
   scrollbar-width: none; /* Hides Firefox scrollbar */
 }
@@ -271,7 +273,7 @@ hr {
 }
 .headerbutton {
   border-radius: 5rem;
-  background-color: #8000FF;
+  background-color: #00000000;
   height: 45px;
   margin: 10px 0 10px 10px;
   display: flex;
@@ -300,12 +302,12 @@ hr {
   transition: transform .2s ease-out;
 }
 .button:hover, .cirbutton:hover {
-  background-color: #8000FF;
+  background-color: #7000DF;
   transform: scale(1.05);
   transition: .2s;
 }
 .button:hover, .cirbutton:active {
-  background-color: #7000DF;
+  background-color: #6000BF;
   transform: scale(0.95);
   transition: .2s;
 }
