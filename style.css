@@ -24,7 +24,7 @@ footer {
 body {
   font-family: Montserrat;
   background: #101010;
-  background: linear-gradient(90deg, #50009F, #000000, #000000, #50009F);
+  background: linear-gradient(90deg, #50009F, #000, #000, #50009F);
   background-size: 200% 200%;
   animation: Gradient 20s ease-in-out infinite;
   margin: 0 auto;
@@ -101,7 +101,7 @@ hr {
   height: 3px;
   background-color: #FFFFFF40;
   border: none;
-  width: 95%;
+  width: 100%;
   margin: 25px 0 25px 0;
 }
 .navbuttons li {
