@@ -176,6 +176,10 @@ hr {
   -ms-overflow-style: none; /* Hides IE and Edge scrollbar */
   scrollbar-width: none; /* Hides Firefox scrollbar */
 }
+.slider-graphicsdesign:hover, .slider-photography:hover {
+  transform: scale(1.02);
+  transition: .2s;
+}
 /* Hides scrollbar for Chrome, Safari and Opera */
 .slider-graphicsdesign::-webkit-scrollbar, .slider-photography::-webkit-scrollbar {
   display: none;
@@ -228,10 +232,6 @@ hr {
 }
 .image:hover {
   transform: scale(1.02);
-  transition: .2s;
-}
-.image:active {
-  transform: scale(0.98);
   transition: .2s;
 }
 .stuff {
