@@ -100,6 +100,9 @@ body {
   flex-flow: column;
   text-align: center;
 }
+.navbuttons li {
+  display: inline-block;
+}
 .mySlides {
   display: none;
 }
@@ -178,6 +181,7 @@ body {
   bottom: 20px;
   width: 100%;
   text-align: center;
+  filter: drop-shadow(0 0 3px #000000);
   z-index: 1;
 }
 .numbertext {
@@ -187,6 +191,7 @@ body {
   font-weight: 500;
   padding: 20px 22px;
   position: absolute;
+  filter: drop-shadow(0 0 3px #000000);
   z-index: 1;
 }
 .dot, .dotB {
@@ -277,16 +282,13 @@ hr {
   width: 100%;
   margin: 25px 0 25px 0;
 }
-.navbuttons li {
-  display: inline-block;
-}
-.image {
+.refsheet {
   border: 3px solid;
   border-radius: 1rem;
   background-color: #00000080;
   margin-right: 20px;
   margin-left: 20px;
-  min-width: 150px;
+  min-width: 210px;
   transition: transform .2s ease-out;
 }
 .imageL {
