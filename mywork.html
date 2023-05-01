@@ -19,7 +19,16 @@
         <button class="headerbutton" onclick="window.location.href='index.html';"><p>Home</p></button>
         <button class="headerbutton" onclick="window.location.href='mywork.html';"><p>My Work</p></button>
       </div>
+      <div class="hamburger" onclick="openMenu()">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
     </header>
+    <div class="mobilenav" style="display: none; position: fixed;" id="mobileLinks">
+      <a href="index.html">Home</a>
+      <a href="mywork.html">My Work</a>
+    </div>
     <div class="banner2">
       <h1 style="color: #1C1C1C">My Work</h1>
       <h3 style="color: #1C1C1C">Eye candy!</h3>
@@ -193,6 +202,23 @@
       </div>
     </footer>
   </pagefade>
+  <script>
+    const hamburger = document.querySelector(".hamburger")
+
+    hamburger.addEventListener("click", () => {
+      hamburger.classList.toggle("hamburger-active")
+    })
+  </script>
+  <script>
+    function openMenu() {
+      var hamburgermenu = document.getElementById("mobileLinks");
+      if (hamburgermenu.style.display === "block") {
+        hamburgermenu.style.display = "none";
+      } else {
+        hamburgermenu.style.display = "block";
+      }
+    }
+  </script>
 </body>
 <script>
   document.addEventListener('scroll', () => {
