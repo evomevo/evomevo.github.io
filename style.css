@@ -132,7 +132,7 @@ body {
   background-color: #00000000;
   width: 65px;
   height: 65px;
-  margin: 10px 5px 10px 5px;
+  margin: 20px 10px 20px 10px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -148,7 +148,7 @@ body {
   background-color: #00000000;
   width: 65px;
   height: 65px;
-  margin: 10px 5px 10px 5px;
+  margin: 20px 10px 20px 10px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -280,13 +280,23 @@ hr {
 .navbuttons li {
   display: inline-block;
 }
-.image {
+.imageL {
   border: 3px solid;
   border-radius: 1rem;
   background-color: #00000080;
   margin-right: 20px;
   margin-left: 20px;
   transition: transform .2s ease-out;
+  float: left;
+}
+.imageR {
+  border: 3px solid;
+  border-radius: 1rem;
+  background-color: #00000080;
+  margin-right: 20px;
+  margin-left: 20px;
+  transition: transform .2s ease-out;
+  float: right;
 }
 .image:hover {
   transform: scale(1.02);
@@ -378,6 +388,12 @@ pagefade {
     opacity: 1;
   } 
 }
+@media screen and (max-width: 950px) {
+  .imageL, .imageR {
+    float: none;
+    margin-bottom: 10px;
+  }
+}
 @media screen and (max-width: 600px) {
   .logo {
     width: 150px;
@@ -385,12 +401,12 @@ pagefade {
   .prev {
     width: 45px;
     height: 45px;
-    margin: 10px 5px 10px 5px;
+    margin: 5px 10px 5px 10px;
   }
   .next {
     width: 45px;
     height: 45px;
-    margin: 10px 5px 10px 5px;
+    margin: 5px 10px 5px 10px;
   }
   .dot, .dotB {
     height: 7px;
