@@ -114,38 +114,36 @@ body {
   margin: 20px auto 0 auto;
 }
 .prev {
-  cursor: pointer;
-  top: 50%;
+  border-radius: 50%;
+  background-color: #00000000;
   width: 65px;
   height: 65px;
+  margin: 10px 5px 10px 5px;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
   color: white;
   border: 3px solid white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.2s ease;
-  border-radius: 50%;
+  cursor: pointer;
+  transition: transform .2s ease-out;
   user-select: none;
-  z-index: 1;
 }
 .next {
-  cursor: pointer;
-  top: 50%;
+  border-radius: 50%;
+  background-color: #00000000;
   width: 65px;
   height: 65px;
+  margin: 10px 5px 10px 5px;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
   color: white;
   border: 3px solid white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.2s ease;
-  border-radius: 50%;
+  cursor: pointer;
+  transition: transform .2s ease-out;
   user-select: none;
-  z-index: 1;
 }
 .prev:hover, .next:hover {
   background-color: #7000DF;
@@ -301,7 +299,6 @@ hr {
   align-items: center;
   position: relative;
   color: white;
-  padding: 5px 10px;
   border: 3px solid white;
   cursor: pointer;
   transition: transform .2s ease-out;
