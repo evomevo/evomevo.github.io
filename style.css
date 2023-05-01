@@ -114,8 +114,13 @@ body {
   transform: scale(1.02);
   transition: .2s;
 }
-.slideshow-container {
-  max-width: 30rem;
+.graphdes-slideshow-container {
+  max-width: 25rem;
+  position: relative;
+  margin: 20px auto 0 auto;
+}
+.photo-slideshow-container {
+  max-width: 45rem;
   position: relative;
   margin: 20px auto 0 auto;
 }
