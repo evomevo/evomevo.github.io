@@ -216,7 +216,7 @@ body {
   animation-duration: 0.2s;
 }
 @keyframes fade {
-  from {opacity: 0} 
+  from {opacity: 0.4}
   to {opacity: 1}
 }
 .controls {
@@ -311,7 +311,7 @@ hr {
   transition: transform .2s ease-out;
   float: right;
 }
-.image:hover {
+.refsheet:hover, .imageL:hover, .imageR:hover {
   transform: scale(1.02);
   transition: .2s;
 }
@@ -412,13 +412,13 @@ pagefade {
     width: 150px;
   }
   .prev {
-    width: 45px;
-    height: 45px;
+    width: 55px;
+    height: 55px;
     margin: 5px 10px 5px 10px;
   }
   .next {
-    width: 45px;
-    height: 45px;
+    width: 55px;
+    height: 55px;
     margin: 5px 10px 5px 10px;
   }
   .dot, .dotB {
@@ -431,13 +431,13 @@ pagefade {
     line-height: 1.3;
   }
   h2 {
-    font-size: 40px;
+    font-size: 35px;
     line-height: 1.3;
   }
   h3 {
     font-family: Montserrat;
     margin: 0;
-    font-size: 30px;
+    font-size: 25px;
     font-weight: 700;
     line-height: 1.6;
   }
@@ -454,6 +454,9 @@ pagefade {
     font-size: 15px;
     font-weight: 500;
     line-height: 1.3;
+  }
+  i {
+    height: ;
   }
   .button {
     border-radius: 5rem;
