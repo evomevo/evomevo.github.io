@@ -189,10 +189,7 @@ body {
   text-align: center;
   color: #FFF;
 }
-.mySlides {
-  display: none;
-}
-.mySlidesB {
+.mySlides, .mySlidesB {
   display: none;
 }
 .slide-img {
@@ -249,7 +246,11 @@ body {
   display: inline-block;
   transition: 0.2s ease-in-out;
 }
-.active, .dot:hover, .dotB:hover {
+.dot:hover, .dotB:hover {
+  transform: scale(1.2);
+  transition: 0.2s ease-in-out;
+}
+.active {
   background-color: #FFF;
   transform: scale(1.2);
   transition: 0.2s ease-in-out;
@@ -447,7 +448,7 @@ pagefade {
     margin: 5px auto;
   }
   .navmenu {
-    margin: 68.91px 0 0 0;
+    margin-top: 68.91px;
     width: 100%;
     right: auto;
     transition: .2s ease-in-out;
