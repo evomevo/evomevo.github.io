@@ -3,12 +3,13 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  left: 0;
+  top: 0;
   right: 0;
+  left: 0;
   padding: 10px 10%;
   border-radius: 0 0 1rem 1rem;
   background-color: #8000FF00;
-  filter: drop-shadow(0 0 20px #000000);
+  filter: drop-shadow(0 0 5px #000000);
   z-index: 3;
   transition: 0.2s ease-in-out;
 }
@@ -23,7 +24,7 @@ footer {
   padding: 20px 10%;
   border-radius: 1rem 1rem 0 0;
   background-color: #8000FF;
-  filter: drop-shadow(0 0 20px #000000);
+  filter: drop-shadow(0 0 5px #000000);
   z-index: 3;
 }
 body {
@@ -73,14 +74,15 @@ body {
 .navmenu {
   overflow: hidden;
   background-color: #8000FF;
-  margin: 76.88px 10% 0 0;
+  margin: 81.88px 10% 0 0;
+  top: 0;
   right: 0;
   position: fixed;
   display: none;
   width: 300px;
   flex-direction: column;
   border-radius: 1rem;
-  filter: drop-shadow(0 0 20px #000000);
+  filter: drop-shadow(0 0 5px #000000);
   transition: 0.2s ease-in-out;
   z-index: 2;
 }
@@ -326,6 +328,7 @@ hr {
   height: 3px;
   background-color: #FFFFFF40;
   border: none;
+  border-radius: 1rem;
   width: 100%;
   margin: 25px 0 25px 0;
 }
@@ -444,7 +447,7 @@ pagefade {
     margin: 5px auto;
   }
   .navmenu {
-    margin-top: 63.91px;
+    margin-top: 68.91px;
     width: 100%;
     right: auto;
     transition: .2s ease-in-out;
