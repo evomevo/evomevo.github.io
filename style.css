@@ -10,7 +10,7 @@ header {
   background-color: #8000FF00;
   filter: drop-shadow(0 0 20px #000000);
   z-index: 3;
-  transition: background-color 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
 header.scrolled {
   background-color: #8000FFFF;
@@ -28,7 +28,6 @@ footer {
 }
 body {
   font-family: Montserrat;
-  background: #101010;
   background: linear-gradient(90deg, #50009F, #000, #000, #50009F);
   background-size: 200% 200%;
   animation: Gradient 20s ease-in-out infinite;
@@ -41,24 +40,6 @@ body {
   color: white;
   overflow: overlay;
 }
-.hamburger {
-  display: none;
-  cursor: pointer;
-}
-.hamburger-active {
-  transition: 0.2s;
-}
-.bar {
-  display: block;
-  width: 25px;
-  height: 3px;
-  margin: 5px auto;
-  justify-content: center;
-  align-items: center;
-  background-color: white;
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-}
 @-webkit-keyframes Gradient {
   0% {
     background-position: 0% 50%
@@ -70,8 +51,73 @@ body {
     background-position: 0% 50%
   }
 }
+.hamburger {
+  display: block;
+  cursor: pointer;
+}
+.hamburger-active {
+  transition: 0.2s ease-in-out;
+}
+.bar {
+  display: block;
+  width: 35px;
+  height: 5px;
+  margin: 7px auto;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border-radius: 1rem;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+.navmenu {
+  overflow: hidden;
+  background-color: #8000FF;
+  margin: 76.88px 10% 0 0;
+  right: 0;
+  position: fixed;
+  display: none;
+  width: 300px;
+  flex-direction: column;
+  border-radius: 1rem;
+  filter: drop-shadow(0 0 20px #000000);
+  transition: 0.2s ease-in-out;
+  z-index: 2;
+}
+.navmenu #mobileLinks {
+  display: none;
+}
+.navmenu a {
+  color: white;
+  padding: 14px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  transition: 0.2s ease-in-out;
+}
+.navmenu a:hover {
+  background-color: #7000DF;
+  transition: 0.2s ease-in-out;
+}
+.navmenu a:active {
+  background-color: #6000BF;
+  transition: 0.2s ease-in-out;
+}
+.hamburger.hamburger-active .bar:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.hamburger-active .bar:nth-child(1) {
+  transform: translateY(12px) rotate(45deg);
+}
+.hamburger.hamburger-active .bar:nth-child(3) {
+  transform: translateY(-12px) rotate(-45deg);
+}
+.mobile-nav-item {
+  margin: 15px 0;
+}
 .logo {
   width: 200px;
+  transition: 0.2s ease-in-out;
 }
 .stuff {
   padding: 5% 10%;
@@ -99,9 +145,10 @@ body {
   align-items: center;
   flex-flow: column;
   text-align: center;
+  color: #FFF;
 }
 .banner2 {
-  background: url(img/manilacityscape.png);
+  background: linear-gradient(0, #00000010, #00000010), url(img/manilacityscape.png);
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -118,9 +165,27 @@ body {
   align-items: center;
   flex-flow: column;
   text-align: center;
+  color: #1C1C1C;
 }
-.navbuttons li {
-  display: inline-block;
+.banner3 {
+  background: linear-gradient(0, #00000060, #00000060), url(img/auraambgc.png);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+  text-align: center;
+  color: #FFF;
 }
 .mySlides {
   display: none;
@@ -133,11 +198,11 @@ body {
   border: 3px solid white;
   background-color: #00000080;
   border-radius: 1rem;
-  transition: transform .2s ease-out;
+  transition: .2s ease-in-out;
 }
 .slide-img:hover {
   transform: scale(1.02);
-  transition: .2s;
+  transition: .2s ease-in-out;
 }
 .graphdes-slideshow-container {
   max-width: 25rem;
@@ -149,51 +214,8 @@ body {
   position: relative;
   margin: 20px auto 0 auto;
 }
-.prev {
-  border-radius: 50%;
-  background-color: #00000000;
-  width: 65px;
-  height: 65px;
-  margin: 20px 10px 20px 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  color: white;
-  border: 3px solid white;
-  cursor: pointer;
-  transition: transform .2s ease-out;
-  user-select: none;
-}
-.next {
-  border-radius: 50%;
-  background-color: #00000000;
-  width: 65px;
-  height: 65px;
-  margin: 20px 10px 20px 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  color: white;
-  border: 3px solid white;
-  cursor: pointer;
-  transition: transform .2s ease-out;
-  user-select: none;
-}
-.prev:hover, .next:hover {
-  background-color: #7000DF;
-  transform: scale(1.05);
-  transition: .2s;
-}
-.prev:active, .next:active {
-  background-color: #6000BF;
-  transform: scale(0.95);
-  transition: .2s;
-}
 .text {
   color: #f2f2f2;
-  font-size: 15px;
   font-size: 20px;
   font-weight: 500;
   position: absolute;
@@ -202,16 +224,17 @@ body {
   text-align: center;
   filter: drop-shadow(0 0 3px #000000);
   z-index: 1;
+  transition: .2s ease-in-out;
 }
 .numbertext {
   color: #f2f2f2;
-  font-size: 12px;
   font-size: 20px;
   font-weight: 500;
   padding: 20px 22px;
   position: absolute;
   filter: drop-shadow(0 0 3px #000000);
   z-index: 1;
+  transition: .2s ease-in-out;
 }
 .dot, .dotB {
   cursor: pointer;
@@ -222,13 +245,12 @@ body {
   border: 3px solid white;
   border-radius: 50%;
   display: inline-block;
-  transition: background-color 0.2s ease-in;
-  transition: transform 0.2s ease-out;
+  transition: 0.2s ease-in-out;
 }
 .active, .dot:hover, .dotB:hover {
   background-color: #FFF;
   transform: scale(1.2);
-  transition: 0.2s;
+  transition: 0.2s ease-in-out;
 }
 .fade {
   animation-name: fade;
@@ -245,6 +267,7 @@ body {
 }
 ::-webkit-scrollbar {
   width: 10px;
+  transition: .2s ease-in-out;
 }
 ::-webkit-scrollbar-thumb {
   background: #FFFFFF40;
@@ -261,21 +284,24 @@ h1 {
   margin: 0;
   font-size: 80px;
   font-weight: 900;
-  line-height: 1.6;
+  line-height: 1.3;
+  transition: 0.2s ease-in-out;
 }
 h2 {
   font-family: Montserrat;
   margin: 0;
   font-size: 60px;
   font-weight: 800;
-  line-height: 1.6;
+  line-height: 1.3;
+  transition: 0.2s ease-in-out;
 }
 h3 {
   font-family: Montserrat;
   margin: 0;
   font-size: 30px;
   font-weight: 700;
-  line-height: 1.6;
+  line-height: 1.3;
+  transition: 0.2s ease-in-out;
 }
 h4 {
   font-family: Montserrat;
@@ -283,6 +309,7 @@ h4 {
   font-size: 25px;
   font-weight: 600;
   line-height: 1.3;
+  transition: 0.2s ease-in-out;
 }
 p {
   font-family: Montserrat;
@@ -290,9 +317,10 @@ p {
   font-size: 20px;
   font-weight: 500;
   line-height: 1.3;
+  transition: 0.2s ease-in-out;
 }
 i {
-  color: white;
+  color: #000;
 }
 hr {
   height: 3px;
@@ -308,7 +336,7 @@ hr {
   margin-right: 20px;
   margin-left: 20px;
   min-width: 250px;
-  transition: transform 0.2s ease-out;
+  transition: .2s ease-in-out;
 }
 .imageL {
   border: 3px solid;
@@ -317,8 +345,8 @@ hr {
   margin-right: 20px;
   margin-left: 20px;
   min-width: 150px;
-  transition: transform 0.2s ease-out;
   float: left;
+  transition: .2s ease-in-out;
 }
 .imageR {
   border: 3px solid;
@@ -327,56 +355,50 @@ hr {
   margin-right: 20px;
   margin-left: 20px;
   min-width: 150px;
-  transition: transform 0.2s ease-out;
   float: right;
+  transition: .2s ease-in-out;
 }
 .refsheet:hover, .imageL:hover, .imageR:hover {
   transform: scale(1.02);
-  transition: .2s;
+  transition: .2s ease-in-out;
+}
+.prev, .next {
+  margin: 20px 10px 20px 10px;
+}
+.cirbutton {
+  margin: 10px 5px 10px 5px;
 }
 .button {
   border-radius: 5rem;
-  background-color: #00000000;
+  background-color: #FFF;
+  height: 45px;
   margin: 10px 5px 10px 5px;
   display: flex;
-  color: white;
+  justify-content: center;
+  align-items: center;
+  color: #000;
   padding: 5px 10px;
-  border: 3px solid white;
+  border: none;
   cursor: pointer;
-  transition: transform .2s ease-out;
+  transition: .2s ease-in-out;
 }
-.cirbutton {
+.cirbutton, .prev, .next {
   border-radius: 50%;
-  background-color: #00000000;
-  width: 65px;
-  height: 65px;
-  margin: 10px 5px 10px 5px;
+  background-color: #FFF;
+  width: 55px;
+  height: 55px;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
-  color: white;
-  border: 3px solid white;
+  color: #000;
+  border: none;
   cursor: pointer;
-  transition: transform .2s ease-out;
-}
-.headerbutton {
-  border-radius: 5rem;
-  background-color: #00000000;
-  height: 45px;
-  margin: 10px 0 10px 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  padding: 10px 20px;
-  border: 3px solid white;
-  cursor: pointer;
-  transition: transform .2s ease-out;
+  transition: .2s ease-in-out;
 }
 .footercirbutton {
   border-radius: 50%;
-  background-color: #00000000;
+  background-color: #FFF;
   width: 45px;
   height: 45px;
   margin: 20px 10px 10px 0;
@@ -384,30 +406,19 @@ hr {
   justify-content: center;
   align-items: center;
   position: relative;
-  color: white;
-  border: 3px solid white;
+  border: none;
   cursor: pointer;
-  transition: transform .2s ease-out;
+  transition: .2s ease-in-out;
 }
-.button:hover, .cirbutton:hover {
-  background-color: #7000DF;
+.button:hover, .cirbutton:hover, .footercirbutton:hover, .prev:hover, .next:hover {
+  background-color: #DDD;
   transform: scale(1.05);
-  transition: .2s;
+  transition: .2s ease-in-out;
 }
-.button:active, .cirbutton:active {
-  background-color: #6000BF;
+.button:active, .cirbutton:active, .footercirbutton:active, .prev:active, .next:active {
+  background-color: #CCC;
   transform: scale(0.95);
-  transition: .2s;
-}
-.headerbutton:hover, .footercirbutton:hover {
-  background-color: #7000DF;
-  transform: scale(1.05);
-  transition: .2s;
-}
-.headerbutton:active, .footercirbutton:active {
-  background-color: #6000BF;
-  transform: scale(0.95);
-  transition: .2s;
+  transition: .2s ease-in-out;
 }
 pagefade {
   animation: pageFadeIn 1s;
@@ -427,38 +438,16 @@ pagefade {
   }
 }
 @media screen and (max-width: 600px) {
-  .mobilenav {
-    overflow: hidden;
-    background-color: #8000FF;
-    position: relative;
-    display: none;
+  .bar {
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+  }
+  .navmenu {
+    margin-top: 63.91px;
     width: 100%;
-    position: fixed;
-    border-radius: 1rem;
-    filter: drop-shadow(0 0 20px #000000);
-    top: 68.91px;
-    transition: transform 0.2s ease-in-out;
-    z-index: 2;
-  }
-  .mobilenav #mobileLinks {
-    display: none;
-  }
-  .mobilenav a {
-    color: white;
-    padding: 14px 16px;
-    text-decoration: none;
-    display: block;
-    transition: transform .2s ease-out;
-  }
-  .mobilenav a:hover {
-    background-color: #7000DF;
-    transition: .2s;
-  }
-  .hamburger {
-    display: block;
-  }
-  .hamburger.hamburger-active .bar:nth-child(2) {
-    opacity: 0;
+    right: auto;
+    transition: .2s ease-in-out;
   }
   .hamburger.hamburger-active .bar:nth-child(1) {
     transform: translateY(8px) rotate(45deg);
@@ -466,11 +455,9 @@ pagefade {
   .hamburger.hamburger-active .bar:nth-child(3) {
     transform: translateY(-8px) rotate(-45deg);
   }
-  .mobile-nav-item {
-    margin: 15px 0;
-  }
   .logo {
     width: 150px;
+    transition: .2s ease-in-out;
   }
   .prev {
     width: 55px;
@@ -482,58 +469,55 @@ pagefade {
     height: 55px;
     margin: 5px 10px 5px 10px;
   }
+  .text {
+    color: #f2f2f2;
+    font-size: 17px;
+    font-weight: 500;
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    transition: .2s ease-in-out;
+  }
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 17px;
+    font-weight: 500;
+    padding: 20px 22px;
+    position: absolute;
+    transition: .2s ease-in-out;
+  }
   .dot, .dotB {
     height: 7px;
     width: 7px;
     margin: 0 3px;
+    transition: .2s ease-in-out;
   }
   h1 {
     font-size: 60px;
     line-height: 1.3;
+    transition: .2s ease-in-out;
   }
   h2 {
     font-size: 35px;
     line-height: 1.3;
+    transition: .2s ease-in-out;
   }
   h3 {
-    font-family: Montserrat;
-    margin: 0;
     font-size: 25px;
-    font-weight: 700;
-    line-height: 1.6;
+    line-height: 1.3;
+    transition: .2s ease-in-out;
   }
   h4 {
-    font-family: Montserrat;
-    margin: 0;
     font-size: 20px;
-    font-weight: 600;
     line-height: 1.3;
+    transition: .2s ease-in-out;
   }
   p {
-    font-family: Montserrat;
-    margin: 0;
     font-size: 15px;
-    font-weight: 500;
     line-height: 1.3;
+    transition: .2s ease-in-out;
   }
   .button {
-    border-radius: 5rem;
-    background-color: #00000000;
     padding: 2px 10px;
-  }
-  .cirbutton {
-    border-radius: 50%;
-    background-color: #00000000;
-    width: 55px;
-    height: 55px;
-  }
-  .headerbutton {
-    display: none;
-  }
-  .footercirbutton {
-    border-radius: 50%;
-    background-color: #00000000;
-    width: 35px;
-    height: 35px;
   }
 }

@@ -15,23 +15,18 @@
   <pagefade>
     <header>
       <img class="logo" alt="evomevo logo" src="img/evomevo.svg">
-      <div style="display: flex;">
-        <button class="headerbutton" onclick="window.location.href='index.html';"><p>Home</p></button>
-        <button class="headerbutton" onclick="window.location.href='mywork.html';"><p>My Work</p></button>
-      </div>
       <div class="hamburger" onclick="openMenu()">
-        <span class="bar"></span>
         <span class="bar"></span>
         <span class="bar"></span>
       </div>
     </header>
-    <div class="mobilenav" style="display: none; position: fixed;" id="mobileLinks">
+    <div class="navmenu" style="display: none; position: fixed;" id="mobileLinks">
       <a href="index.html">Home</a>
       <a href="mywork.html">My Work</a>
     </div>
     <div class="banner2">
-      <h1 style="color: #1C1C1C">My Work</h1>
-      <h3 style="color: #1C1C1C">Eye candy!</h3>
+      <h1>My Work</h1>
+      <h3>Eye candy!</h3>
     </div>
     <div class="stuff">
       <h2>Graphics Design</h2>
@@ -197,8 +192,8 @@
       <h4 float="left" style="margin: 20px 0 0 0;">Congratulations, you've reached the end of this page! Have a cookie. 🍪</h4><br>
       <p float="left">Any of my work presented, unless noted otherwise, are protected under a CC BY-NC-ND 4.0 license, meaning you are required to credit me, you are not able to use anything commercially, and you are not able to modify or create remixes of my work. The wedery logo, evomevo logos, photos taken, and others may have varying levels of copyright. Please contact the responsible people for usage permission.</p>
       <div style="display: flex;">
-        <button class="footercirbutton" onclick="window.location.href='https://www.youtube.com/@evomevo';"><i class="fa-brands fa-youtube fa-lg";"></i></button>
-        <button class="footercirbutton" onclick="window.location.href='https://twitter.com/evomevo21';"><i class="fa-brands fa-twitter fa-lg";"></i></button>
+        <button class="footercirbutton" onclick="window.location.href='https://www.youtube.com/@evomevo';"><i class="fa-brands fa-youtube fa-xl";"></i></button>
+        <button class="footercirbutton" onclick="window.location.href='https://twitter.com/evomevo21';"><i class="fa-brands fa-twitter fa-xl";"></i></button>
       </div>
     </footer>
   </pagefade>
@@ -212,10 +207,10 @@
   <script>
     function openMenu() {
       var hamburgermenu = document.getElementById("mobileLinks");
-      if (hamburgermenu.style.display === "block") {
+      if (hamburgermenu.style.display === "flex") {
         hamburgermenu.style.display = "none";
       } else {
-        hamburgermenu.style.display = "block";
+        hamburgermenu.style.display = "flex";
       }
     }
   </script>
