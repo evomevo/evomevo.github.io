@@ -448,7 +448,7 @@ pagefade {
     margin: 5px auto;
   }
   .navmenu {
-    margin-top: 68.91px;
+    margin: 68.91px 0 0 0;
     width: 100%;
     right: auto;
     transition: .2s ease-in-out;
