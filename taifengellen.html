@@ -34,19 +34,19 @@
   </style>
 </head>
 <body>
-  <pagefade>
-    <header>
-      <img class="logo" alt="evomevo logo" src="img/evomevo.svg">
-      <div class="hamburger" onclick="openMenu()">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-      </div>
-    </header>
-    <div class="navmenu" id="mobileLinks">
-      <a href="index.html">Heim</a>
-      <a href="mywork.html">Mein Arbeit</a>
+  <header>
+    <img class="logo" alt="evomevo logo" src="img/evomevo.svg">
+    <div class="hamburger">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
     </div>
+  </header>
+  <div class="navmenu" id="mobileLinks">
+    <a href="index.html">Heim</a>
+    <a href="mywork.html">Mein Arbeit</a>
+  </div>
+  <pagefade>
     <div class="bannerellen">
       <h1>Taifeng Ellen</h1>
       <h3>😲</h3>
@@ -91,12 +91,18 @@
     </footer>
   </pagefade>
   <script>
-    const hamburger = document.querySelector(".hamburger")
-    const navmenu = document.querySelector(".navmenu")
+    const hamburger = document.querySelector('.hamburger')
+    const navmenu = document.querySelector('.navmenu')
+    const pagefade = document.querySelector('pagefade')
 
-    hamburger.addEventListener("click", () => {
-      hamburger.classList.toggle("hamburger-active")
-      navmenu.classList.toggle("hamburger-active")
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('hamburger-active')
+      navmenu.classList.toggle('hamburger-active')
+    })
+
+    pagefade.addEventListener('click', () => {
+      hamburger.classList.remove('hamburger-active')
+      navmenu.classList.remove('hamburger-active')
     })
   </script>
 </body>
