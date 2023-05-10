@@ -46,7 +46,6 @@
     <div class="navmenu" id="mobileLinks">
       <a href="index.html">Heim</a>
       <a href="mywork.html">Mein Arbeit</a>
-      <a href="requests.html">Anfragen</a>
     </div>
     <div class="bannerellen">
       <h1>Taifeng Ellen</h1>
@@ -93,20 +92,12 @@
   </pagefade>
   <script>
     const hamburger = document.querySelector(".hamburger")
+    const navmenu = document.querySelector(".navmenu")
 
     hamburger.addEventListener("click", () => {
       hamburger.classList.toggle("hamburger-active")
+      navmenu.classList.toggle("hamburger-active")
     })
-  </script>
-  <script>
-    function openMenu() {
-      var hamburgermenu = document.getElementById("mobileLinks");
-      if (hamburgermenu.style.display === "flex") {
-        hamburgermenu.style.display = "none";
-      } else {
-        hamburgermenu.style.display = "flex";
-      }
-    }
   </script>
 </body>
 <script>
