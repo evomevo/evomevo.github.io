@@ -258,6 +258,7 @@ hr {
   transition: .2s ease-in-out;
 }
 .slide-img:hover {
+  border: 3px solid #8000FF;
   transform: scale(1.02);
   transition: .2s ease-in-out;
 }
@@ -284,7 +285,7 @@ hr {
   transition: .2s ease-in-out;
 }
 .numbertext {
-  color: #f2f2f2;
+  color: #F2F2F2;
   font-size: 20px;
   font-weight: 500;
   padding: 20px 22px;
@@ -299,12 +300,13 @@ hr {
   width: 15px;
   margin: 0 5px;
   background-color: #FFFFFF00;
-  border: 3px solid white;
+  border: 3px solid #FFF;
   border-radius: 50%;
   display: inline-block;
   transition: 0.2s ease-in-out;
 }
 .dot:hover, .dotB:hover {
+  border: 3px solid #8000FF;
   transform: scale(1.2);
   transition: 0.2s ease-in-out;
 }
@@ -357,6 +359,7 @@ hr {
   transition: .2s ease-in-out;
 }
 .refsheet:hover, .imageL:hover, .imageR:hover {
+  border: 3px solid #8000FF;
   transform: scale(1.02);
   transition: .2s ease-in-out;
 }
@@ -369,6 +372,8 @@ hr {
 .button {
   border-radius: 5rem;
   background-color: #FFF;
+  border: none;
+  outline: 0px solid #8000FF;
   height: 45px;
   margin: 10px 5px 10px 5px;
   display: flex;
@@ -376,13 +381,14 @@ hr {
   align-items: center;
   color: #000;
   padding: 5px 10px;
-  border: none;
   cursor: pointer;
   transition: .2s ease-in-out;
 }
 .cirbutton, .prev, .next {
   border-radius: 50%;
   background-color: #FFF;
+  border: none;
+  outline: 0px solid #8000FF;
   width: 55px;
   height: 55px;
   display: flex;
@@ -390,13 +396,14 @@ hr {
   align-items: center;
   position: relative;
   color: #000;
-  border: none;
   cursor: pointer;
   transition: .2s ease-in-out;
 }
 .footercirbutton {
   border-radius: 50%;
   background-color: #FFF;
+  border: none;
+  outline: 0px solid #000;
   width: 45px;
   height: 45px;
   margin: 20px 10px 10px 0;
@@ -404,17 +411,30 @@ hr {
   justify-content: center;
   align-items: center;
   position: relative;
-  border: none;
   cursor: pointer;
   transition: .2s ease-in-out;
 }
-.button:hover, .cirbutton:hover, .footercirbutton:hover, .prev:hover, .next:hover {
+.footercirbutton:hover {
   background-color: #DDD;
+  outline: 5px solid #000;
   transform: scale(1.05);
   transition: .2s ease-in-out;
 }
-.button:active, .cirbutton:active, .footercirbutton:active, .prev:active, .next:active {
+.footercirbutton:active {
   background-color: #CCC;
+  outline: 3px solid #000;
+  transform: scale(0.95);
+  transition: .2s ease-in-out;
+}
+.button:hover, .cirbutton:hover, .prev:hover, .next:hover {
+  background-color: #DDD;
+  outline: 5px solid #8000FF;
+  transform: scale(1.05);
+  transition: .2s ease-in-out;
+}
+.button:active, .cirbutton:active, .prev:active, .next:active {
+  background-color: #CCC;
+  outline: 2px solid #8000FF;
   transform: scale(0.95);
   transition: .2s ease-in-out;
 }
