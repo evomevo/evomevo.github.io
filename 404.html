@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <meta name="description" content="wow portfolio!">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="img/evoshort.png"/>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:500,600,700,800,900">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <header>
+    <img class="logo" alt="evomevo logo" src="img/evomevo.svg">
+    <div class="hamburger">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
+  </header>
+  <div class="navmenu" id="mobileLinks">
+    <a>Home</a>
+    <a href="mywork.html">My Work</a>
+  </div>
+  <pagefade>
+    <div class="banner3" style="width: 100vw;">
+      <h1>Oh no, Error 404!</h1>
+      <h3>Page not found. The hamburger menu is waiting.</h3>
+    </div>
+  </pagefade>
+  <script>
+    const hamburger = document.querySelector('.hamburger')
+    const navmenu = document.querySelector('.navmenu')
+    const pagefade = document.querySelector('pagefade')
+
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('hamburger-active')
+      navmenu.classList.toggle('hamburger-active')
+    })
+
+    pagefade.addEventListener('click', () => {
+      hamburger.classList.remove('hamburger-active')
+      navmenu.classList.remove('hamburger-active')
+    })
+  </script>
+</body>
+<script>
+  document.addEventListener('scroll', () => {
+    const header = document.querySelector('header');
+    
+    if (window.scrollY > 0) {
+      header.classList.add('scrolled');
+    } else {
+      header.classList.remove('scrolled');
+    }
+  });
+</script>
+</html>
