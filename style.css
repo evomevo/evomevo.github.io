@@ -264,6 +264,7 @@ hr {
   transition: .2s cubic-bezier(1, 0, 1, 1);
 }
 .slide-img:hover {
+  outline: 5px solid #FFF;
   transform: scale(1.02);
   transition: .2s cubic-bezier(0, 0, 0, 1);
 }
@@ -364,6 +365,7 @@ hr {
   transition: .2s cubic-bezier(1, 0, 1, 1);
 }
 .refsheet:hover, .imageL:hover, .imageR:hover {
+  outline: 5px solid #FFF;
   transform: scale(1.02);
   transition: .2s cubic-bezier(0, 0, 0, 1);
 }
