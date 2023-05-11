@@ -11,7 +11,7 @@ header {
   background-color: #8000FF00;
   filter: drop-shadow(0 0 5px #000000);
   z-index: 3;
-  transition: 0.2s ease-in-out;
+  transition: .2s cubic-bezier(1, 0, 1, 1);
 }
 header.scrolled {
   background-color: #8000FFFF;
@@ -31,7 +31,7 @@ body {
   font-family: Montserrat;
   background: linear-gradient(90deg, #50009F, #000, #000, #50009F);
   background-size: 200% 200%;
-  animation: Gradient 20s ease-in-out infinite;
+  animation: banner1Gradient 20s ease-in-out infinite;
   position: relative;
   margin: 0 auto;
   display: flex;
@@ -68,6 +68,7 @@ body {
   flex-flow: column;
   text-align: center;
   color: #FFF;
+  word-wrap: break-word;
 }
 .banner2 {
   background: linear-gradient(0, #00000010, #00000010), url(img/manilacityscape.png);
@@ -88,6 +89,7 @@ body {
   flex-flow: column;
   text-align: center;
   color: #1C1C1C;
+  word-wrap: break-word;
 }
 .banner3 {
   background: linear-gradient(0, #00000060, #00000060), url(img/auraambgc.png);
@@ -108,10 +110,10 @@ body {
   flex-flow: column;
   text-align: center;
   color: #FFF;
+  word-wrap: break-word;
 }
 ::-webkit-scrollbar {
   width: 10px;
-  transition: .2s ease-in-out;
 }
 ::-webkit-scrollbar-thumb {
   background: #FFFFFF40;
@@ -129,7 +131,7 @@ h1 {
   font-size: 80px;
   font-weight: 900;
   line-height: 1.3;
-  transition: 0.2s ease-in-out;
+  transition: .2s cubic-bezier(1, 0, 1, 1);
 }
 h2 {
   font-family: Montserrat;
@@ -137,7 +139,7 @@ h2 {
   font-size: 60px;
   font-weight: 800;
   line-height: 1.3;
-  transition: 0.2s ease-in-out;
+  transition: .2s cubic-bezier(1, 0, 1, 1);
 }
 h3 {
   font-family: Montserrat;
@@ -145,7 +147,7 @@ h3 {
   font-size: 30px;
   font-weight: 700;
   line-height: 1.3;
-  transition: 0.2s ease-in-out;
+  transition: .2s cubic-bezier(1, 0, 1, 1);
 }
 h4 {
   font-family: Montserrat;
@@ -153,7 +155,7 @@ h4 {
   font-size: 25px;
   font-weight: 600;
   line-height: 1.3;
-  transition: 0.2s ease-in-out;
+  transition: .2s cubic-bezier(1, 0, 1, 1);
 }
 p {
   font-family: Montserrat;
@@ -161,7 +163,7 @@ p {
   font-size: 20px;
   font-weight: 500;
   line-height: 1.3;
-  transition: 0.2s ease-in-out;
+  transition: .2s cubic-bezier(1, 0, 1, 1);
 }
 i {
   color: #000;
@@ -176,14 +178,15 @@ hr {
 }
 .logo {
   width: 200px;
-  transition: 0.2s ease-in-out;
+  transition: .2s cubic-bezier(1, 0, 1, 1);
 }
 .hamburger {
   display: block;
   cursor: pointer;
+  transition: .2s cubic-bezier(1, 0, 1, 1);
 }
 .hamburger-active {
-  transition: 0.2s ease-in-out;
+  transition: .2s cubic-bezier(1, 0, 1, 1);
 }
 .bar {
   display: block;
@@ -194,8 +197,8 @@ hr {
   align-items: center;
   background-color: #FFF;
   border-radius: 1rem;
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
+  -webkit-transition: .2s cubic-bezier(1, 0, 1, 1);
+  transition: .2s cubic-bezier(1, 0, 1, 1);
 }
 .navmenu {
   overflow: hidden;
@@ -209,12 +212,12 @@ hr {
   flex-direction: column;
   border-radius: 1rem;
   filter: drop-shadow(0 0 5px #000000);
-  transition: 0.2s ease-in-out;
+  transition: .2s cubic-bezier(1, 0, 1, 1);
   z-index: 2;
 }
 .navmenu.hamburger-active {
   top: 0;
-  transition: 0.2s ease-in-out;
+  transition: .2s cubic-bezier(0, 0, 0, 1);
 }
 .navmenu #mobileLinks {
   display: none;
@@ -225,24 +228,27 @@ hr {
   text-align: center;
   text-decoration: none;
   display: block;
-  transition: 0.2s ease-in-out;
+  transition: .2s cubic-bezier(0, 0, 0, 1);
 }
 .navmenu a:hover {
   background-color: #7000DF;
-  transition: 0.2s ease-in-out;
+  transition: .2s cubic-bezier(0, 0, 0, 1);
 }
 .navmenu a:active {
   background-color: #6000BF;
-  transition: 0.2s ease-in-out;
+  transition: .2s cubic-bezier(0, 0, 0, 1);
 }
 .hamburger.hamburger-active .bar:nth-child(2) {
   opacity: 0;
+  transition: .2s cubic-bezier(0, 0, 0, 1);
 }
 .hamburger.hamburger-active .bar:nth-child(1) {
   transform: translateY(12px) rotate(45deg);
+  transition: .2s cubic-bezier(0, 0, 0, 1);
 }
 .hamburger.hamburger-active .bar:nth-child(3) {
   transform: translateY(-12px) rotate(-45deg);
+  transition: .2s cubic-bezier(0, 0, 0, 1);
 }
 .mobile-nav-item {
   margin: 15px 0;
@@ -255,12 +261,12 @@ hr {
   outline: 3px solid #FFF;
   background-color: #00000080;
   border-radius: 1rem;
-  transition: .2s ease-in-out;
+  transition: .2s cubic-bezier(1, 0, 1, 1);
 }
 .slide-img:hover {
   outline: 5px solid #FFF;
   transform: scale(1.02);
-  transition: .2s ease-in-out;
+  transition: .2s cubic-bezier(0, 0, 0, 1);
 }
 .graphdes-slideshow-container {
   max-width: 25rem;
@@ -282,7 +288,7 @@ hr {
   text-align: center;
   filter: drop-shadow(0 0 3px #000000);
   z-index: 1;
-  transition: .2s ease-in-out;
+  transition: .2s cubic-bezier(1, 0, 1, 1);
 }
 .numbertext {
   color: #F2F2F2;
@@ -292,7 +298,7 @@ hr {
   position: absolute;
   filter: drop-shadow(0 0 3px #000000);
   z-index: 1;
-  transition: .2s ease-in-out;
+  transition: .2s cubic-bezier(1, 0, 1, 1);
 }
 .dot, .dotB {
   cursor: pointer;
@@ -303,26 +309,26 @@ hr {
   border: 3px solid #FFF;
   border-radius: 50%;
   display: inline-block;
-  transition: 0.2s ease-in-out;
+  transition: .2s cubic-bezier(1, 0, 1, 1);
 }
 .dot:hover, .dotB:hover {
   border: 3px solid #8000FF;
   transform: scale(1.2);
-  transition: 0.2s ease-in-out;
+  transition: .2s cubic-bezier(0, 0, 0, 1);
 }
 .dot:active, .dotB:active {
   background-color: #CCC;
   transform: scale(1.1);
-  transition: 0.2s ease-in-out;
+  transition: .2s cubic-bezier(0, 0, 0, 1);
 }
 .active {
   background-color: #FFF;
   transform: scale(1.2);
-  transition: 0.2s ease-in-out;
+  transition: .2s cubic-bezier(0, 0, 0, 1);
 }
 .fade {
   animation-name: fade;
-  animation-duration: 0.2s;
+  animation-duration: .2s;
 }
 .controls {
   display: flex;
@@ -336,7 +342,7 @@ hr {
   margin-right: 20px;
   margin-left: 20px;
   min-width: 250px;
-  transition: .2s ease-in-out;
+  transition: .2s cubic-bezier(1, 0, 1, 1);
 }
 .imageL {
   outline: 3px solid;
@@ -346,7 +352,7 @@ hr {
   margin-left: 20px;
   min-width: 150px;
   float: left;
-  transition: .2s ease-in-out;
+  transition: .2s cubic-bezier(1, 0, 1, 1);
 }
 .imageR {
   outline: 3px solid;
@@ -356,12 +362,12 @@ hr {
   margin-left: 20px;
   min-width: 150px;
   float: right;
-  transition: .2s ease-in-out;
+  transition: .2s cubic-bezier(1, 0, 1, 1);
 }
 .refsheet:hover, .imageL:hover, .imageR:hover {
   outline: 5px solid #FFF;
   transform: scale(1.02);
-  transition: .2s ease-in-out;
+  transition: .2s cubic-bezier(0, 0, 0, 1);
 }
 .prev, .next {
   margin: 20px 10px 20px 10px;
@@ -382,7 +388,7 @@ hr {
   color: #000;
   padding: 5px 10px;
   cursor: pointer;
-  transition: .2s ease-in-out;
+  transition: .2s cubic-bezier(1, 0, 1, 1);
 }
 .cirbutton, .prev, .next {
   border-radius: 50%;
@@ -397,7 +403,7 @@ hr {
   position: relative;
   color: #000;
   cursor: pointer;
-  transition: .2s ease-in-out;
+  transition: .2s cubic-bezier(1, 0, 1, 1);
 }
 .footercirbutton {
   border-radius: 50%;
@@ -412,36 +418,36 @@ hr {
   align-items: center;
   position: relative;
   cursor: pointer;
-  transition: .2s ease-in-out;
+  transition: .2s cubic-bezier(1, 0, 1, 1);
 }
 .footercirbutton:hover {
   background-color: #DDD;
   outline: 5px solid #000;
   transform: scale(1.1);
-  transition: .2s ease-in-out;
+  transition: .2s cubic-bezier(0, 0, 0, 1);
 }
 .footercirbutton:active {
   background-color: #CCC;
   outline: 3px solid #000;
   transform: scale(0.95);
-  transition: .2s ease-in-out;
+  transition: .2s cubic-bezier(0, 0, 0, 1);
 }
 .button:hover, .cirbutton:hover, .prev:hover, .next:hover {
   background-color: #DDD;
   outline: 5px solid #8000FF;
   transform: scale(1.1);
-  transition: .2s ease-in-out;
+  transition: .2s cubic-bezier(0, 0, 0, 1);
 }
 .button:active, .cirbutton:active, .prev:active, .next:active {
   background-color: #CCC;
   outline: 3px solid #8000FF;
   transform: scale(0.95);
-  transition: .2s ease-in-out;
+  transition: .2s cubic-bezier(0, 0, 0, 1);
 }
 pagefade {
   animation: pageFadeIn 1s;
 }
-@-webkit-keyframes Gradient {
+@-webkit-keyframes banner1Gradient {
   0% {
     background-position: 0% 50%
   }
@@ -475,10 +481,11 @@ pagefade {
     width: 25px;
     height: 3px;
     margin: 5px auto;
+    transition: .2s cubic-bezier(0, 0, 0, 1);
   }
   .navmenu.hamburger-active {
     top: 0;
-    transition: .2s ease-in-out;
+    transition: .2s cubic-bezier(0, 0, 0, 1);
   }
   .hamburger.hamburger-active .bar:nth-child(1) {
     transform: translateY(8px) rotate(45deg);
@@ -488,7 +495,7 @@ pagefade {
   }
   .logo {
     width: 150px;
-    transition: .2s ease-in-out;
+    transition: .2s cubic-bezier(0, 0, 0, 1);
   }
   .prev {
     width: 55px;
@@ -507,7 +514,7 @@ pagefade {
     position: absolute;
     bottom: 20px;
     width: 100%;
-    transition: .2s ease-in-out;
+    transition: .2s cubic-bezier(0, 0, 0, 1);
   }
   .numbertext {
     color: #f2f2f2;
@@ -515,38 +522,38 @@ pagefade {
     font-weight: 500;
     padding: 20px 22px;
     position: absolute;
-    transition: .2s ease-in-out;
+    transition: .2s cubic-bezier(0, 0, 0, 1);
   }
   .dot, .dotB {
     height: 7px;
     width: 7px;
     margin: 0 3px;
-    transition: .2s ease-in-out;
+    transition: .2s cubic-bezier(0, 0, 0, 1);
   }
   h1 {
     font-size: 60px;
     line-height: 1.3;
-    transition: .2s ease-in-out;
+    transition: .2s cubic-bezier(0, 0, 0, 1);
   }
   h2 {
     font-size: 35px;
     line-height: 1.3;
-    transition: .2s ease-in-out;
+    transition: .2s cubic-bezier(0, 0, 0, 1);
   }
   h3 {
     font-size: 25px;
     line-height: 1.3;
-    transition: .2s ease-in-out;
+    transition: .2s cubic-bezier(0, 0, 0, 1);
   }
   h4 {
     font-size: 20px;
     line-height: 1.3;
-    transition: .2s ease-in-out;
+    transition: .2s cubic-bezier(0, 0, 0, 1);
   }
   p {
     font-size: 15px;
     line-height: 1.3;
-    transition: .2s ease-in-out;
+    transition: .2s cubic-bezier(0, 0, 0, 1);
   }
   .button {
     padding: 2px 10px;
@@ -558,6 +565,6 @@ pagefade {
     width: 100%;
     top: -250px;
     right: auto;
-    transition: .2s ease-in-out;
+    transition: .2s cubic-bezier(0, 0, 0, 1);
   }
 }
