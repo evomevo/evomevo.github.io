@@ -563,6 +563,6 @@ pagefade {
     width: 100%;
     top: -250px;
     right: auto;
-    transition: .2s cubic-bezier(0, 0, 0, 1);
+    transition: .2s cubic-bezier(1, 0, 1, 1);
   }
 }
