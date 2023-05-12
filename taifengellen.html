@@ -31,6 +31,85 @@
       text-align: center;
       color: #FFF;
     }
+  
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+  
+    canvas {
+      height: 100vh;
+      width: 100vw;
+      position: relative;
+    }
+  
+    #control-bar-wrapper {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      position: fixed;
+      top: 0px;
+      left: 0px;
+      z-index: 10;
+      padding: 0.5rem;
+    }
+  
+    .toggle {
+      background-color: rgb(255 255 255 / 10%);
+      backdrop-filter: blur(5px);
+      padding: 0.5rem;
+      border-radius: 0.25rem;
+      height: 2rem;
+      border: none;
+      outline: none;
+      cursor: pointer;
+    }
+  
+    .toggle:is(:hover, :focus-visible) {
+      background-color: rgb(255 255 255 / 15%);
+    }
+  
+    .toggle > i {
+      color: white;
+      display: none;
+      height: 1rem;
+      width: 1rem;
+      font-size: 0.6rem;
+      line-height: 1rem;
+      text-align: center;
+    }
+  
+    .toggle[data-toggled="true"] > i.on {
+      display: block;
+    }
+
+    .toggle[data-toggled="false"] > i.off {
+      display: block;
+    }
+
+    #sound-message {
+      position: fixed;
+      top: 36%;
+      left: 50%;
+      translate: -50% -50%;
+      z-index: 3;
+      padding: 0.75rem;
+      background-color: rgb(255 255 255 / 5%);
+      border-radius: 0.4rem;
+      transition: opacity 1000ms;
+      pointer-events: none;
+    }
+
+    body:has(#sound-toggle[data-toggled="true"]) #sound-message {
+      opacity: 0;
+    }
+
+    #sound-message > p {
+      color: white;
+      font-size: 0.9rem;
+      white-space: nowrap;
+    }
   </style>
 </head>
 <body>
@@ -45,6 +124,7 @@
   <div class="navmenu" id="mobileLinks">
     <a href="index.html">Heim</a>
     <a href="mywork.html">Mein Arbeit</a>
+    <a href="commissions.html">Provisionen</a>
   </div>
   <pagefade>
     <div class="bannerellen">
@@ -76,10 +156,8 @@
         <p><br>Seeing Taifeng Ellen, and the beautiful designs of Taifeng, has piqued my interest in stealing satellite imagery. So I decided to share some of the worst ones of Taifeng Ellen through Ellener.</p>
       </div>
       <hr>
-      <p>Oh yeah, and I also have my own Taifeng Ellen! If you're interested in drinking air, that would be very based! Just be sure you're planning to eat water. Have fun!</p>
-      <div style="margin: 20px;">
-        <img class="refsheet" src="https://upload.wikimedia.org/wikipedia/commons/b/b8/Typhoon_Ellen_1983_STS-8_%282%29.jpg" width="50%">
-      </div>
+      <p>Oh yeah, and I also have my own Taifeng Ellen! If you're interested in listening to the polyrhythm below, click on it! Just be sure you're planning to eat water. Have fun!</p>
+      <canvas id="paper" width="1187" height="695"></canvas>
     </div>
     <footer>
       <h4 float="left" style="margin: 20px 0 0 0;">Congratulations, you've reached the end of this page! Have a JoJ. 🏠</h4><br>
@@ -106,6 +184,7 @@
     })
   </script>
 </body>
+<script src="polyrhythm.js"></script>
 <script>
   document.addEventListener('scroll', () => {
     const header = document.querySelector('header');
