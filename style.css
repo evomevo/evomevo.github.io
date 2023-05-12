@@ -481,7 +481,6 @@ pagefade {
     width: 25px;
     height: 3px;
     margin: 5px auto;
-    transition: .2s cubic-bezier(0, 0, 0, 1);
   }
   .navmenu.hamburger-active {
     top: 0;
