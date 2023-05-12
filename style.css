@@ -309,7 +309,7 @@ hr {
   border: 3px solid #FFF;
   border-radius: 50%;
   display: inline-block;
-  transition: .2s cubic-bezier(1, 0, 1, 1);
+  transition: .2s cubic-bezier(0, 0, 0, 1);
 }
 .dot:hover, .dotB:hover {
   border: 3px solid #8000FF;
