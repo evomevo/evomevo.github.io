@@ -10,7 +10,7 @@ header {
   border-radius: 0 0 1rem 1rem;
   background-color: #8000FF00;
   filter: drop-shadow(0 0 5px #000000);
-  z-index: 3;
+  z-index: 10000;
   transition: .2s cubic-bezier(1, 0, 1, 1);
 }
 header.scrolled {
@@ -25,7 +25,7 @@ footer {
   border-radius: 1rem 1rem 0 0;
   background-color: #8000FF;
   filter: drop-shadow(0 0 5px #000000);
-  z-index: 3;
+  z-index: 9999;
 }
 body {
   font-family: Montserrat;
@@ -335,15 +335,6 @@ hr {
   justify-content: center;
   align-items: center;
 }
-.refsheet {
-  outline: 3px solid;
-  border-radius: 1rem;
-  background-color: #00000080;
-  margin-right: 20px;
-  margin-left: 20px;
-  min-width: 250px;
-  transition: .2s cubic-bezier(1, 0, 1, 1);
-}
 .imageL {
   outline: 3px solid;
   border-radius: 1rem;
@@ -364,7 +355,7 @@ hr {
   float: right;
   transition: .2s cubic-bezier(1, 0, 1, 1);
 }
-.refsheet:hover, .imageL:hover, .imageR:hover {
+.imageL:hover, .imageR:hover {
   outline: 5px solid #FFF;
   transform: scale(1.02);
   transition: .2s cubic-bezier(0, 0, 0, 1);
