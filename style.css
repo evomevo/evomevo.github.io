@@ -228,6 +228,25 @@ hr {
   transform: translateY(-12px) rotate(-45deg);
   transition: .2s cubic-bezier(0, 0, 0, 1);
 }
+.introcontainer {
+  border-radius: 1rem;
+  margin: 25px;
+  padding: 50px;
+  justify-content: center;
+  background-image: linear-gradient(0, #00000090, #00000090), url(img/auraambgc.png);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+  transition: .2s cubic-bezier(1, 0, 1, 1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.layout {
+  display: flex;
+}
 .container1 {
   background-image: linear-gradient(0, #00000090, #00000090), url(img/ayalamallsfeliz.png);
 }
@@ -240,14 +259,10 @@ hr {
 .container4 {
   background-image: linear-gradient(0, #00000090, #00000090), url(img/smcenterpasig.png);
 }
-.container5 {
-  background-image: linear-gradient(0, #00000090, #00000090), url(img/auraambgc.png);
-}
-.container1, .container2, .container3, .container4, .container5 {
+.container1, .container2, .container3, .container4 {
   border-radius: 1rem;
   margin: 25px;
   padding: 50px;
-  width: 25rem;
   height: 25rem;
   display: flex;
   flex-direction: column;
@@ -258,6 +273,7 @@ hr {
   -webkit-background-size: cover;
   background-size: cover;
   transition: .2s cubic-bezier(1, 0, 1, 1);
+  flex: 1 0 0;
 }
 .mobile-nav-item {
   margin: 15px 0;
@@ -499,8 +515,6 @@ pagefade {
   .container1, .container2, .container3, .container4, .container5 {
     margin: 10px;
     padding: 25px;
-    width: 15rem;
-    height: 18rem;
     transition: .2s cubic-bezier(0, 0, 0, 1);
   }
   .prev {
