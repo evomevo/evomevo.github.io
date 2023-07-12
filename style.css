@@ -477,7 +477,6 @@ pagefade {
     transition: .2s cubic-bezier(0, 0, 0, 1);
   }
   .introcontainer, .container1, .container2, .container3, .container4, .container5 {
-    height: 17rem;
     margin: 10px;
     padding: 25px;
     transition: .2s cubic-bezier(0, 0, 0, 1);
