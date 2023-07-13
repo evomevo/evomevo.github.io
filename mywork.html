@@ -32,6 +32,7 @@
       <h3 style="filter: drop-shadow(0 0 5px #00000080)">Eye candy!</h3>
     </div>
     <div class="stuff">
+      <div class="layout" style="flex-direction: column">
       <div class="container1">
         <h2>Graphics Design</h2><br>
         <div class="itemlayout">
@@ -42,10 +43,74 @@
           <img class="galimg" src="img/weathericons.png">
           <img class="galimg" src="img/iconpack.png">
           <img class="galimg" src="img/triaconceptlogo.png">
+          <div class="graphdes-slideshow-container">        
+            <div class="mySlides fade">
+              <img class="slide-img" src="img/wedery.png" draggable="false" style="width:100%">
+            </div>        
+            <div class="mySlides fade">
+              <img class="slide-img" src="img/evoshort.png" draggable="false" style="width:100%">
+            </div>        
+            <div class="mySlides fade">
+              <img class="slide-img" src="img/welle.png" draggable="false" style="width:100%">
+            </div>        
+            <div class="mySlides fade">
+              <img class="slide-img" src="img/weatherylogorevamp.png" draggable="false" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+              <img class="slide-img" src="img/weathericons.png" draggable="false" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+              <img class="slide-img" src="img/iconpack.png" draggable="false" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+              <img class="slide-img" src="img/triaconceptlogo.png" draggable="false" style="width:100%">
+            </div>
+            </div>
+            <div class="controls">
+              <button class="prev" onclick="plusSlides(-1)"><i class="fa-solid fa-chevron-left fa-xl"></i></button>
+              <div class="dots">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+                <span class="dot" onclick="currentSlide(5)"></span>
+                <span class="dot" onclick="currentSlide(6)"></span>
+                <span class="dot" onclick="currentSlide(7)"></span>
+              </div>
+              <button class="next" onclick="plusSlides(1)"><i class="fa-solid fa-chevron-right fa-xl"></i></button>
+            </div>
+            <script>
+              let slideIndex = 1;
+              showSlides(slideIndex);
+            
+              function plusSlides(n) {
+                showSlides(slideIndex += n);
+              }
+            
+              function currentSlide(n) {
+                showSlides(slideIndex = n);
+              }
+    
+              function showSlides(n) {
+                let i;
+                let slides = document.getElementsByClassName("mySlides");
+                let dots = document.getElementsByClassName("dot");
+                if (n > slides.length) {slideIndex = 1}    
+                if (n < 1) {slideIndex = slides.length}
+                for (i = 0; i < slides.length; i++) {
+                  slides[i].style.display = "none";  
+                }
+                for (i = 0; i < dots.length; i++) {
+                  dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex-1].style.display = "block";  
+                dots[slideIndex-1].className += " active";
+              }
+            </script>
         </div>
       </div>
       <div class="container2">
-        <br><br><h2>Photography</h2><br>
+        <h2>Photography</h2><br>
         <div class="itemlayout">
           <img class="galimg" src="img/manilacityscape.png">
           <img class="galimg" src="img/auraambgc.png">
@@ -53,6 +118,63 @@
           <img class="galimg" src="img/ayalamallsfeliz.png">
           <img class="galimg" src="img/taytaysky.png">
         </div>
+        <div class="photo-slideshow-container">        
+          <div class="mySlidesB fade">
+            <img class="slide-img" src="img/manilacityscape.png" draggable="false" style="width:100%">
+          </div>
+          <div class="mySlidesB fade">
+            <img class="slide-img" src="img/auraambgc.png" draggable="false" style="width:100%">
+          </div>
+          <div class="mySlidesB fade">
+            <img class="slide-img" src="img/smcenterpasig.png" draggable="false" style="width:100%">
+          </div>
+          <div class="mySlidesB fade">
+            <img class="slide-img" src="img/ayalamallsfeliz.png" draggable="false" style="width:100%">
+          </div>
+          <div class="mySlidesB fade">
+            <img class="slide-img" src="img/taytaysky.png" draggable="false" style="width:100%">
+          </div>
+          </div>
+          <div class="controls">
+            <button class="prev" onclick="plusSlidesB(-1)"><i class="fa-sharp fa-solid fa-chevron-left fa-2xl"></i></button>
+            <div class="dots">
+              <span class="dotB" onclick="currentSlideB(1)"></span>
+              <span class="dotB" onclick="currentSlideB(2)"></span>
+              <span class="dotB" onclick="currentSlideB(3)"></span>
+              <span class="dotB" onclick="currentSlideB(4)"></span>
+              <span class="dotB" onclick="currentSlideB(5)"></span>
+            </div>
+            <button class="next" onclick="plusSlidesB(1)"><i class="fa-sharp fa-solid fa-chevron-right fa-2xl"></i></button>
+          </div>
+          <script>
+            let slideIndexB = 1;
+            showSlidesB(slideIndexB);
+            
+            function plusSlidesB(n) {
+              showSlidesB(slideIndexB += n);
+            }
+            
+            function currentSlideB(n) {
+              showSlidesB(slideIndexB = n);
+            }
+            
+            function showSlidesB(n) {
+              let i;
+              let slides = document.getElementsByClassName("mySlidesB");
+              let dots = document.getElementsByClassName("dotB");
+              if (n > slides.length) {slideIndexB = 1}    
+              if (n < 1) {slideIndexB = slides.length}
+              for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+              }
+              for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+              }
+              slides[slideIndexB-1].style.display = "block";  
+              dots[slideIndexB-1].className += " active";
+            }
+          </script>
+          </div>
       </div>
     </div>
     <footer>
