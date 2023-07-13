@@ -440,7 +440,7 @@ pagefade {
   }
   .slide-img:hover {
     outline: 5px solid #FFF;
-    transform: scale(1.1);
+    transform: scale(1.2);
     transition: .2s ease-in-out;
   }
   .graphdes-slideshow-container {
