@@ -64,13 +64,14 @@ body {
 }
 .banner1 {
   background: linear-gradient(0, #00000010, #00000010), url(img/manilacityscape.png);
-  color: #111111;
+  color: #000;
 }
 .banner2 {
-  background: linear-gradient(0, #00000020, #00000020), url(img/ayalamallsfeliz.png);
+  background: linear-gradient(0, #00000010, #00000010), url(img/taytaysky.png);
+  color: #000;
 }
 .banner3 {
-  background: linear-gradient(0, #00000060, #00000060), url(img/auraambgc.png);
+  background: linear-gradient(0, #00000010, #00000010), url(img/smcenterpasig.png);
 }
 .banner1, .banner2, .banner3 {
   background-attachment: fixed;
