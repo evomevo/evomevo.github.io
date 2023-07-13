@@ -434,13 +434,13 @@ pagefade {
   .slide-img {
     vertical-align: middle;
     outline: 3px solid #FFF;
-    background-color: #00000080;
+    background-color: #8000FF50;
     border-radius: 1rem;
     transition: .2s ease-in-out;
   }
   .slide-img:hover {
     outline: 5px solid #FFF;
-    transform: scale(1.02);
+    transform: scale(1.1);
     transition: .2s ease-in-out;
   }
   .graphdes-slideshow-container {
