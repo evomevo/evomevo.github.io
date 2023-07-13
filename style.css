@@ -9,7 +9,6 @@ header {
   padding: 10px 10%;
   border-radius: 0 0 1rem 1rem;
   background-color: #8000FF00;
-  filter: drop-shadow(0 0 5px #000000);
   z-index: 10000;
   transition: .2s cubic-bezier(1, 0, 1, 1);
 }
@@ -24,7 +23,6 @@ footer {
   padding: 20px 10%;
   border-radius: 1rem 1rem 0 0;
   background-color: #8000FF;
-  filter: drop-shadow(0 0 5px #000000);
   z-index: 9999;
 }
 body {
@@ -64,11 +62,11 @@ body {
   word-wrap: break-word;
 }
 .banner1 {
-  background: url(img/bannerimg.png);
-}
-.banner2 {
   background: linear-gradient(0, #00000010, #00000010), url(img/manilacityscape.png);
   color: #111111;
+}
+.banner2 {
+  background: url(img/ayalamallsfeliz.png);
 }
 .banner3 {
   background: linear-gradient(0, #00000060, #00000060), url(img/auraambgc.png);
@@ -146,7 +144,11 @@ hr {
 }
 .logo {
   width: 200px;
+  fill: #000;
   transition: .2s cubic-bezier(1, 0, 1, 1);
+}
+.logo.scrolled {
+  fill: #FFF;
 }
 .hamburger {
   display: block;
@@ -163,10 +165,13 @@ hr {
   margin: 7px auto;
   justify-content: center;
   align-items: center;
-  background-color: #FFF;
+  background-color: #000;
   border-radius: 1rem;
   -webkit-transition: .2s cubic-bezier(1, 0, 1, 1);
   transition: .2s cubic-bezier(1, 0, 1, 1);
+}
+.bar.scrolled {
+  background-color: #FFF;
 }
 .navmenu {
   overflow: hidden;
@@ -179,7 +184,7 @@ hr {
   width: 300px;
   flex-direction: column;
   border-radius: 1rem;
-  filter: drop-shadow(0 0 5px #000000);
+  filter: drop-shadow(0 0 5px #000);
   transition: .2s cubic-bezier(1, 0, 1, 1);
   z-index: 2;
 }
@@ -306,7 +311,7 @@ hr {
   bottom: 20px;
   width: 100%;
   text-align: center;
-  filter: drop-shadow(0 0 3px #000000);
+  filter: drop-shadow(0 0 3px #000);
   z-index: 1;
   transition: .2s cubic-bezier(1, 0, 1, 1);
 }
@@ -316,7 +321,7 @@ hr {
   font-weight: 500;
   padding: 20px 22px;
   position: absolute;
-  filter: drop-shadow(0 0 3px #000000);
+  filter: drop-shadow(0 0 3px #000);
   z-index: 1;
   transition: .2s cubic-bezier(1, 0, 1, 1);
 }
