@@ -435,13 +435,15 @@ pagefade {
     display: block;
   }
   .slide-img {
+    background-color: #00000000;
     vertical-align: middle;
     outline: 3px solid #FFF;
-    background-color: #8000FF50;
     border-radius: 1rem;
     transition: .2s ease-in-out;
   }
   .slide-img:hover {
+    background-color: #00000050;
+    backdrop-filter: blur(5px);
     outline: 5px solid #FFF;
     transform: scale(1.2);
     transition: .2s ease-in-out;
