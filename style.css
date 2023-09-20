@@ -100,13 +100,19 @@ body {
   max-height: 150px;
   border-radius: 1rem;
   outline: 3px solid #FFF;
+  cursor: pointer;
   transition: .3s ease-in-out;
 }
-.galimg:hover {
+.galimg.active {
   background-color: #00000050;
   backdrop-filter: blur(5px);
+  margin: 20px;
+  padding: 5px;
+  max-height: 150px;
+  border-radius: 1rem;
   outline: 5px solid #FFF;
   transform: scale(2);
+  cursor: pointer;
   transition: .3s ease-in-out;
 }
 h1 {
