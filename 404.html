@@ -49,33 +49,4 @@
     })
   </script>
 </body>
-<script>
-  document.addEventListener('scroll', () => {
-    const header = document.querySelector('header');
-    const logo = document.querySelector('.logo');
-    
-    if (window.scrollY > 0) {
-      header.classList.add('scrolled');
-      logo.classList.add('scrolled');
-    } else {
-      header.classList.remove('scrolled');
-      logo.classList.remove('scrolled');
-    }
-  });
-</script>
-<script>
-  document.addEventListener('scroll', () => {
-    const header = document.querySelector('header');
-    const logo = document.querySelector('.logo');
-    const bars = document.querySelectorAll('.bar');
-
-    bars.forEach(bar => {
-      if (window.scrollY > 0) {
-        bar.classList.add('scrolled');
-      } else {
-        bar.classList.remove('scrolled');
-      }
-    });
-  });
-</script>
 </html>

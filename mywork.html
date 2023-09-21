@@ -198,36 +198,21 @@
   </pagefade>
   <script>
     const galimg = document.querySelectorAll('.galimg');
-
-    galimg.forEach(galimg => {
-      galimg.addEventListener('click', () => {
-        document.querySelector('.active')?.classList.remove('active');
-        galimg.classList.add('active');
-      });
-    });
-
-    document.addEventListener('click', (event) => {
-      if (!event.target.classList.contains('galimg')) {
-        galimg.forEach(galimg => {
-      galimg.classList.remove('active');
-        });
-      }
-    });
-  </script>
-  <script>
     const slideimg = document.querySelectorAll('.slideimg');
 
-    slideimg.forEach(slideimg => {
-        slideimg.addEventListener('click', () => {
+    const galslideimgs = [...galimg, ...slideimg];
+
+    galslideimgs.forEach(image => {
+      image.addEventListener('click', () => {
         document.querySelector('.active')?.classList.remove('active');
-        slideimg.classList.add('active');
+        image.classList.add('active');
       });
     });
 
     document.addEventListener('click', (event) => {
-      if (!event.target.classList.contains('slideimg')) {
-        slideimg.forEach(slideimg => {
-            slideimg.classList.remove('active');
+      if (!event.target.classList.contains('galimg') && !event.target.classList.contains('slideimg')) {
+        galslideimgs.forEach(image => {
+          image.classList.remove('active');
         });
       }
     });
@@ -253,29 +238,17 @@
   document.addEventListener('scroll', () => {
     const header = document.querySelector('header');
     const logo = document.querySelector('.logo');
-    
+    const bars = document.querySelectorAll('.bar');
+
     if (window.scrollY > 0) {
       header.classList.add('scrolled');
       logo.classList.add('scrolled');
+      bars.forEach(bar => bar.classList.add('scrolled'));
     } else {
       header.classList.remove('scrolled');
       logo.classList.remove('scrolled');
+      bars.forEach(bar => bar.classList.remove('scrolled'));
     }
-  });
-</script>
-<script>
-  document.addEventListener('scroll', () => {
-    const header = document.querySelector('header');
-    const logo = document.querySelector('.logo');
-    const bars = document.querySelectorAll('.bar');
-
-    bars.forEach(bar => {
-      if (window.scrollY > 0) {
-        bar.classList.add('scrolled');
-      } else {
-        bar.classList.remove('scrolled');
-      }
-    });
   });
 </script>
 </html>
