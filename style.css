@@ -66,15 +66,15 @@ a {
   word-wrap: break-word;
 }
 .banner1 {
-  background: linear-gradient(0, #00000010, #00000010), url(img/manilacityscape.png);
+  background: linear-gradient(0, #00000010, #00000010), url(media/manilacityscape.png);
   color: #000;
 }
 .banner2 {
-  background: linear-gradient(0, #00000010, #00000010), url(img/taytaysky.png);
+  background: linear-gradient(0, #00000010, #00000010), url(media/taytaysky.png);
   color: #000;
 }
 .banner3 {
-  background: linear-gradient(0, #00000010, #00000010), url(img/smcenterpasig.png);
+  background: linear-gradient(0, #00000010, #00000010), url(media/smcenterpasig.png);
 }
 .banner1, .banner2, .banner3 {
   background-attachment: fixed;
@@ -269,7 +269,7 @@ hr {
   margin: 20px;
   padding: 50px;
   justify-content: center;
-  background-image: linear-gradient(0, #000000A0, #000000A0), url(img/auraambgc.png);
+  background-image: linear-gradient(0, #000000A0, #000000A0), url(media/auraambgc.png);
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -301,16 +301,16 @@ hr {
   align-content: center;
 }
 .container1 {
-  background-image: linear-gradient(0, #000000A0, #000000A0), url(img/ayalamallsfeliz.png);
+  background-image: linear-gradient(0, #000000A0, #000000A0), url(media/ayalamallsfeliz.png);
 }
 .container2 {
-  background-image: linear-gradient(0, #000000A0, #000000A0), url(img/manilacityscape.png);
+  background-image: linear-gradient(0, #000000A0, #000000A0), url(media/manilacityscape.png);
 }
 .container3 {
-  background-image: linear-gradient(0, #000000A0, #000000A0), url(img/taytaysky.png);
+  background-image: linear-gradient(0, #000000A0, #000000A0), url(media/taytaysky.png);
 }
 .container4 {
-  background-image: linear-gradient(0, #000000A0, #000000A0), url(img/smcenterpasig.png);
+  background-image: linear-gradient(0, #000000A0, #000000A0), url(media/smcenterpasig.png);
 }
 .container1, .container2, .container3, .container4 {
   border-radius: 1rem;
