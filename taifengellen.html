@@ -80,16 +80,17 @@
   <script>
     const hamburger = document.querySelector('.hamburger')
     const navmenu = document.querySelector('.navmenu')
-    const pagefade = document.querySelector('pagefade')
 
     hamburger.addEventListener('click', () => {
       hamburger.classList.toggle('hamburger-active')
       navmenu.classList.toggle('hamburger-active')
     })
 
-    pagefade.addEventListener('click', () => {
-      hamburger.classList.remove('hamburger-active')
-      navmenu.classList.remove('hamburger-active')
+    document.body.addEventListener('click', (event) => {
+      if (event.target !== hamburger && event.target !== navmenu && event.target.closest('.hamburger') !== hamburger) {
+        hamburger.classList.remove('hamburger-active')
+        navmenu.classList.remove('hamburger-active')
+      }
     })
   </script>
 </body>
