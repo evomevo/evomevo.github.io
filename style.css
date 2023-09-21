@@ -103,6 +103,10 @@ body {
   cursor: pointer;
   transition: .2s ease-in-out;
 }
+.galimg:hover {
+  transform: scale(1.1);
+  transition: .2s ease-in-out;
+}
 .galimg.active {
   background-color: #00000050;
   backdrop-filter: blur(5px);
@@ -114,6 +118,7 @@ body {
   transform: scale(2);
   cursor: pointer;
   transition: .2s ease-in-out;
+  z-index: 1;
 }
 h1 {
   font-family: Montserrat;
