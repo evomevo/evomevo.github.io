@@ -73,50 +73,50 @@
             <div class="mySlides fade">
               <img class="slideimg" src="img/baltics.png" draggable="false" oncontextmenu="return false;"  style="width:100%">
             </div>
+          </div>
+          <div class="controls">
+            <button class="prev" onclick="plusSlides(-1);"><i class="fa-solid fa-chevron-left fa-2xl"></i></button>
+            <div class="dots">
+              <span class="dot" onclick="currentSlide(1);"></span>
+              <span class="dot" onclick="currentSlide(2);"></span>
+              <span class="dot" onclick="currentSlide(3);"></span>
+              <span class="dot" onclick="currentSlide(4);"></span>
+              <span class="dot" onclick="currentSlide(5);"></span>
+              <span class="dot" onclick="currentSlide(6);"></span>
+              <span class="dot" onclick="currentSlide(7);"></span>
+              <span class="dot" onclick="currentSlide(8);"></span>
+              <span class="dot" onclick="currentSlide(9);"></span>
             </div>
-            <div class="controls">
-              <button class="prev" onclick="plusSlides(-1);"><i class="fa-solid fa-chevron-left fa-2xl"></i></button>
-              <div class="dots">
-                <span class="dot" onclick="currentSlide(1);"></span>
-                <span class="dot" onclick="currentSlide(2);"></span>
-                <span class="dot" onclick="currentSlide(3);"></span>
-                <span class="dot" onclick="currentSlide(4);"></span>
-                <span class="dot" onclick="currentSlide(5);"></span>
-                <span class="dot" onclick="currentSlide(6);"></span>
-                <span class="dot" onclick="currentSlide(7);"></span>
-                <span class="dot" onclick="currentSlide(8);"></span>
-                <span class="dot" onclick="currentSlide(9);"></span>
-              </div>
-              <button class="next" onclick="plusSlides(1);"><i class="fa-solid fa-chevron-right fa-2xl"></i></button>
-            </div>
-            <script>
-              let slideIndex = 1;
-              showSlides(slideIndex);
-            
-              function plusSlides(n) {
-                showSlides(slideIndex += n);
-              }
-            
-              function currentSlide(n) {
-                showSlides(slideIndex = n);
-              }
+            <button class="next" onclick="plusSlides(1);"><i class="fa-solid fa-chevron-right fa-2xl"></i></button>
+          </div>
+          <script>
+            let slideIndex = 1;
+            showSlides(slideIndex);
+          
+            function plusSlides(n) {
+              showSlides(slideIndex += n);
+            }
+          
+            function currentSlide(n) {
+              showSlides(slideIndex = n);
+            }
     
-              function showSlides(n) {
-                let i;
-                let slides = document.getElementsByClassName("mySlides");
-                let dots = document.getElementsByClassName("dot");
-                if (n > slides.length) {slideIndex = 1}    
-                if (n < 1) {slideIndex = slides.length}
-                for (i = 0; i < slides.length; i++) {
-                  slides[i].style.display = "none";  
-                }
-                for (i = 0; i < dots.length; i++) {
-                  dots[i].className = dots[i].className.replace(" active", "");
-                }
-                slides[slideIndex-1].style.display = "block";  
-                dots[slideIndex-1].className += " active";
+            function showSlides(n) {
+              let i;
+              let slides = document.getElementsByClassName("mySlides");
+              let dots = document.getElementsByClassName("dot");
+              if (n > slides.length) {slideIndex = 1}    
+              if (n < 1) {slideIndex = slides.length}
+              for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
               }
-            </script>
+              for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+              }
+              slides[slideIndex-1].style.display = "block";  
+              dots[slideIndex-1].className += " active";
+            }
+          </script>
         </div>
       </div>
       <div class="container2">
@@ -190,9 +190,9 @@
     <footer>
       <h4 float="left" style="margin: 20px 0 0 0;">Congratulations, you've reached the end of this page! Have a cookie. 🍪</h4><br>
       <p float="left">Any of my work presented, unless noted otherwise, are protected under a CC BY-NC-ND 4.0 license, meaning you are required to credit me, you are not able to use anything commercially, and you are not able to modify or create remixes of my work. The wedery logo, evomevo logos, photos taken, and others may have varying levels of copyright. Please contact the responsible people for usage permission.</p>
-      <div style="display: flex;">
-        <button class="footercirbutton" onclick="window.location.href='https://www.youtube.com/@evomevo';"><i class="fa-brands fa-youtube fa-xl";"></i></button>
-        <button class="footercirbutton" onclick="window.location.href='https://x.com/evomevo_';"><i class="fa-brands fa-x-twitter fa-xl";"></i></button>
+      <div style="display: flex">
+        <a class="footercirbutton" href="https://www.youtube.com/@evomevo"><i class="fa-brands fa-youtube fa-xl";"></i></a>
+        <a class="footercirbutton" href="https://x.com/evomevo_"><i class="fa-brands fa-x-twitter fa-xl";"></i></a>
       </div>
     </footer>
   </pagefade>
