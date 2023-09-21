@@ -107,8 +107,11 @@ body {
   transform: scale(1.1);
   transition: .2s ease-in-out;
 }
+.galimg:active {
+  background-color: #ffffff60;
+}
 .galimg.active {
-  background-color: #00000050;
+  background-color: #00000060;
   backdrop-filter: blur(5px);
   margin: 20px;
   padding: 5px;
