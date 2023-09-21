@@ -47,6 +47,9 @@ body {
   flex-flow: column;
   text-align: center;
 }
+a {
+  text-decoration: none;
+}
 .banner1, .banner2, .banner3 {
   width: 100%;
   height: 100vh;
