@@ -257,7 +257,7 @@ hr {
   transform: translateY(-12px) rotate(-45deg);
   transition: .2s ease-in-out;
 }
-.mySlides, .mySlidesB, .slide-img, .graphdes-slideshow-container, .photo-slideshow-container, .dot, .dotB, .controls, .prev, .next {
+.mySlides, .mySlidesB, .slideimg, .graphdes-slideshow-container, .photo-slideshow-container, .dot, .dotB, .controls, .prev, .next {
   display: none;
 }
 .fade {
@@ -445,10 +445,10 @@ pagefade {
   .galimg {
     display: none;
   }
-  .slide-img, .graphdes-slideshow-container, .photo-slideshow-container, .dot, .dotB, .controls, .prev, .next {
+  .slideimg, .graphdes-slideshow-container, .photo-slideshow-container, .dot, .dotB, .controls, .prev, .next {
     display: block;
   }
-  .slide-img {
+  .slideimg {
     background-color: #00000000;
     outline: 3px solid #FFF;
     padding: 5px;
@@ -456,8 +456,12 @@ pagefade {
     box-sizing: border-box;
     transition: .2s ease-in-out;
   }
-  .slide-img:hover {
-    background-color: #00000050;
+  .slideimg:active {
+    background-color: #ffffff60;
+    transition: .2s ease-in-out;
+  }
+  .slideimg.active {
+    background-color: #00000060;
     backdrop-filter: blur(5px);
     outline: 5px solid #FFF;
     transform: scale(1.2);

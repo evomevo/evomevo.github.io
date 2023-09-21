@@ -47,31 +47,31 @@
           <img class="galimg" draggable="false" oncontextmenu="return false;"  src="img/baltics.png">
           <div class="graphdes-slideshow-container">        
             <div class="mySlides fade">
-              <img class="slide-img" src="img/wedery.png" draggable="false" oncontextmenu="return false;"  style="width:100%">
+              <img class="slideimg" src="img/wedery.png" draggable="false" oncontextmenu="return false;"  style="width:100%">
             </div>        
             <div class="mySlides fade">
-              <img class="slide-img" src="img/evoshort.png" draggable="false" oncontextmenu="return false;"  style="width:100%">
+              <img class="slideimg" src="img/evoshort.png" draggable="false" oncontextmenu="return false;"  style="width:100%">
             </div>        
             <div class="mySlides fade">
-              <img class="slide-img" src="img/welle.png" draggable="false" oncontextmenu="return false;"  style="width:100%">
+              <img class="slideimg" src="img/welle.png" draggable="false" oncontextmenu="return false;"  style="width:100%">
             </div>        
             <div class="mySlides fade">
-              <img class="slide-img" src="img/weatherylogorevamp.png" draggable="false" oncontextmenu="return false;"  style="width:100%">
+              <img class="slideimg" src="img/weatherylogorevamp.png" draggable="false" oncontextmenu="return false;"  style="width:100%">
             </div>
             <div class="mySlides fade">
-              <img class="slide-img" src="img/weathericons.png" draggable="false" oncontextmenu="return false;"  style="width:100%">
+              <img class="slideimg" src="img/weathericons.png" draggable="false" oncontextmenu="return false;"  style="width:100%">
             </div>
             <div class="mySlides fade">
-              <img class="slide-img" src="img/iconpack.png" draggable="false" oncontextmenu="return false;"  style="width:100%">
+              <img class="slideimg" src="img/iconpack.png" draggable="false" oncontextmenu="return false;"  style="width:100%">
             </div>
             <div class="mySlides fade">
-              <img class="slide-img" src="img/triaconceptlogo.png" draggable="false" oncontextmenu="return false;"  style="width:100%">
+              <img class="slideimg" src="img/triaconceptlogo.png" draggable="false" oncontextmenu="return false;"  style="width:100%">
             </div>
             <div class="mySlides fade">
-              <img class="slide-img" src="img/pythonwood.png" draggable="false" oncontextmenu="return false;"  style="width:100%">
+              <img class="slideimg" src="img/pythonwood.png" draggable="false" oncontextmenu="return false;"  style="width:100%">
             </div>
             <div class="mySlides fade">
-              <img class="slide-img" src="img/baltics.png" draggable="false" oncontextmenu="return false;"  style="width:100%">
+              <img class="slideimg" src="img/baltics.png" draggable="false" oncontextmenu="return false;"  style="width:100%">
             </div>
             </div>
             <div class="controls">
@@ -130,19 +130,19 @@
         </div>
         <div class="photo-slideshow-container">        
           <div class="mySlidesB fade">
-            <img class="slide-img" src="img/manilacityscape.png" draggable="false" oncontextmenu="return false;"  style="width:100%">
+            <img class="slideimg" src="img/manilacityscape.png" draggable="false" oncontextmenu="return false;"  style="width:100%">
           </div>
           <div class="mySlidesB fade">
-            <img class="slide-img" src="img/auraambgc.png" draggable="false" oncontextmenu="return false;"  style="width:100%">
+            <img class="slideimg" src="img/auraambgc.png" draggable="false" oncontextmenu="return false;"  style="width:100%">
           </div>
           <div class="mySlidesB fade">
-            <img class="slide-img" src="img/smcenterpasig.png" draggable="false" oncontextmenu="return false;"  style="width:100%">
+            <img class="slideimg" src="img/smcenterpasig.png" draggable="false" oncontextmenu="return false;"  style="width:100%">
           </div>
           <div class="mySlidesB fade">
-            <img class="slide-img" src="img/ayalamallsfeliz.png" draggable="false" oncontextmenu="return false;"  style="width:100%">
+            <img class="slideimg" src="img/ayalamallsfeliz.png" draggable="false" oncontextmenu="return false;"  style="width:100%">
           </div>
           <div class="mySlidesB fade">
-            <img class="slide-img" src="img/taytaysky.png" draggable="false" oncontextmenu="return false;"  style="width:100%">
+            <img class="slideimg" src="img/taytaysky.png" draggable="false" oncontextmenu="return false;"  style="width:100%">
           </div>
           </div>
           <div class="controls">
@@ -210,6 +210,24 @@
       if (!event.target.classList.contains('galimg')) {
         galimg.forEach(galimg => {
       galimg.classList.remove('active');
+        });
+      }
+    });
+  </script>
+  <script>
+    const slideimg = document.querySelectorAll('.slideimg');
+
+    slideimg.forEach(slideimg => {
+        slideimg.addEventListener('click', () => {
+        document.querySelector('.active')?.classList.remove('active');
+        slideimg.classList.add('active');
+      });
+    });
+
+    document.addEventListener('click', (event) => {
+      if (!event.target.classList.contains('slideimg')) {
+        slideimg.forEach(slideimg => {
+            slideimg.classList.remove('active');
         });
       }
     });
