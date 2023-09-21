@@ -45,7 +45,8 @@
           <img class="galimg" draggable="false" oncontextmenu="return false;"  src="img/triaconceptlogo.png">
           <img class="galimg" draggable="false" oncontextmenu="return false;"  src="img/pythonwood.png">
           <img class="galimg" draggable="false" oncontextmenu="return false;"  src="img/baltics.png">
-          <div class="graphdes-slideshow-container">        
+          <div class="graphdes-slideshow-container">
+            <button class="prev" onclick="plusSlides(-1);"><i class="fa-solid fa-chevron-left fa-2xl"></i></button>
             <div class="mySlides fade">
               <img class="slideimg" src="img/wedery.png" draggable="false" oncontextmenu="return false;"  style="width:100%">
             </div>        
@@ -73,9 +74,8 @@
             <div class="mySlides fade">
               <img class="slideimg" src="img/baltics.png" draggable="false" oncontextmenu="return false;"  style="width:100%">
             </div>
+            <button class="next" onclick="plusSlides(1);"><i class="fa-solid fa-chevron-right fa-2xl"></i></button>
           </div>
-          <div class="controls">
-            <button class="prev" onclick="plusSlides(-1);"><i class="fa-solid fa-chevron-left fa-2xl"></i></button>
             <div class="dots">
               <span class="dot" onclick="currentSlide(1);"></span>
               <span class="dot" onclick="currentSlide(2);"></span>
@@ -87,8 +87,6 @@
               <span class="dot" onclick="currentSlide(8);"></span>
               <span class="dot" onclick="currentSlide(9);"></span>
             </div>
-            <button class="next" onclick="plusSlides(1);"><i class="fa-solid fa-chevron-right fa-2xl"></i></button>
-          </div>
           <script>
             let slideIndex = 1;
             showSlides(slideIndex);
@@ -103,18 +101,18 @@
     
             function showSlides(n) {
               let i;
-              let slides = document.getElementsByClassName("mySlides");
-              let dots = document.getElementsByClassName("dot");
-              if (n > slides.length) {slideIndex = 1}    
+              let slides = document.getElementsByClassName('mySlides');
+              let dots = document.getElementsByClassName('dot');
+              if (n > slides.length) {slideIndex = 1}
               if (n < 1) {slideIndex = slides.length}
               for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";  
+                slides[i].style.display = 'none';
               }
               for (i = 0; i < dots.length; i++) {
-                dots[i].className = dots[i].className.replace(" active", "");
+                dots[i].className = dots[i].className.replace(' active', '');
               }
-              slides[slideIndex-1].style.display = "block";  
-              dots[slideIndex-1].className += " active";
+              slides[slideIndex-1].style.display = 'block';
+              dots[slideIndex-1].className += ' active';
             }
           </script>
         </div>
@@ -127,34 +125,31 @@
           <img class="galimg" draggable="false" oncontextmenu="return false;"  src="img/smcenterpasig.png">
           <img class="galimg" draggable="false" oncontextmenu="return false;"  src="img/ayalamallsfeliz.png">
           <img class="galimg" draggable="false" oncontextmenu="return false;"  src="img/taytaysky.png">
-        </div>
-        <div class="photo-slideshow-container">        
-          <div class="mySlidesB fade">
-            <img class="slideimg" src="img/manilacityscape.png" draggable="false" oncontextmenu="return false;"  style="width:100%">
-          </div>
-          <div class="mySlidesB fade">
-            <img class="slideimg" src="img/auraambgc.png" draggable="false" oncontextmenu="return false;"  style="width:100%">
-          </div>
-          <div class="mySlidesB fade">
-            <img class="slideimg" src="img/smcenterpasig.png" draggable="false" oncontextmenu="return false;"  style="width:100%">
-          </div>
-          <div class="mySlidesB fade">
-            <img class="slideimg" src="img/ayalamallsfeliz.png" draggable="false" oncontextmenu="return false;"  style="width:100%">
-          </div>
-          <div class="mySlidesB fade">
-            <img class="slideimg" src="img/taytaysky.png" draggable="false" oncontextmenu="return false;"  style="width:100%">
-          </div>
-          </div>
-          <div class="controls">
-            <button class="prev" onclick="plusSlidesB(-1);"><i class="fa-sharp fa-solid fa-chevron-left fa-2xl"></i></button>
-            <div class="dots">
-              <span class="dotB" onclick="currentSlideB(1);"></span>
-              <span class="dotB" onclick="currentSlideB(2);"></span>
-              <span class="dotB" onclick="currentSlideB(3);"></span>
-              <span class="dotB" onclick="currentSlideB(4);"></span>
-              <span class="dotB" onclick="currentSlideB(5);"></span>
+          <div class="photo-slideshow-container">
+            <button class="prev" onclick="plusSlidesB(-1);"><i class="fa-solid fa-chevron-left fa-2xl"></i></button>
+            <div class="mySlidesB fade">
+              <img class="slideimg" src="img/manilacityscape.png" draggable="false" oncontextmenu="return false;"  style="width:100%">
+            </div>
+            <div class="mySlidesB fade">
+              <img class="slideimg" src="img/auraambgc.png" draggable="false" oncontextmenu="return false;"  style="width:100%">
+            </div>
+            <div class="mySlidesB fade">
+              <img class="slideimg" src="img/smcenterpasig.png" draggable="false" oncontextmenu="return false;"  style="width:100%">
+            </div>
+            <div class="mySlidesB fade">
+              <img class="slideimg" src="img/ayalamallsfeliz.png" draggable="false" oncontextmenu="return false;"  style="width:100%">
+            </div>
+            <div class="mySlidesB fade">
+              <img class="slideimg" src="img/taytaysky.png" draggable="false" oncontextmenu="return false;"  style="width:100%">
             </div>
             <button class="next" onclick="plusSlidesB(1);"><i class="fa-sharp fa-solid fa-chevron-right fa-2xl"></i></button>
+          </div>
+          <div class="dots">
+            <span class="dotB" onclick="currentSlideB(1);"></span>
+            <span class="dotB" onclick="currentSlideB(2);"></span>
+            <span class="dotB" onclick="currentSlideB(3);"></span>
+            <span class="dotB" onclick="currentSlideB(4);"></span>
+            <span class="dotB" onclick="currentSlideB(5);"></span>
           </div>
           <script>
             let slideIndexB = 1;
@@ -170,21 +165,22 @@
             
             function showSlidesB(n) {
               let i;
-              let slides = document.getElementsByClassName("mySlidesB");
-              let dots = document.getElementsByClassName("dotB");
-              if (n > slides.length) {slideIndexB = 1}    
+              let slides = document.getElementsByClassName('mySlidesB');
+              let dots = document.getElementsByClassName('dotB');
+              if (n > slides.length) {slideIndexB = 1}
               if (n < 1) {slideIndexB = slides.length}
               for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";  
+                slides[i].style.display = 'none';
               }
               for (i = 0; i < dots.length; i++) {
-                dots[i].className = dots[i].className.replace(" active", "");
+                dots[i].className = dots[i].className.replace(' active', '');
               }
-              slides[slideIndexB-1].style.display = "block";  
-              dots[slideIndexB-1].className += " active";
+              slides[slideIndexB-1].style.display = 'block';
+              dots[slideIndexB-1].className += ' active';
             }
           </script>
           </div>
+        </div>
       </div>
     </div>
     <footer>
@@ -198,21 +194,18 @@
   </pagefade>
   <script>
     const galimg = document.querySelectorAll('.galimg');
-    const slideimg = document.querySelectorAll('.slideimg');
 
-    const galslideimgs = [...galimg, ...slideimg];
-
-    galslideimgs.forEach(image => {
-      image.addEventListener('click', () => {
+    galimg.forEach(galimg => {
+      galimg.addEventListener('click', () => {
         document.querySelector('.active')?.classList.remove('active');
-        image.classList.add('active');
+        galimg.classList.add('active');
       });
     });
 
     document.addEventListener('click', (event) => {
-      if (!event.target.classList.contains('galimg') && !event.target.classList.contains('slideimg')) {
-        galslideimgs.forEach(image => {
-          image.classList.remove('active');
+      if (!event.target.classList.contains('galimg')) {
+        galimg.forEach(galimg => {
+          galimg.classList.remove('active');
         });
       }
     });
