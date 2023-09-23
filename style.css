@@ -127,7 +127,7 @@ a {
   max-height: 30vmax;
   border-radius: 2rem;
   border: 5px solid #FFF;
-  outline: 100vmax solid #00000060;
+  outline: 100vmax solid #00000080;
   transition: .2s ease-in-out;
   z-index: 1;
 }
