@@ -34,7 +34,7 @@
     <div class="stuff">
       <div class="layout" style="flex-direction: column">
       <div class="container1">
-        <h2>Graphics Design</h2><p>Click on an image to make it larger, and click anywhere else to make it small again!</p><br>
+        <h2>Graphics Design</h2><br>
         <div class="itemlayout">
           <img class="galimg" draggable="false" src="media/wedery.png">
           <img class="galimg" draggable="false" src="media/evoshort.png">
@@ -118,7 +118,7 @@
         </div>
       </div>
       <div class="container2">
-        <h2>Photography</h2><p>Click on an image to make it larger, and click anywhere else to make it small again!</p><br>
+        <h2>Photography</h2><br>
         <div class="itemlayout">
           <img class="galimg" draggable="false" src="media/manilacityscape.png">
           <img class="galimg" draggable="false" src="media/auraambgc.png">
@@ -191,56 +191,59 @@
         <a class="footercirbutton" href="https://x.com/i/user/1405559715434700802"><i class="fa-brands fa-x-twitter fa-xl";"></i></a>
       </div>
     </footer>
+  <div class="imgmodal"><p>Click anywhere else to exit popup view!</p><br></div>
   </pagefade>
   <script>
-    const galimg = document.querySelectorAll('.galimg');
+const galimg = document.querySelectorAll('.galimg');
+const imgmodal = document.querySelector('.imgmodal');
 
-    galimg.forEach(galimg => {
-      galimg.addEventListener('click', () => {
-        const activeGalimg = document.querySelector('.galimg.active');
-        if (activeGalimg) {
-          activeGalimg.style.opacity = 0;
-          setTimeout(() => {
-            activeGalimg.remove();
-          }, 100);
-        }
+galimg.forEach(galimg => {
+  galimg.addEventListener('click', () => {
+    const activeGalimg = document.querySelector('.galimg.active');
+    if (activeGalimg) {
+      setTimeout(() => {
+        activeGalimg.remove();
+      }, 100);
+    }
 
-        const clone = galimg.cloneNode(true);
-        clone.classList.add('active');
-        clone.style.opacity = 0;
-        document.body.appendChild(clone);
+    const clone = galimg.cloneNode(true);
+    clone.classList.add('active');
 
-        setTimeout(() => {
-          clone.style.opacity = 1;
-        }, 100);
-      });
-    });
+    imgmodal.appendChild(clone);
+    imgmodal.style.display = 'flex';
 
-    document.addEventListener('click', (event) => {
-      if (!event.target.classList.contains('galimg')) {
-        const activeGalimg = document.querySelector('.galimg.active');
-        if (activeGalimg) {
-          activeGalimg.style.opacity = 0;
-          setTimeout(() => {
-            activeGalimg.remove();
-          }, 100);
-        }
-      }
-    });
+    setTimeout(() => {
+      imgmodal.style.opacity = 1;
+    }, 100);
+  });
+});
+
+document.addEventListener('click', (event) => {
+  if (!event.target.classList.contains('galimg')) {
+    const activeGalimg = document.querySelector('.galimg.active');
+    if (activeGalimg) {
+      imgmodal.style.opacity = 0;
+      setTimeout(() => {
+        activeGalimg.remove();
+        imgmodal.style.display = 'none';
+      }, 100);
+    }
+  }
+});
   </script>
   <script>
     const hamburger = document.querySelector('.hamburger');
     const navmenu = document.querySelector('.navmenu');
 
     hamburger.addEventListener('click', () => {
-      hamburger.classList.toggle('hamburger-active');
-      navmenu.classList.toggle('hamburger-active');
+      hamburger.classList.toggle('active');
+      navmenu.classList.toggle('active');
     });
 
     document.body.addEventListener('click', (event) => {
       if (event.target !== hamburger && event.target !== navmenu && event.target.closest('.hamburger') !== hamburger) {
-        hamburger.classList.remove('hamburger-active');
-        navmenu.classList.remove('hamburger-active');
+        hamburger.classList.remove('active');
+        navmenu.classList.remove('active');
       }
     });
   </script>
