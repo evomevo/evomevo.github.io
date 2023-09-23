@@ -33,152 +33,28 @@
     </div>
     <div class="stuff">
       <div class="layout" style="flex-direction: column">
-      <div class="container1">
-        <h2>Graphics Design</h2><br>
-        <div class="itemlayout">
-          <img class="galimg" draggable="false" src="media/wedery.png">
-          <img class="galimg" draggable="false" src="media/evoshort.png">
-          <img class="galimg" draggable="false" src="media/welle.png">
-          <img class="galimg" draggable="false" src="media/weatherylogorevamp.png">
-          <img class="galimg" draggable="false" src="media/weathericons.png">
-          <img class="galimg" draggable="false" src="media/iconpack.png">
-          <img class="galimg" draggable="false" src="media/triaconceptlogo.png">
-          <img class="galimg" draggable="false" src="media/pythonwood.png">
-          <img class="galimg" draggable="false" src="media/baltics.png">
-          <div class="graphdes-slideshow-container">
-            <button class="prev" onclick="plusSlides(-1);"><i class="fa-solid fa-chevron-left fa-2xl"></i></button>
-            <div class="mySlides fade">
-              <img class="slideimg" src="media/wedery.png" draggable="false" style="width:100%">
-            </div>        
-            <div class="mySlides fade">
-              <img class="slideimg" src="media/evoshort.png" draggable="false" style="width:100%">
-            </div>        
-            <div class="mySlides fade">
-              <img class="slideimg" src="media/welle.png" draggable="false" style="width:100%">
-            </div>        
-            <div class="mySlides fade">
-              <img class="slideimg" src="media/weatherylogorevamp.png" draggable="false" style="width:100%">
-            </div>
-            <div class="mySlides fade">
-              <img class="slideimg" src="media/weathericons.png" draggable="false" style="width:100%">
-            </div>
-            <div class="mySlides fade">
-              <img class="slideimg" src="media/iconpack.png" draggable="false" style="width:100%">
-            </div>
-            <div class="mySlides fade">
-              <img class="slideimg" src="media/triaconceptlogo.png" draggable="false" style="width:100%">
-            </div>
-            <div class="mySlides fade">
-              <img class="slideimg" src="media/pythonwood.png" draggable="false" style="width:100%">
-            </div>
-            <div class="mySlides fade">
-              <img class="slideimg" src="media/baltics.png" draggable="false" style="width:100%">
-            </div>
-            <button class="next" onclick="plusSlides(1);"><i class="fa-solid fa-chevron-right fa-2xl"></i></button>
+        <div class="container1">
+          <h2>Graphics Design</h2><br>
+          <div class="itemlayout">
+            <img class="galimg" draggable="false" src="media/wedery.png">
+            <img class="galimg" draggable="false" src="media/evoshort.png">
+            <img class="galimg" draggable="false" src="media/welle.png">
+            <img class="galimg" draggable="false" src="media/weatherylogorevamp.png">
+            <img class="galimg" draggable="false" src="media/weathericons.png">
+            <img class="galimg" draggable="false" src="media/iconpack.png">
+            <img class="galimg" draggable="false" src="media/triaconceptlogo.png">
+            <img class="galimg" draggable="false" src="media/pythonwood.png">
+            <img class="galimg" draggable="false" src="media/baltics.png">
           </div>
-            <div class="dots">
-              <span class="dot" onclick="currentSlide(1);"></span>
-              <span class="dot" onclick="currentSlide(2);"></span>
-              <span class="dot" onclick="currentSlide(3);"></span>
-              <span class="dot" onclick="currentSlide(4);"></span>
-              <span class="dot" onclick="currentSlide(5);"></span>
-              <span class="dot" onclick="currentSlide(6);"></span>
-              <span class="dot" onclick="currentSlide(7);"></span>
-              <span class="dot" onclick="currentSlide(8);"></span>
-              <span class="dot" onclick="currentSlide(9);"></span>
-            </div>
-          <script>
-            let slideIndex = 1;
-            showSlides(slideIndex);
-          
-            function plusSlides(n) {
-              showSlides(slideIndex += n);
-            }
-          
-            function currentSlide(n) {
-              showSlides(slideIndex = n);
-            }
-    
-            function showSlides(n) {
-              let i;
-              let slides = document.getElementsByClassName('mySlides');
-              let dots = document.getElementsByClassName('dot');
-              if (n > slides.length) {slideIndex = 1}
-              if (n < 1) {slideIndex = slides.length}
-              for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = 'none';
-              }
-              for (i = 0; i < dots.length; i++) {
-                dots[i].className = dots[i].className.replace(' active', '');
-              }
-              slides[slideIndex-1].style.display = 'block';
-              dots[slideIndex-1].className += ' active';
-            }
-          </script>
         </div>
-      </div>
-      <div class="container2">
-        <h2>Photography</h2><br>
-        <div class="itemlayout">
-          <img class="galimg" draggable="false" src="media/manilacityscape.png">
-          <img class="galimg" draggable="false" src="media/auraambgc.png">
-          <img class="galimg" draggable="false" src="media/smcenterpasig.png">
-          <img class="galimg" draggable="false" src="media/ayalamallsfeliz.png">
-          <img class="galimg" draggable="false" src="media/taytaysky.png">
-          <div class="photo-slideshow-container">
-            <button class="prev" onclick="plusSlidesB(-1);"><i class="fa-solid fa-chevron-left fa-2xl"></i></button>
-            <div class="mySlidesB fade">
-              <img class="slideimg" src="media/manilacityscape.png" draggable="false" style="width:100%">
-            </div>
-            <div class="mySlidesB fade">
-              <img class="slideimg" src="media/auraambgc.png" draggable="false" style="width:100%">
-            </div>
-            <div class="mySlidesB fade">
-              <img class="slideimg" src="media/smcenterpasig.png" draggable="false" style="width:100%">
-            </div>
-            <div class="mySlidesB fade">
-              <img class="slideimg" src="media/ayalamallsfeliz.png" draggable="false" style="width:100%">
-            </div>
-            <div class="mySlidesB fade">
-              <img class="slideimg" src="media/taytaysky.png" draggable="false" style="width:100%">
-            </div>
-            <button class="next" onclick="plusSlidesB(1);"><i class="fa-sharp fa-solid fa-chevron-right fa-2xl"></i></button>
-          </div>
-          <div class="dots">
-            <span class="dotB" onclick="currentSlideB(1);"></span>
-            <span class="dotB" onclick="currentSlideB(2);"></span>
-            <span class="dotB" onclick="currentSlideB(3);"></span>
-            <span class="dotB" onclick="currentSlideB(4);"></span>
-            <span class="dotB" onclick="currentSlideB(5);"></span>
-          </div>
-          <script>
-            let slideIndexB = 1;
-            showSlidesB(slideIndexB);
-            
-            function plusSlidesB(n) {
-              showSlidesB(slideIndexB += n);
-            }
-            
-            function currentSlideB(n) {
-              showSlidesB(slideIndexB = n);
-            }
-            
-            function showSlidesB(n) {
-              let i;
-              let slides = document.getElementsByClassName('mySlidesB');
-              let dots = document.getElementsByClassName('dotB');
-              if (n > slides.length) {slideIndexB = 1}
-              if (n < 1) {slideIndexB = slides.length}
-              for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = 'none';
-              }
-              for (i = 0; i < dots.length; i++) {
-                dots[i].className = dots[i].className.replace(' active', '');
-              }
-              slides[slideIndexB-1].style.display = 'block';
-              dots[slideIndexB-1].className += ' active';
-            }
-          </script>
+        <div class="container2">
+          <h2>Photography</h2><br>
+          <div class="itemlayout">
+            <img class="galimg" draggable="false" src="media/manilacityscape.png">
+            <img class="galimg" draggable="false" src="media/auraambgc.png">
+            <img class="galimg" draggable="false" src="media/smcenterpasig.png">
+            <img class="galimg" draggable="false" src="media/ayalamallsfeliz.png">
+            <img class="galimg" draggable="false" src="media/taytaysky.png">
           </div>
         </div>
       </div>
@@ -191,9 +67,12 @@
         <a class="footercirbutton" href="https://x.com/i/user/1405559715434700802"><i class="fa-brands fa-x-twitter fa-xl";"></i></a>
       </div>
     </footer>
-  <div class="imgmodal"><p>Click anywhere else to exit popup view!</p><br></div>
+    <div class="imgmodal">
+      <p>Click anywhere else to exit popup view!</p><br>
+    </div>
   </pagefade>
-  <script>
+</body>
+<script>
 const galimg = document.querySelectorAll('.galimg');
 const imgmodal = document.querySelector('.imgmodal');
 
@@ -230,39 +109,38 @@ document.addEventListener('click', (event) => {
     }
   }
 });
-  </script>
-  <script>
-    const hamburger = document.querySelector('.hamburger');
-    const navmenu = document.querySelector('.navmenu');
-
-    hamburger.addEventListener('click', () => {
-      hamburger.classList.toggle('active');
-      navmenu.classList.toggle('active');
-    });
-
-    document.body.addEventListener('click', (event) => {
-      if (event.target !== hamburger && event.target !== navmenu && event.target.closest('.hamburger') !== hamburger) {
-        hamburger.classList.remove('active');
-        navmenu.classList.remove('active');
-      }
-    });
-  </script>
-</body>
+</script>
 <script>
-  document.addEventListener('scroll', () => {
-    const header = document.querySelector('header');
-    const logo = document.querySelector('.logo');
-    const bars = document.querySelectorAll('.bar');
+  const hamburger = document.querySelector('.hamburger');
+  const navmenu = document.querySelector('.navmenu');
 
-    if (window.scrollY > 0) {
-      header.classList.add('scrolled');
-      logo.classList.add('scrolled');
-      bars.forEach(bar => bar.classList.add('scrolled'));
-    } else {
-      header.classList.remove('scrolled');
-      logo.classList.remove('scrolled');
-      bars.forEach(bar => bar.classList.remove('scrolled'));
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    navmenu.classList.toggle('active');
+  });
+
+  document.body.addEventListener('click', (event) => {
+    if (event.target !== hamburger && event.target !== navmenu && event.target.closest('.hamburger') !== hamburger) {
+      hamburger.classList.remove('active');
+      navmenu.classList.remove('active');
     }
   });
+</script>
+<script>
+  document.addEventListener('scroll', () => {
+  const header = document.querySelector('header');
+  const logo = document.querySelector('.logo');
+  const bars = document.querySelectorAll('.bar');
+
+  if (window.scrollY > 0) {
+    header.classList.add('scrolled');
+    logo.classList.add('scrolled');
+    bars.forEach(bar => bar.classList.add('scrolled'));
+  } else {
+    header.classList.remove('scrolled');
+    logo.classList.remove('scrolled');
+    bars.forEach(bar => bar.classList.remove('scrolled'));
+  }
+});
 </script>
 </html>

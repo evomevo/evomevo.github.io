@@ -99,7 +99,8 @@ a {
   background-color: #00000000;
   margin: 20px;
   padding: 5px;
-  max-height: 150px;
+  min-height: 10vmin;
+  max-height: 10vmax;
   border-radius: 1rem;
   outline: 3px solid #FFF;
   cursor: pointer;
@@ -113,6 +114,7 @@ a {
   background-color: #00000080;
   margin: 0 auto;
   padding: 5px;
+  max-width: none;
   max-height: 30vmax;
   border-radius: 2rem;
   outline: 5px solid #FFF;
@@ -271,9 +273,6 @@ hr {
   transform: translateY(-12px) rotate(-45deg);
   transition: .2s ease-in-out;
 }
-.mySlides, .mySlidesB, .slideimg, .graphdes-slideshow-container, .photo-slideshow-container, .dot, .dotB, .controls, .prev, .next {
-  display: none;
-}
 .fade {
   animation-name: fade;
   animation-duration: .2s;
@@ -370,7 +369,7 @@ hr {
   cursor: pointer;
   transition: .2s ease-in-out;
 }
-.cirbutton, .prev, .next {
+.cirbutton {
   border-radius: 50%;
   background-color: #FFF;
   border: none;
@@ -413,13 +412,13 @@ hr {
   transform: scale(.95);
   transition: .2s ease-in-out;
 }
-.button:hover, .cirbutton:hover, .prev:hover, .next:hover {
+.button:hover, .cirbutton:hover {
   background-color: #DDD;
   outline: 5px solid #8000FF;
   transform: scale(1.1);
   transition: .2s ease-in-out;
 }
-.button:active, .cirbutton:active, .prev:active, .next:active {
+.button:active, .cirbutton:active {
   background-color: #CCC;
   outline: 3px solid #8000FF;
   transform: scale(.95);
@@ -455,99 +454,8 @@ pagefade {
   .layout {
     flex-direction: column;
   }
-  .itemlayout {
-    flex-direction: column;
-  }
   .galimg {
-    display: none;
-  }
-  .slideimg, .prev, .next, .dot, .dotB {
-    display: block;
-  }
-  .graphdes-slideshow-container, .photo-slideshow-container {
-    display: flex;
-    align-items: flex-end;
-  }
-  .slideimg {
-    position: relative;
-    max-width: 20rem;
-    background-color: #00000000;
-    outline: 3px solid #FFF;
-    padding: 5px;
-    border-radius: 1rem;
-    box-sizing: border-box;
-    transition: .2s ease-in-out;
-  }
-  .slideimg:hover {
-    position: relative;
-    max-width: 20rem;
-    background-color: #00000060;
-    backdrop-filter: blur(5px);
-    outline: 5px solid #FFF;
-    transform: scale(1.2);
-    transition: .2s ease-in-out;
-    z-index: 2;
-  }
-  .dot, .dotB {
-    cursor: pointer;
-    height: 10px;
-    width: 10px;
-    margin: 10px 2px 0 2px;
-    background-color: #FFFFFF00;
-    border: 3px solid #FFF;
-    border-radius: 50%;
-    display: inline-block;
-    transition: .2s ease-in-out;
-  }
-  .dot:hover, .dotB:hover {
-    border: 3px solid #8000FF;
-    transform: scale(1.2);
-    transition: .2s ease-in-out;
-  }
-  .dot:active, .dotB:active {
-    background-color: #CCC;
-    transform: scale(1.1);
-    transition: .2s ease-in-out;
-  }
-  .active {
-    background-color: #FFF;
-    transform: scale(1.2);
-    transition: .2s ease-in-out;
-  }
-  .graphdes-slideshow-container {
-    position: relative;
-    margin: 20px 0;
-    padding: 10px;
-  }
-  .photo-slideshow-container {
-    position: relative;
-    margin: 20px 0;
-    padding: 10px;
-  }
-  .dots {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-  }
-  .fade {
-    animation-name: fade;
-    animation-duration: .2s;
-  }
-  .controls {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .prev, .next {
-    margin: -29px 0;
-    z-index: 1;
-  }
-  .prev {
-    margin-right: -26px;
-  }
-  .next {
-    margin-left: -26px;
+    margin: 10px;
   }
 }
 @media screen and (max-width: 700px) {
@@ -579,6 +487,9 @@ pagefade {
     padding: 25px;
     transition: .2s ease-in-out;
   }
+  .galimg {
+    max-height: 15vmax;
+  }
   h1 {
     font-size: 50px;
     line-height: 1.3;
@@ -607,12 +518,8 @@ pagefade {
   .button {
     padding: 2px 20px;
   }
-  .cirbutton, .prev, .next {
-    aspect-ratio: 1 / 1;
-    transition: .2s ease-in-out;
-  }
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 425px) {
   .navmenu {
     margin: 68.91px 0 0 0;
     width: 90%;
