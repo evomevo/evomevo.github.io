@@ -193,22 +193,45 @@
     </footer>
   </pagefade>
   <script>
-    const galimg = document.querySelectorAll('.galimg');
+const galimg = document.querySelectorAll('.galimg');
 
-    galimg.forEach(galimg => {
-      galimg.addEventListener('click', () => {
-        document.querySelector('.active')?.classList.remove('active');
-        galimg.classList.add('active');
-      });
-    });
+galimg.forEach(galimg => {
+  galimg.addEventListener('click', () => {
+    const activeGalimg = document.querySelector('.galimg.active');
+    if (activeGalimg) {
+      // Fade out the active Galimg element
+      activeGalimg.style.opacity = 0;
+      setTimeout(() => {
+        activeGalimg.remove();
+      }, 100);
+    }
 
-    document.addEventListener('click', (event) => {
-      if (!event.target.classList.contains('galimg')) {
-        galimg.forEach(galimg => {
-          galimg.classList.remove('active');
-        });
-      }
-    });
+    // Create a duplicate of the Galimg element and make it active
+    const clone = galimg.cloneNode(true);
+    clone.classList.add('active');
+    clone.style.opacity = 0;
+    document.body.appendChild(clone);
+
+    // Fade in the duplicate Galimg element
+    setTimeout(() => {
+      clone.style.opacity = 1;
+    }, 100);
+  });
+});
+
+document.addEventListener('click', (event) => {
+  // Remove the duplicate Galimg element if the user clicks anywhere else
+  if (!event.target.classList.contains('galimg')) {
+    const activeGalimg = document.querySelector('.galimg.active');
+    if (activeGalimg) {
+      // Fade out the active Galimg element
+      activeGalimg.style.opacity = 0;
+      setTimeout(() => {
+        activeGalimg.remove();
+      }, 100);
+    }
+  }
+});
   </script>
   <script>
     const hamburger = document.querySelector('.hamburger');
