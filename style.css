@@ -530,5 +530,6 @@ pagefade {
   }
   .galimg.active {
     max-height: 23vmax;
+    border-radius: 1rem;
   }
 }
