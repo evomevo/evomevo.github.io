@@ -114,7 +114,8 @@ a {
   background-color: #00000080;
   margin: 0 auto;
   padding: 5px;
-  max-width: none;
+  object-fit: contain;
+  min-width: none;
   max-height: 30vmax;
   border-radius: 2rem;
   outline: 5px solid #FFF;
@@ -527,7 +528,7 @@ pagefade {
     right: auto;
     transition: .2s ease-in-out;
   }
-  .slideimg:hover {
-    transform: scale(1.4);
+  .galimg.active {
+    max-height: 23vmax;
   }
 }
