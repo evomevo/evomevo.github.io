@@ -27,7 +27,7 @@ footer {
 }
 body {
   font-family: Montserrat;
-  background: linear-gradient(90deg, #50009F, #180030, #180030, #50009F);
+  background: linear-gradient(90deg, #7000E0, #180030, #180030, #7000E0);
   background-size: 200% 200%;
   animation: banner1Gradient 20s ease-in-out infinite;
   position: relative;
