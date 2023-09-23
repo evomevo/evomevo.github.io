@@ -116,8 +116,7 @@ a {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  margin: 20px;
-  padding: 5px;
+  margin: 0 auto;
   max-height: 30vmax;
   border-radius: 2rem;
   border: 5px solid #FFF;
