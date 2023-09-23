@@ -116,7 +116,8 @@ a {
   transition: .2s ease-in-out;
 }
 .galimg.active {
-  background-color: #000000;
+  background-color: #000000C0;
+  backdrop-filter: blur(50px);
   position: fixed;
   top: 50%;
   left: 50%;
