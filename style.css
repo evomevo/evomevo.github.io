@@ -534,3 +534,8 @@ pagefade {
     border-radius: 1rem;
   }
 }
+@media screen and (max-width: 332px) {
+  .galimg {
+    margin: 7px;
+  }
+}
