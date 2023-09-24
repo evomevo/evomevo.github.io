@@ -36,6 +36,7 @@ function tiltelementMouseMove(event) {
 
   tiltelement.style.transform = `perspective(${tiltEffectSettings.perspective}px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) 
                           scale3d(${tiltEffectSettings.scale}, ${tiltEffectSettings.scale}, ${tiltEffectSettings.scale})`;
+                          setTransition(event);
 }
 
 function tiltelementMouseLeave(event) {
