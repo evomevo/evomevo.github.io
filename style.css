@@ -121,6 +121,8 @@ a {
   border-radius: 2rem;
   outline: 5px solid #FFF;
   cursor: auto;
+  perspective: 1000px;
+  animation: tilt-wiggle 30s ease-in-out infinite;
   transition: .2s ease-in-out;
 }
 .galimg.active:hover {
@@ -426,14 +428,11 @@ pagefade {
   animation: pageFadeIn 1s;
 }
 @-webkit-keyframes banner1Gradient {
-  0% {
+  0%, 100% {
     background-position: 0% 50%
   }
   50% {
     background-position: 100% 50%
-  }
-  100% {
-    background-position: 0% 50%
   }
 }
 @keyframes pageFadeIn {
@@ -444,9 +443,19 @@ pagefade {
     opacity: 1;
   } 
 }
-@keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
+@keyframes tilt-wiggle {
+  0%, 100% {
+      transform: translate3d(-2px, 1px, 0) rotateX(1deg) rotateY(-5deg) rotateZ(-1deg);
+  }
+  25% {
+      transform: translate3d(0, 2px, -1px) rotateX(-2deg) rotateY(-4deg) rotateZ(0);
+  }
+  50% {
+      transform: translate3d(2px, -1px, -2px) rotateX(-4deg) rotateY(5deg) rotateZ(1deg);
+  }
+  75% {
+      transform: translate3d(1px, 0, 2px) rotateX(3deg) rotateY(-3deg) rotateZ(0);
+  }
 }
 @media screen and (max-width: 1100px) {
   .layout {
