@@ -33,13 +33,13 @@
     </div>
     <div class="stuff">
       <div class="stufflayout">
-        <div class="introcontainer">
+        <div class="introcontainer" data-tilt data-tilt-max="2">
           <h2>Introduction</h2>
           <p><br>Welcome to my portfolio! You might know me as the founder and owner of wedery, a Meteorological organization that I founded in 2021. I do multiple forms of art, which are listed below. I like to listen to French House, Future Funk, and Nu-disco music. I'm interested in many studies of science, such as Meteorology (of course), Astronomy, Technology, and more.</p>
         </div>
       </div>
       <div class="layout">
-        <div class="container1">
+        <div class="container1" data-tilt data-tilt-max="2">
           <h2>Motion Design</h2>
           <p><br>I've used many video editors in my lifetime, including Windows' built-in one back in the day, with each giving me a sense of what I can do with sending a message through many forms of media. Since I was already interested in Meteorology, and with many YouTube channels giving me inspiration, it gave me the strength and confidence to start a YouTube channel called Weathery (now wedery) in April of 2021, where I shared many things through the platform. Ever since its retirement in 2023, I have moved on to make smaller motion design projects and upload some of them to my personal YouTube channel. You may check it out along with wedery's channel below.</p>
           <div class="buttonlist">
@@ -47,7 +47,7 @@
             <a class="button" href="https://www.youtube.com/channel/UC8yJUdyTeUOlOmYl9hUx1xQ"><i class="fa-brands fa-youtube fa-2xl";"></i><p>evomevo</p></a>
           </div>
         </div>
-        <div class="container2">
+        <div class="container2" data-tilt data-tilt-max="2">
           <h2>Graphics Design</h2>
           <p><br>Ever since I discovered it in 2020, I have discovered my other talent using Figma, and I continued to refine it today. I make stuff like icons, logos, banners, and much more, be it for fun, wedery, or something else. I have made many random stuff that haven't been released, and making them helps with my learning or enhancing my skill. You may check out my work over on wedery or my art account below, both on X/Twitter.</p>
           <div class="buttonlist">
@@ -57,11 +57,11 @@
         </div>
       </div>
       <div class="layout">
-        <div class="container3">
+        <div class="container3" data-tilt data-tilt-max="2">
           <h2>Web Design</h2>
           <p><br>This is one of the more recent stuff that I learned, and I'm already pretty decent at it! Creating this portfolio website was actually my learning experience in web design. I also create cyclone updates for wedery on X/Twitter and Bluesky, with them created using the Auto Layout feature of Figma, which is actually just an easier version of HTML and CSS! Pretty cool, huh?</p>
         </div>
-        <div class="container4">
+        <div class="container4" data-tilt data-tilt-max="2">
           <h2>Photo&shy;graphy</h2>
           <p><br>Seeing the architectural wonders of the world and the beautiful designs of nature, has piqued my interest in taking photos. So I decided to share some of my best ones through my art account on X/Twitter.</p>
         </div>
@@ -76,23 +76,24 @@
       </div>
     </footer>
   </pagefade>
-  <script>
-    const hamburger = document.querySelector('.hamburger');
-    const navmenu = document.querySelector('.navmenu');
-
-    hamburger.addEventListener('click', () => {
-      hamburger.classList.toggle('active');
-      navmenu.classList.toggle('active');
-    });
-
-    document.body.addEventListener('click', (event) => {
-      if (event.target !== hamburger && event.target !== navmenu && event.target.closest('.hamburger') !== hamburger) {
-        hamburger.classList.remove('active');
-        navmenu.classList.remove('active');
-      }
-    });
-  </script>
 </body>
+<script src="vanilla-tilt-min.js"></script>
+<script>
+  const hamburger = document.querySelector('.hamburger');
+  const navmenu = document.querySelector('.navmenu');
+
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    navmenu.classList.toggle('active');
+  });
+
+  document.body.addEventListener('click', (event) => {
+    if (event.target !== hamburger && event.target !== navmenu && event.target.closest('.hamburger') !== hamburger) {
+      hamburger.classList.remove('active');
+      navmenu.classList.remove('active');
+    }
+  });
+</script>
 <script>
   document.addEventListener('scroll', () => {
     const header = document.querySelector('header');

@@ -104,6 +104,7 @@ a {
   border-radius: 1rem;
   outline: 3px solid #FFF;
   cursor: pointer;
+  transform-style: preserve-3d;
   transition: .2s ease-in-out;
 }
 .galimg:hover {
@@ -284,12 +285,10 @@ hr {
   padding: 50px;
   justify-content: center;
   background-image: linear-gradient(0, #000000A0, #000000A0), url(media/auraambgc.png);
-  background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   -webkit-background-size: cover;
   background-size: cover;
-  transition: .2s ease-in-out;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -333,14 +332,12 @@ hr {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   -webkit-background-size: cover;
   background-size: cover;
   overflow-wrap: break-word;
   flex: 1;
-  transition: .2s ease-in-out;
 }
 .mobile-nav-item {
   margin: 15px 0;
@@ -486,7 +483,6 @@ pagefade {
   .introcontainer, .container1, .container2, .container3, .container4, .container5 {
     margin: 10px;
     padding: 25px;
-    transition: .2s ease-in-out;
   }
   h1 {
     font-size: 50px;
