@@ -445,16 +445,16 @@ pagefade {
 }
 @keyframes tilt-wiggle {
   0%, 100% {
-      transform: translate3d(-2px, 1px, 0) rotateX(1deg) rotateY(-5deg) rotateZ(-1deg);
+      transform: translate3d(-2px, 1px, 0) rotateX(3deg) rotateY(-7deg);
   }
   25% {
-      transform: translate3d(0, 2px, -1px) rotateX(-2deg) rotateY(-4deg) rotateZ(0);
+      transform: translate3d(0, 2px, -1px) rotateX(-4deg) rotateY(-6deg);
   }
   50% {
-      transform: translate3d(2px, -1px, -2px) rotateX(-4deg) rotateY(5deg) rotateZ(1deg);
+      transform: translate3d(2px, -1px, -2px) rotateX(-6deg) rotateY(7deg);
   }
   75% {
-      transform: translate3d(1px, 0, 2px) rotateX(3deg) rotateY(-3deg) rotateZ(0);
+      transform: translate3d(1px, 0, 2px) rotateX(5deg) rotateY(-5deg);
   }
 }
 @media screen and (max-width: 1100px) {
