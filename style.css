@@ -462,7 +462,7 @@ pagefade {
     flex-direction: column;
   }
   .galimg {
-    margin: 10px;
+    margin: 7px;
   }
 }
 @media screen and (max-width: 700px) {
@@ -532,10 +532,5 @@ pagefade {
   }
   .galimg.active {
     border-radius: 1rem;
-  }
-}
-@media screen and (max-width: 332px) {
-  .galimg {
-    margin: 7px;
   }
 }
