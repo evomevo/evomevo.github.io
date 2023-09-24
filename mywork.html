@@ -33,7 +33,7 @@
     </div>
     <div class="stuff">
       <div class="layout" style="flex-direction: column">
-        <div class="container1" data-tilt data-tilt-max="2">
+        <div class="container1" id="tilt">
           <h2>Graphics Design</h2><p>Tip: click on an image to enable popup view!</p><br>
           <div class="itemlayout">
             <img class="galimg" draggable="false" src="media/wedery.png">
@@ -47,7 +47,7 @@
             <img class="galimg" draggable="false" src="media/baltics.png">
           </div>
         </div>
-        <div class="container2" data-tilt data-tilt-max="2">
+        <div class="container2" id="tilt">
           <h2>Photography</h2><p>Tip: click on an image to enable popup view!</p><br>
           <div class="itemlayout">
             <img class="galimg" draggable="false" src="media/manilacityscape.png">
@@ -72,7 +72,7 @@
     </div>
   </pagefade>
 </body>
-<script src="vanilla-tilt-min.js"></script>
+<script src="3d-tilt.js"></script>
 <script>
 const galimg = document.querySelectorAll('.galimg');
 const imgmodal = document.querySelector('.imgmodal');
@@ -88,6 +88,7 @@ galimg.forEach(galimg => {
 
     const clone = galimg.cloneNode(true);
     clone.classList.add('active');
+    clone.id = 'tilt';
 
     imgmodal.appendChild(clone);
     imgmodal.style.display = 'flex';
