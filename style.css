@@ -104,7 +104,6 @@ a {
   border-radius: 1rem;
   outline: 3px solid #FFF;
   cursor: pointer;
-  transform-style: preserve-3d;
   transition: .2s ease-in-out;
 }
 .galimg:hover {
@@ -123,6 +122,7 @@ a {
   cursor: auto;
   perspective: 1000px;
   animation: tilt-wiggle 30s ease-in-out infinite;
+  transform-style: preserve-3d;
   transition: .2s ease-in-out;
 }
 .galimg.active:hover {
@@ -142,6 +142,7 @@ a {
   justify-content: center;
   align-items: center;
   transition: opacity .1s linear;
+  z-index: 2;
 }
 h1 {
   font-family: Montserrat;
@@ -320,7 +321,6 @@ hr {
   align-items: center;
   outline: 5px solid #8000FF;
   flex: 1;
-  transform-style: preserve-3d;
   transition: .2s ease-in-out;
 }
 .container1, .container2, .container3, .container4 {
@@ -338,7 +338,6 @@ hr {
   overflow-wrap: break-word;
   outline: 5px solid #8000FF;
   flex: 1;
-  transform-style: preserve-3d;
   transition: .2s ease-in-out;
 }
 .container1 {
