@@ -1,7 +1,7 @@
 const tiltEffectSettings = {
   max: 2,
   perspective: 1000,
-  scale: 1.02,
+  scale: 1,
   speed: 500,
   easing: "cubic-bezier(0, 1, .5, 1)"
 };
