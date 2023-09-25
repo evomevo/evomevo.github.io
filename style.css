@@ -304,7 +304,7 @@ hr {
   transition: .3s ease-in-out;
 }
 .imglayout.active {
-  max-height: 1000px;
+  max-height: 100vmax;
   padding-top: 15px;
   opacity: 1;
   transition: .3s ease-in-out;
