@@ -1,5 +1,5 @@
 const tiltEffectSettings = {
-  max: 2,
+  max: 3,
   perspective: 1000,
   scale: 1,
   speed: 500,
