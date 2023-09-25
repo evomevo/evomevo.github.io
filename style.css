@@ -293,19 +293,21 @@ hr {
   z-index: 0;
 }
 .imglayout {
-  display: none;
+  display: flex;
+  max-height: 0;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
   align-content: center;
-  padding-top: 15px;
   opacity: 0;
-  transition: .2s ease-in-out;
+  overflow: hidden;
+  transition: .3s ease-in-out;
 }
 .imglayout.active {
-  display: flex;
+  max-height: 1000px;
+  padding-top: 15px;
   opacity: 1;
-  transition: .2s ease-in-out;
+  transition: .3s ease-in-out;
 }
 .introcontainer {
   border-radius: 1rem;
@@ -320,7 +322,7 @@ hr {
   display: flex;
   flex-direction: column;
   align-items: center;
-  box-shadow: inset 0px 0px 0px 5px #8000FF;
+  box-shadow: inset 0 0 0 5px #8000FF;
   flex: 1;
   transition: .2s ease-in-out;
 }
@@ -337,7 +339,7 @@ hr {
   -webkit-background-size: cover;
   background-size: cover;
   overflow-wrap: break-word;
-  box-shadow: inset 0px 0px 0px 5px #8000FF;
+  box-shadow: inset 0 0 0 5px #8000FF;
   flex: 1;
   transition: .2s ease-in-out;
 }

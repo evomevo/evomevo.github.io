@@ -77,29 +77,34 @@
 <script src="3d-tilt.js"></script>
 <script>
 const dropbtnA = document.querySelectorAll("#dropbtnA");
-const dropbtnB = document.querySelectorAll("#dropbtnB");
 const imglayoutA = document.querySelector("#imglayoutA");
+
+const dropbtnB = document.querySelectorAll("#dropbtnB");
 const imglayoutB = document.querySelector("#imglayoutB");
 
 dropbtnA.forEach(dropbtnA => {
-  dropbtnA.addEventListener("click", function() {
-    if (dropbtnA.textContent === "Click to reveal") {
-      dropbtnA.textContent = "Click to hide";
+  dropbtnA.addEventListener('click', function() {
+    if (dropbtnA.textContent === 'Click to reveal') {
+      dropbtnA.innerHTML = '<p>Click to hide</p>';
     } else {
-      dropbtnA.textContent = "Click to reveal";
-    }
-    imglayoutA.classList.toggle("active");
+      dropbtnA.innerHTML = '<p>Click to reveal</p>';
+    };
+    setTimeout(() => {
+      imglayoutA.classList.toggle('active');
+    }, 200);
   });
 });
 
 dropbtnB.forEach(dropbtnB => {
-  dropbtnB.addEventListener("click", function() {
-    if (dropbtnB.textContent === "Click to reveal") {
-      dropbtnB.textContent = "Click to hide";
+  dropbtnB.addEventListener('click', function() {
+    if (dropbtnB.textContent === 'Click to reveal') {
+      dropbtnB.innerHTML = '<p>Click to hide</p>';
     } else {
-      dropbtnB.textContent = "Click to reveal";
-    }
-    imglayoutB.classList.toggle("active");
+      dropbtnB.innerHTML = '<p>Click to reveal</p>';
+    };
+    setTimeout(() => {
+      imglayoutB.classList.toggle('active');
+    }, 200);
   });
 });
 </script>
