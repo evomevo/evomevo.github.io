@@ -281,21 +281,6 @@ hr {
   animation-name: fade;
   animation-duration: .2s;
 }
-.introcontainer {
-  border-radius: 1rem;
-  margin: 20px;
-  padding: 50px;
-  justify-content: center;
-  background-image: linear-gradient(0, #000000A0, #000000A0), url(media/auraambgc.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  -webkit-background-size: cover;
-  background-size: cover;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  flex: 1;
-}
 .stufflayout {
   display: flex;
   flex-direction: column;
@@ -303,29 +288,39 @@ hr {
 .layout {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-content: center;
   transition: .2s ease-in-out;
 }
-.itemlayout {
-  display: flex;
+.imglayout {
+  display: none;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
   align-content: center;
+  padding-top: 15px;
+  opacity: 0;
+  transition: .2s ease-in-out;
 }
-.container1 {
-  background-image: linear-gradient(0, #000000A0, #000000A0), url(media/ayalamallsfeliz.png);
+.imglayout.active {
+  display: flex;
+  opacity: 1;
+  transition: .2s ease-in-out;
 }
-.container2 {
-  background-image: linear-gradient(0, #000000A0, #000000A0), url(media/manilacityscape.png);
-}
-.container3 {
-  background-image: linear-gradient(0, #000000A0, #000000A0), url(media/taytaysky.png);
-}
-.container4 {
-  background-image: linear-gradient(0, #000000A0, #000000A0), url(media/smcenterpasig.png);
+.introcontainer {
+  border-radius: 1rem;
+  margin: 20px;
+  padding: 50px;
+  justify-content: center;
+  background-image: linear-gradient(0, #00000080, #00000080);
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  outline: 5px solid #8000FF;
+  flex: 1;
+  transition: .2s ease-in-out;
 }
 .container1, .container2, .container3, .container4 {
   border-radius: 1rem;
@@ -334,12 +329,27 @@ hr {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   background-position: center;
   background-repeat: no-repeat;
   -webkit-background-size: cover;
   background-size: cover;
   overflow-wrap: break-word;
+  outline: 5px solid #8000FF;
   flex: 1;
+  transition: .2s ease-in-out;
+}
+.container1 {
+  background-image: linear-gradient(0, #00000080, #00000080);
+}
+.container2 {
+  background-image: linear-gradient(0, #00000080, #00000080);
+}
+.container3 {
+  background-image: linear-gradient(0, #00000080, #00000080);
+}
+.container4 {
+  background-image: linear-gradient(0, #00000080, #00000080);
 }
 .mobile-nav-item {
   margin: 15px 0;
@@ -358,13 +368,14 @@ hr {
   background-color: #FFF;
   border: none;
   outline: 0px solid #000;
-  height: 45px;
+  height: 40px;
   margin: 10px;
+  width: fit-content;
+  padding: 5px 20px;
   display: flex;
   justify-content: center;
   align-items: center;
   color: #000;
-  padding: 5px 20px;
   gap: 10px;
   cursor: pointer;
   transition: .2s ease-in-out;
