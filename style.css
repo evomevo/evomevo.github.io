@@ -305,7 +305,6 @@ hr {
 }
 .imglayout.active {
   max-height: 100vmax;
-  padding-top: 15px;
   opacity: 1;
   transition: .3s ease-in-out;
 }
@@ -415,6 +414,18 @@ hr {
   cursor: pointer;
   transition: .2s ease-in-out;
 }
+.button:hover, .cirbutton:hover {
+  background-color: #DDD;
+  outline: 5px solid #8000FF;
+  transform: scale(1.1);
+  transition: .2s ease-in-out;
+}
+.button:active, .cirbutton:active {
+  background-color: #CCC;
+  outline: 3px solid #8000FF;
+  transform: scale(.95);
+  transition: .2s ease-in-out;
+}
 .footercirbutton:hover {
   background-color: #DDD;
   outline: 5px solid #000;
@@ -427,17 +438,8 @@ hr {
   transform: scale(.95);
   transition: .2s ease-in-out;
 }
-.button:hover, .cirbutton:hover {
-  background-color: #DDD;
-  outline: 5px solid #8000FF;
-  transform: scale(1.1);
-  transition: .2s ease-in-out;
-}
-.button:active, .cirbutton:active {
-  background-color: #CCC;
-  outline: 3px solid #8000FF;
-  transform: scale(.95);
-  transition: .2s ease-in-out;
+.button.gallery {
+  margin-top: 40px;
 }
 pagefade {
   animation: pageFadeIn 1s;
