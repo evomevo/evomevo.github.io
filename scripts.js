@@ -1,3 +1,17 @@
+//image preloader
+function preloadImage(src) {
+  const image = new Image();
+  image.src = src;
+}
+
+const images = document.querySelectorAll('.galimg');
+
+for (const image of images) {
+  preloadImage(image.src);
+}
+
+
+
 //dropdown gallery
 const dropbtnA = document.querySelectorAll("#dropbtnA");
 const imglayoutA = document.querySelector("#imglayoutA");
