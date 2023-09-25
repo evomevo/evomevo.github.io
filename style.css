@@ -379,7 +379,6 @@ hr {
   justify-content: center;
   align-items: center;
   color: #000;
-  gap: 10px;
   cursor: pointer;
   transition: .2s ease-in-out;
 }
@@ -480,6 +479,9 @@ pagefade {
   }
   .galimg {
     margin: 7px;
+  }
+  .button.gallery {
+    margin-top: 25px;
   }
 }
 @media screen and (max-width: 700px) {
