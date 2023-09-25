@@ -32,21 +32,7 @@
       <h3 style="filter: drop-shadow(0 0 5px #00000080)">Page not found. The hamburger menu is waiting.</h3>
     </div>
   </pagefade>
-  <script>
-    const hamburger = document.querySelector('.hamburger')
-    const navmenu = document.querySelector('.navmenu')
-
-    hamburger.addEventListener('click', () => {
-      hamburger.classList.toggle('active')
-      navmenu.classList.toggle('active')
-    })
-
-    document.body.addEventListener('click', (event) => {
-      if (event.target !== hamburger && event.target !== navmenu && event.target.closest('.hamburger') !== hamburger) {
-        hamburger.classList.remove('active')
-        navmenu.classList.remove('active')
-      }
-    })
-  </script>
 </body>
+<script src="scripts.js"></script>
+<script src="3d-tilt.js"></script>
 </html>
