@@ -29,7 +29,7 @@ body {
   font-family: Montserrat;
   background: linear-gradient(90deg, #7000E0, #180030, #180030, #7000E0);
   background-size: 200% 200%;
-  animation: banner1Gradient 20s ease-in-out infinite;
+  animation: bgGradientLoop 20s ease-in-out infinite;
   position: relative;
   margin: 0 auto;
   display: flex;
@@ -50,6 +50,11 @@ a {
   text-decoration: none;
 }
 .banner1, .banner2, .banner3 {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
   width: 100%;
   height: 100vh;
   display: -webkit-flex;
@@ -74,13 +79,6 @@ a {
 }
 .banner3 {
   background: linear-gradient(0, #00000010, #00000010), url(media/smcenterpasig.png);
-}
-.banner1, .banner2, .banner3 {
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  -webkit-background-size: cover;
-  background-size: cover;
 }
 ::-webkit-scrollbar {
   width: 10px;
@@ -375,6 +373,7 @@ hr {
   margin: 10px;
   width: fit-content;
   padding: 5px 20px;
+  gap: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -443,7 +442,7 @@ hr {
 pagefade {
   animation: pageFadeIn 1s;
 }
-@-webkit-keyframes banner1Gradient {
+@-webkit-keyframes bgGradientLoop {
   0%, 100% {
     background-position: 0% 50%
   }
