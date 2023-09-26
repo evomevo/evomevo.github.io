@@ -315,7 +315,7 @@ hr {
 .container {
   background-image: radial-gradient(circle at 0 0, #00000080, #00000080);
   border-radius: 1rem;
-  margin: 20px 0;
+  margin: 20px;
   padding: 50px;
   display: flex;
   flex-direction: column;
@@ -479,6 +479,9 @@ pagefade {
   }
 }
 @media screen and (max-width: 700px) {
+  .content {
+    padding: 2.5% 5%;
+  }
   header {
     transition: .2s cubic-bezier(0.5, 0, 0.5, 1);
   }
@@ -502,7 +505,7 @@ pagefade {
     width: 150px;
     transition: .2s cubic-bezier(0.5, 0, 0.5, 1);
   }
-  .introcontainer, .container1, .container2, .container3, .container4, .container5 {
+  .container {
     margin: 10px;
     padding: 25px;
   }
