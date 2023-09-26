@@ -13,16 +13,13 @@ for (const image of images) {
 
 
 //banner parallax scroll
-// Get all foreground elements
 var parallaxElements = document.querySelectorAll("#parallax");
 
-// Add an event listener to scroll the foreground elements
 window.addEventListener("scroll", function() {
   var scrollY = window.scrollY;
 
-  // Scroll all foreground elements at a slower speed than the background image
   parallaxElements.forEach(function(element) {
-    var foregroundTransform = "translateY(" + scrollY / 2 + "px)";
+    var foregroundTransform = "translateY(" + scrollY / 1.5 + "px)";
     element.style.transform = foregroundTransform;
   });
 });
