@@ -10,11 +10,11 @@ header {
   border-radius: 0 0 1rem 1rem;
   background-color: #8000FF00;
   z-index: 3;
-  transition: .2s ease-in-out;
+  transition: .2s cubic-bezier(0.5, 0, 0.5, 1);
 }
 header.scrolled {
   background-color: #8000FFFF;
-  transition: .2s ease-in-out;
+  transition: .2s cubic-bezier(0.5, 0, 0.5, 1);
 }
 footer {
   position: absolute;
@@ -28,7 +28,7 @@ body {
   font-family: Montserrat;
   background: linear-gradient(90deg, #7000E0, #180030, #180030, #7000E0);
   background-size: 200% 200%;
-  animation: bgGradientLoop 30s ease-in-out infinite;
+  animation: bgGradientLoop 30s cubic-bezier(0.5, 0, 0.5, 1) infinite;
   position: relative;
   margin: 0 auto;
   display: flex;
@@ -40,7 +40,7 @@ body {
 .content {
   background: linear-gradient(90deg, #7000E0, #180030, #180030, #7000E0);
   background-size: 200% 200%;
-  animation: bgGradientLoop 30s ease-in-out infinite;
+  animation: bgGradientLoop 30s cubic-bezier(0.5, 0, 0.5, 1) infinite;
   padding: 5% 10%;
   display: flex;
   justify-content: center;
@@ -109,11 +109,11 @@ a {
   border-radius: 1rem;
   outline: 3px solid #FFF;
   cursor: pointer;
-  transition: .2s ease-in-out;
+  transition: .2s cubic-bezier(0.5, 0, 0.5, 1);
 }
 .galimg:hover {
   transform: scale(1.1);
-  transition: .2s ease-in-out;
+  transition: .2s cubic-bezier(0.5, 0, 0.5, 1);
 }
 .galimg.active {
   background-color: #00000080;
@@ -126,13 +126,13 @@ a {
   outline: 5px solid #FFF;
   cursor: auto;
   perspective: 1000px;
-  animation: tilt-wiggle 30s ease-in-out infinite;
+  animation: tilt-wiggle 30s cubic-bezier(0.5, 0, 0.5, 1) infinite;
   transform-style: preserve-3d;
-  transition: .2s ease-in-out;
+  transition: .2s cubic-bezier(0.5, 0, 0.5, 1);
 }
 .galimg.active:hover {
   transform: none;
-  transition: .2s ease-in-out;
+  transition: .2s cubic-bezier(0.5, 0, 0.5, 1);
 }
 .imgmodal {
   background-color: #00000060;
@@ -201,19 +201,19 @@ hr {
 .logo {
   width: 200px;
   fill: #000;
-  transition: .2s ease-in-out;
+  transition: .2s cubic-bezier(0.5, 0, 0.5, 1);
 }
 .logo.scrolled {
   fill: #FFF;
-  transition: .2s ease-in-out;
+  transition: .2s cubic-bezier(0.5, 0, 0.5, 1);
 }
 .hamburger {
   display: block;
   cursor: pointer;
-  transition: .2s ease-in-out;
+  transition: .2s cubic-bezier(0.5, 0, 0.5, 1);
 }
 .active {
-  transition: .2s ease-in-out;
+  transition: .2s cubic-bezier(0.5, 0, 0.5, 1);
 }
 .bar {
   display: block;
@@ -224,12 +224,12 @@ hr {
   align-items: center;
   background-color: #000;
   border-radius: 1rem;
-  -webkit-transition: .2s ease-in-out;
-  transition: .2s ease-in-out;
+  -webkit-transition: .2s cubic-bezier(0.5, 0, 0.5, 1);
+  transition: .2s cubic-bezier(0.5, 0, 0.5, 1);
 }
 .bar.scrolled {
   background-color: #FFF;
-  transition: .2s ease-in-out;
+  transition: .2s cubic-bezier(0.5, 0, 0.5, 1);
 }
 .navmenu {
   overflow: hidden;
@@ -243,12 +243,12 @@ hr {
   flex-direction: column;
   border-radius: 1rem;
   filter: drop-shadow(0 0 5px #000);
-  transition: .2s ease-in-out;
+  transition: .2s cubic-bezier(0.5, 0, 0.5, 1);
   z-index: 2;
 }
 .navmenu.active {
   top: 0;
-  transition: .2s ease-in-out;
+  transition: .2s cubic-bezier(0.5, 0, 0.5, 1);
 }
 .navmenu #mobileLinks {
   display: none;
@@ -259,27 +259,27 @@ hr {
   text-align: center;
   text-decoration: none;
   display: block;
-  transition: .2s ease-in-out;
+  transition: .2s cubic-bezier(0.5, 0, 0.5, 1);
 }
 .navmenu a:hover {
   background-color: #7000DF;
-  transition: .2s ease-in-out;
+  transition: .2s cubic-bezier(0.5, 0, 0.5, 1);
 }
 .navmenu a:active {
   background-color: #6000BF;
-  transition: .2s ease-in-out;
+  transition: .2s cubic-bezier(0.5, 0, 0.5, 1);
 }
 .hamburger.active .bar:nth-child(2) {
   opacity: 0;
-  transition: .2s ease-in-out;
+  transition: .2s cubic-bezier(0.5, 0, 0.5, 1);
 }
 .hamburger.active .bar:nth-child(1) {
   transform: translateY(12px) rotate(45deg);
-  transition: .2s ease-in-out;
+  transition: .2s cubic-bezier(0.5, 0, 0.5, 1);
 }
 .hamburger.active .bar:nth-child(3) {
   transform: translateY(-12px) rotate(-45deg);
-  transition: .2s ease-in-out;
+  transition: .2s cubic-bezier(0.5, 0, 0.5, 1);
 }
 .fade {
   animation-name: fade;
@@ -292,7 +292,7 @@ hr {
 .layout {
   display: flex;
   flex-direction: row;
-  transition: .2s ease-in-out;
+  transition: .2s cubic-bezier(0.5, 0, 0.5, 1);
   z-index: 0;
 }
 .imglayout {
@@ -304,12 +304,12 @@ hr {
   align-content: center;
   opacity: 0;
   overflow: hidden;
-  transition: .3s ease-in-out;
+  transition: .5s cubic-bezier(0.5, 0, 0, 1);
 }
 .imglayout.active {
   max-height: 100vmax;
   opacity: 1;
-  transition: .3s ease-in-out;
+  transition: .5s cubic-bezier(1, 0, 0.5, 1);
 }
 .introcontainer {
   border-radius: 1rem;
@@ -326,7 +326,7 @@ hr {
   align-items: center;
   box-shadow: inset 0 0 0 5px #8000FF;
   flex: 1;
-  transition: .2s ease-in-out;
+  transition: .2s cubic-bezier(0.5, 0, 0.5, 1);
 }
 .container1, .container2, .container3, .container4 {
   border-radius: 1rem;
@@ -343,7 +343,7 @@ hr {
   overflow-wrap: break-word;
   box-shadow: inset 0 0 0 5px #8000FF;
   flex: 1;
-  transition: .2s ease-in-out;
+  transition: .2s cubic-bezier(0.5, 0, 0.5, 1);
 }
 .container1 {
   background-image: linear-gradient(0, #00000080, #00000080);
@@ -384,7 +384,7 @@ hr {
   align-items: center;
   color: #000;
   cursor: pointer;
-  transition: .2s ease-in-out;
+  transition: .2s cubic-bezier(0.5, 0, 0.5, 1);
 }
 .cirbutton {
   border-radius: 50%;
@@ -400,7 +400,7 @@ hr {
   color: #000;
   aspect-ratio: 1 / 1;
   cursor: pointer;
-  transition: .2s ease-in-out;
+  transition: .2s cubic-bezier(0.5, 0, 0.5, 1);
 }
 .footercirbutton {
   border-radius: 50%;
@@ -415,37 +415,38 @@ hr {
   align-items: center;
   position: relative;
   cursor: pointer;
-  transition: .2s ease-in-out;
+  transition: .2s cubic-bezier(0.5, 0, 0.5, 1);
 }
 .button:hover, .cirbutton:hover {
   background-color: #DDD;
   outline: 5px solid #8000FF;
   transform: scale(1.1);
-  transition: .2s ease-in-out;
+  transition: .2s cubic-bezier(0.5, 0, 0.5, 1);
 }
 .button:active, .cirbutton:active {
   background-color: #CCC;
   outline: 3px solid #8000FF;
   transform: scale(.95);
-  transition: .2s ease-in-out;
+  transition: .2s cubic-bezier(0.5, 0, 0.5, 1);
 }
 .footercirbutton:hover {
   background-color: #DDD;
   outline: 5px solid #000;
   transform: scale(1.1);
-  transition: .2s ease-in-out;
+  transition: .2s cubic-bezier(0.5, 0, 0.5, 1);
 }
 .footercirbutton:active {
   background-color: #CCC;
   outline: 3px solid #000;
   transform: scale(.95);
-  transition: .2s ease-in-out;
+  transition: .2s cubic-bezier(0.5, 0, 0.5, 1);
 }
 .button.gallery {
   margin-top: 40px;
 }
 pagefade {
   animation: pageFadeIn 1s;
+  width: 100vmax;
 }
 @-webkit-keyframes bgGradientLoop {
   0%, 100% {
@@ -490,17 +491,17 @@ pagefade {
 }
 @media screen and (max-width: 700px) {
   header {
-    transition: .2s ease-in-out;
+    transition: .2s cubic-bezier(0.5, 0, 0.5, 1);
   }
   .bar {
     width: 25px;
     height: 3px;
     margin: 5px auto;
-    transition: .2s ease-in-out;
+    transition: .2s cubic-bezier(0.5, 0, 0.5, 1);
   }
   .navmenu.active {
     top: 0;
-    transition: .2s ease-in-out;
+    transition: .2s cubic-bezier(0.5, 0, 0.5, 1);
   }
   .hamburger.active .bar:nth-child(1) {
     transform: translateY(8px) rotate(45deg);
@@ -510,7 +511,7 @@ pagefade {
   }
   .logo {
     width: 150px;
-    transition: .2s ease-in-out;
+    transition: .2s cubic-bezier(0.5, 0, 0.5, 1);
   }
   .introcontainer, .container1, .container2, .container3, .container4, .container5 {
     margin: 10px;
@@ -546,7 +547,7 @@ pagefade {
     width: 90%;
     top: -250px;
     right: auto;
-    transition: .2s ease-in-out;
+    transition: .2s cubic-bezier(0.5, 0, 0.5, 1);
   }
   .galimg.active {
     border-radius: 1rem;
