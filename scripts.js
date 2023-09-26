@@ -64,18 +64,18 @@ document.body.addEventListener('click', (event) => {
 
 
 //container hover effect
-const parentCont = document.querySelectorAll(".container");
+const parentCont = document.querySelectorAll('.container');
 
 parentCont.forEach(parentCont => {
   parentCont.addEventListener('mousemove', (event) => {
-    const containers = document.querySelectorAll(".radgradient");
+    const containers = document.querySelectorAll('.radgradient');
     containers.forEach(container => {
       const rect = container.getBoundingClientRect();
       x = event.clientX - rect.left;
       y = event.clientY - rect.top;
 
-      container.style.setProperty("--mouse-x", `${x}px`);
-      container.style.setProperty("--mouse-y", `${y}px`);
+      container.style.setProperty('--mouse-x', `${x}px`);
+      container.style.setProperty('--mouse-y', `${y}px`);
     });
   });
 });
@@ -83,11 +83,11 @@ parentCont.forEach(parentCont => {
 
 
 //dropdown gallery
-const dropbtnA = document.querySelectorAll("#dropbtnA");
-const imglayoutA = document.querySelector("#imglayoutA");
+const dropbtnA = document.querySelectorAll('#dropbtnA');
+const imglayoutA = document.querySelector('#imglayoutA');
 
-const dropbtnB = document.querySelectorAll("#dropbtnB");
-const imglayoutB = document.querySelector("#imglayoutB");
+const dropbtnB = document.querySelectorAll('#dropbtnB');
+const imglayoutB = document.querySelector('#imglayoutB');
 
 dropbtnA.forEach(dropbtnA => {
   dropbtnA.addEventListener('click', function() {

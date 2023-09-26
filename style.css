@@ -17,7 +17,6 @@ header.scrolled {
   transition: .2s cubic-bezier(0.5, 0, 0.5, 1);
 }
 footer {
-  position: absolute;
   display: flex;
   padding: 20px 10%;
   border-radius: 1rem 1rem 0 0;
@@ -434,8 +433,8 @@ hr {
   margin-top: 40px;
 }
 pagefade {
-  animation: pageFadeIn 1s;
   width: 100vmax;
+  animation: pageFadeIn 1s;
 }
 @-webkit-keyframes bgGradientLoop {
   0%, 100% {
