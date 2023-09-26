@@ -117,7 +117,7 @@ a {
 }
 .galimg.active {
   background-color: #00000080;
-  margin: 0 auto;
+  margin: 20px auto;
   padding: 5px;
   object-fit: contain;
   max-width: 80vw;
