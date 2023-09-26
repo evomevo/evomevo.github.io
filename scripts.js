@@ -171,26 +171,36 @@ document.addEventListener('click', (event) => {
 
 
 //year calculation since specific month
-function calculateYearsSinceMonth(month, year) {
+function calculateYearsAndMonthsSinceMonth(month, year) {
   const today = new Date();
   const monthDate = new Date(year, month - 1, 1);
+
   const yearsSinceMonth = today.getFullYear() - monthDate.getFullYear() - (
     (today.getMonth() < month - 1) || (
       (today.getMonth() === month - 1) && (today.getDate() < monthDate.getDate())
     )
   );
-  if (yearsSinceMonth === 1) {
-    return yearsSinceMonth + " year of experience";
-  } else {
-    return yearsSinceMonth + " years of experience";
+
+  const monthsSinceMonth = (today.getMonth() - monthDate.getMonth()) + (yearsSinceMonth * 12);
+
+  const monthsRemainder = monthsSinceMonth % 12;
+
+  if (yearsSinceMonth === 0) {
+    return `${monthsRemainder} months of experience`;
   }
+
+  if (yearsSinceMonth === 1) {
+    return `${yearsSinceMonth} year and ${monthsRemainder} months of experience`;
+  }
+
+  return `${yearsSinceMonth} years and ${monthsRemainder} months of experience`;
 }
 
-const graphicAndMotionDesign = calculateYearsSinceMonth(6, 2020);
-const photography = calculateYearsSinceMonth(3, 2022);
-const webDesign = calculateYearsSinceMonth(4, 2023);
+const graphicAndMotionDesign = calculateYearsAndMonthsSinceMonth(6, 2020);
+const photography = calculateYearsAndMonthsSinceMonth(3, 2022);
+const webDesign = calculateYearsAndMonthsSinceMonth(4, 2023);
 
-document.getElementById("graphicDesign").innerHTML = graphicAndMotionDesign;
-document.getElementById("motionDesign").innerHTML = graphicAndMotionDesign;
-document.getElementById("photography").innerHTML = photography ;
-document.getElementById("webDesign").innerHTML = webDesign;
+document.getElementById('graphicDesign').innerHTML = graphicAndMotionDesign;
+document.getElementById('motionDesign').innerHTML = graphicAndMotionDesign;
+document.getElementById('photography').innerHTML = photography;
+document.getElementById('webDesign').innerHTML = webDesign;
