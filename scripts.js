@@ -45,9 +45,21 @@ document.addEventListener('scroll', () => {
 
 
 
+//header height and menu offset
+const header = document.querySelector('header');
+const navmenu = document.querySelector('.navmenu');
+
+window.addEventListener('resize', function() {
+  navmenu.style.setProperty('--header-height', header.offsetHeight + 'px');
+});
+
+navmenu.style.setProperty('--header-height', header.offsetHeight + 'px');
+
+
+
 //hamburger menu
 const hamburger = document.querySelector('.hamburger');
-const navmenu = document.querySelector('.navmenu');
+//const navmenu = document.querySelector('.navmenu');
 
 hamburger.addEventListener('click', () => {
   hamburger.classList.toggle('active');

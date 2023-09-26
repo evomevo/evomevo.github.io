@@ -233,20 +233,20 @@ hr {
 .navmenu {
   overflow: hidden;
   background-color: #8000FF;
-  margin: 81.88px 10% 0 0;
-  top: -250px;
+  margin-right: 10%;
+  top: calc(var(--header-height) + 10px);
   right: 0;
   position: fixed;
   display: flex;
-  width: 300px;
+  width: 200px;
   flex-direction: column;
   border-radius: 1rem;
-  filter: drop-shadow(0 0 5px #000);
+  opacity: 0;
   transition: .2s cubic-bezier(0.5, 0, 0.5, 1);
   z-index: 2;
 }
 .navmenu.active {
-  top: 0;
+  opacity: 1;
   transition: .2s cubic-bezier(0.5, 0, 0.5, 1);
 }
 .navmenu #mobileLinks {
@@ -490,10 +490,6 @@ pagefade {
     margin: 5px auto;
     transition: .2s cubic-bezier(0.5, 0, 0.5, 1);
   }
-  .navmenu.active {
-    top: 0;
-    transition: .2s cubic-bezier(0.5, 0, 0.5, 1);
-  }
   .hamburger.active .bar:nth-child(1) {
     transform: translateY(8px) rotate(45deg);
   }
@@ -534,13 +530,14 @@ pagefade {
 }
 @media screen and (max-width: 425px) {
   .navmenu {
-    margin: 68.91px 0 0 0;
-    width: 90%;
-    top: -250px;
     right: auto;
+    margin: 0;
+    width: 90%;
+    opacity: 0;
     transition: .2s cubic-bezier(0.5, 0, 0.5, 1);
   }
   .galimg.active {
+    opacity: 1;
     border-radius: 1rem;
   }
 }
