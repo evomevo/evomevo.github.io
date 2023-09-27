@@ -103,26 +103,29 @@ const imglayoutB = document.querySelector('#imglayoutB');
 
 dropbtnA.forEach(dropbtnA => {
   dropbtnA.addEventListener('click', function() {
-    if (dropbtnA.textContent === 'Click to reveal') {
-      dropbtnA.innerHTML = '<p>Click to hide</p>';
-    } else {
-      dropbtnA.innerHTML = '<p>Click to reveal</p>';
-    };
+    dropbtnA.innerHTML = dropbtnA.textContent === 'Click to reveal' ? '<p>Click to hide</p>' : '<p>Click to reveal</p>';
     setTimeout(() => {
       imglayoutA.classList.toggle('active');
+      if (imglayoutA.style.maxHeight){
+        imglayoutA.style.maxHeight = null;
+      } else {
+        imglayoutA.style.maxHeight = imglayoutA.scrollHeight * 2 + "px";
+      }
     }, 200);
   });
 });
+  
 
 dropbtnB.forEach(dropbtnB => {
   dropbtnB.addEventListener('click', function() {
-    if (dropbtnB.textContent === 'Click to reveal') {
-      dropbtnB.innerHTML = '<p>Click to hide</p>';
-    } else {
-      dropbtnB.innerHTML = '<p>Click to reveal</p>';
-    };
+    dropbtnB.innerHTML = dropbtnB.textContent === 'Click to reveal' ? '<p>Click to hide</p>' : '<p>Click to reveal</p>';
     setTimeout(() => {
       imglayoutB.classList.toggle('active');
+      if (imglayoutB.style.maxHeight){
+        imglayoutB.style.maxHeight = null;
+      } else {
+        imglayoutB.style.maxHeight = imglayoutB.scrollHeight * 2 + "px";
+      }
     }, 200);
   });
 });
