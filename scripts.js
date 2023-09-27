@@ -79,17 +79,21 @@ document.body.addEventListener('click', (event) => {
 const parentCont = document.querySelectorAll('.container');
 
 parentCont.forEach(parentCont => {
-  parentCont.addEventListener('mousemove', (event) => {
-    const containers = document.querySelectorAll('.radgradient');
-    containers.forEach(container => {
-      const rect = container.getBoundingClientRect();
-      x = event.clientX - rect.left;
-      y = event.clientY - rect.top;
+  if (window.innerWidth < 768) {
+    parentCont.removeEventListener('mousemove');
+  } else {
+    parentCont.addEventListener('mousemove', (event) => {
+      const containers = document.querySelectorAll('.radgradient');
+      containers.forEach(container => {
+        const rect = container.getBoundingClientRect();
+        x = event.clientX - rect.left;
+        y = event.clientY - rect.top;
 
-      container.style.setProperty('--mouse-x', `${x}px`);
-      container.style.setProperty('--mouse-y', `${y}px`);
+        container.style.setProperty('--mouse-x', `${x}px`);
+        container.style.setProperty('--mouse-y', `${y}px`);
+      });
     });
-  });
+  }
 });
 
 
