@@ -80,9 +80,9 @@ const parentCont = document.querySelectorAll('.container');
 
 parentCont.forEach(parentCont => {
   if (window.innerWidth < 768) {
-    parentCont.removeEventListener('mousemove');
+    null
   } else {
-    parentCont.addEventListener('mousemove', (event) => {
+    parentCont.addEventListener('mousemove', event => {
       const containers = document.querySelectorAll('.radgradient');
       containers.forEach(container => {
         const rect = container.getBoundingClientRect();

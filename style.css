@@ -298,7 +298,7 @@ i {
 
 }
 .container {
-  background-image: radial-gradient(circle at 0 0, #00000080, #00000080);
+  background-color: #00000080;
   border-radius: 1rem;
   margin: 20px;
   padding: 50px;
@@ -325,6 +325,7 @@ i {
   background: radial-gradient(circle at var(--mouse-x) var(--mouse-y), #5000A0, #00000000);
   opacity: 0;
   box-shadow: inherit; 
+  pointer-events: none;
   transition: opacity .2s ease-in-out;
   z-index: -1;
 }
