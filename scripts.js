@@ -212,6 +212,13 @@ document.getElementById('webDesign').innerHTML = webDesign;
 
 //contact form
 function sendMessage() {
+  const response = grecaptcha.getResponse();
+
+  if (response.length == 0) {
+    alert("Please verify that you are a human.");
+    return false;
+  }
+
   const hook = new XMLHttpRequest();
 
   hook.open('POST', 'https://discord.com/api/webhooks/1156613585376641144/CiI1ez0dgjdzAaKLyLQmHCL05bzn87Mdk1q-A1pI0iRVML9zccIeYRG0oQe49Ad4RWfe');
