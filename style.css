@@ -2,6 +2,26 @@
   font-family: 'Montserrat';
   src: url('media/montserrat/Montserrat-VariableFont_wght.ttf') format('truetype');
 }
+form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+input, textarea {
+  font-family: Montserrat;
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 1.3;
+  width: -moz-available;
+  width: -webkit-fill-available;
+  width: fill-available;
+  border: none;
+  border-radius: 1rem;
+  padding: 10px;
+  resize: none;
+}
 header {
   position: fixed;
   display: flex;

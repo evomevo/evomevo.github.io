@@ -207,3 +207,25 @@ document.getElementById('graphicDesign').innerHTML = graphicAndMotionDesign;
 document.getElementById('motionDesign').innerHTML = graphicAndMotionDesign;
 document.getElementById('photography').innerHTML = photography;
 document.getElementById('webDesign').innerHTML = webDesign;
+
+
+
+//contact form
+function sendMessage() {
+  const hook = new XMLHttpRequest();
+
+  hook.open('POST', 'https://discord.com/api/webhooks/1156613585376641144/CiI1ez0dgjdzAaKLyLQmHCL05bzn87Mdk1q-A1pI0iRVML9zccIeYRG0oQe49Ad4RWfe');
+
+  hook.setRequestHeader('Content-type', 'application/json');
+
+  const senderEmail = document.getElementById('emailInput').value;
+  const senderMessage = document.getElementById('messageInput').value;
+
+  const message = {
+    username: `JoJite Mailing Service`,
+    avatar_url: `https://evomevo.github.io/media/evoshort.png`,
+    content: `**Sender:** ${senderEmail}\n**Message:** ${senderMessage}`,
+  };
+  
+  hook.send(JSON.stringify(message));
+}

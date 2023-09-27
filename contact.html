@@ -33,39 +33,51 @@
         <h3 id="parallax" style="filter: drop-shadow(0 0 5px #00000080)">Get in touch!</h3>
       </div>
       <div class="content">
-        <div class="container" id="tilt">
-          <h2>Social Media</h2><br>
-          <div class="itemlayout">
-            <div class="item">
-              <p>YouTube</p>
-              <a class="button" href="https://www.youtube.com/channel/UC8yJUdyTeUOlOmYl9hUx1xQ"><i class="fa-brands fa-youtube fa-2xl";"></i><p>evomevo</p></a>
+        <div class="layout">
+          <div class="container" id="tilt">
+            <h2>Social Media</h2><br>
+            <div class="itemlayout">
+              <div class="item">
+                <p>YouTube</p>
+                <a class="button" href="https://www.youtube.com/channel/UC8yJUdyTeUOlOmYl9hUx1xQ"><i class="fa-brands fa-youtube fa-2xl";"></i><p>evomevo</p></a>
+              </div>
+              <div class="item">
+                <p>Bluesky</p>
+                <a class="button" href="https://bsky.app/profile/evomevo.bsky.social"><i class="fa-solid fa-cloud-sun fa-2xl"></i><p>evomevo<span class="smalltext">.bsky.social</span></p></a>
+              </div>
+              <div class="item">
+                <p>Github</p>
+                <a class="button" href="https://github.com/evomevo"><i class="fa-brands fa-github fa-2xl";"></i><p>evomevo</p></a>
+              </div>
+              <div class="item">
+                <p>SoundCloud</p>
+                <a class="button" href="https://soundcloud.com/evomevo"><i class="fa-brands fa-soundcloud fa-2xl";"></i><p>evomevo</p></a>
+              </div>
+              <div class="item">
+                <p>Twitch</p>
+                <a class="button" href="https://www.twitch.tv/evomevo_"><i class="fa-brands fa-twitch fa-2xl";"></i><p>evomevo_</p></a>
+              </div>
+              <div class="item">
+                <p>X/Twitter</p>
+                <a class="button" href="https://x.com/i/user/1405559715434700802"><i class="fa-brands fa-x-twitter fa-2xl";"></i><p>evomevo_</p></a>
+              </div>
+              <div class="item">
+                <p>Discord Server</p>
+                <a class="button" href="https://discord.gg/Y3y8j7GYTT"><i class="fa-brands fa-discord fa-2xl";"></i><p>something</p></a>
+              </div>
             </div>
-            <div class="item">
-              <p>Bluesky</p>
-              <a class="button" href="https://bsky.app/profile/evomevo.bsky.social"><i class="fa-solid fa-cloud-sun fa-2xl"></i><p>evomevo<span class="smalltext">.bsky.social</span></p></a>
-            </div>
-            <div class="item">
-              <p>Github</p>
-              <a class="button" href="https://github.com/evomevo"><i class="fa-brands fa-github fa-2xl";"></i><p>evomevo</p></a>
-            </div>
-            <div class="item">
-              <p>SoundCloud</p>
-              <a class="button" href="https://soundcloud.com/evomevo"><i class="fa-brands fa-soundcloud fa-2xl";"></i><p>evomevo</p></a>
-            </div>
-            <div class="item">
-              <p>Twitch</p>
-              <a class="button" href="https://www.twitch.tv/evomevo_"><i class="fa-brands fa-twitch fa-2xl";"></i><p>evomevo_</p></a>
-            </div>
-            <div class="item">
-              <p>X/Twitter</p>
-              <a class="button" href="https://x.com/i/user/1405559715434700802"><i class="fa-brands fa-x-twitter fa-2xl";"></i><p>evomevo_</p></a>
-            </div>
-            <div class="item">
-              <p>Discord Server</p>
-              <a class="button" href="https://discord.gg/Y3y8j7GYTT"><i class="fa-brands fa-discord fa-2xl";"></i><p>something</p></a>
-            </div>
+            <div class="radgradient"></div>
           </div>
-          <div class="radgradient"></div>
+          <div class="container" id="tilt">
+            <h2>Contact Form</h2><br>
+            <form onsubmit="sendMessage();return false;">
+              <input type="email" id="emailInput" name="email" placeholder="Email (e.g. example@email.com)" required>
+              <textarea id="messageInput" name="message" rows="5" placeholder="Type your message here." required></textarea>
+              
+              <input class="button" type="submit" value="Submit">
+            </form>
+            <div class="radgradient"></div>
+          </div>
         </div>
       </div>
       <footer>
