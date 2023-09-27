@@ -3,6 +3,7 @@
   src: url('media/montserrat/Montserrat-VariableFont_wght.ttf') format('truetype');
 }
 form {
+  min-width: 50vmin;
   width: 100%;
   display: flex;
   flex-direction: column;
