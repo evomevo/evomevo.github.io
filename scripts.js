@@ -236,4 +236,5 @@ function sendMessage() {
   
   hook.send(JSON.stringify(message));
   document.getElementById("contactform").reset();
+  grecaptcha.reset();
 }
