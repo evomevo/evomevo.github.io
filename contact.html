@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="media/evoshort.png"/>
+    <script src='https://www.google.com/recaptcha/api.js'></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   </head>
   <body oncontextmenu="return false;">
@@ -73,6 +74,7 @@
             <form id="contactform" onsubmit="sendMessage();return false;">
               <input type="email" id="emailInput" name="email" placeholder="Email (e.g. example@email.com)" required>
               <textarea id="messageInput" name="message" rows="5" placeholder="Type your message here." required></textarea>
+              <div class="g-recaptcha" data-sitekey="6LfCclooAAAAAOkoZkofgxQjQukDgn0jKSxT_ybl"></div>
               
               <input class="button" type="submit" value="Submit">
             </form>
