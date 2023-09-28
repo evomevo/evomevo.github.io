@@ -109,10 +109,16 @@ dropbtnA.forEach(dropbtnA => {
       if (imglayoutA.style.maxHeight){
         imglayoutA.style.maxHeight = null;
       } else {
-        imglayoutA.style.maxHeight = imglayoutA.scrollHeight * 2 + "px";
+        imglayoutA.style.maxHeight = imglayoutA.scrollHeight * 2 + 'px';
       }
     }, 200);
   });
+});
+
+window.addEventListener('resize', function() {
+  if (imglayoutA.classList.contains('active')) {
+    imglayoutA.style.maxHeight = imglayoutA.scrollHeight * 2 + 'px';
+  }
 });
   
 
@@ -124,15 +130,16 @@ dropbtnB.forEach(dropbtnB => {
       if (imglayoutB.style.maxHeight){
         imglayoutB.style.maxHeight = null;
       } else {
-        imglayoutB.style.maxHeight = imglayoutB.scrollHeight * 2 + "px";
+        imglayoutB.style.maxHeight = imglayoutB.scrollHeight * 2 + 'px';
       }
     }, 200);
   });
 });
 
 window.addEventListener('resize', function() {
-  imglayoutA.style.maxHeight = imglayoutA.scrollHeight * 2 + 'px';
-  imglayoutB.style.maxHeight = imglayoutB.scrollHeight * 2 + 'px';
+  if (imglayoutB.classList.contains('active')) {
+    imglayoutB.style.maxHeight = imglayoutB.scrollHeight * 2 + 'px';
+  }
 });
 
 
