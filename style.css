@@ -13,7 +13,7 @@ form {
   transform-style: preserve-3d;
 }
 input, textarea, select {
-  background-color: #000;
+  background-color: #000000A0;
   font-family: Montserrat;
   font-size: 17px;
   font-weight: 500;
@@ -142,7 +142,7 @@ a {
   background: #FFFFFF80;
 }
 .galimg {
-  background-color: #00000060;
+  background-color: #000000A0;
   margin: 15px;
   padding: 5px;
   min-height: 10vmin;
