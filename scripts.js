@@ -226,23 +226,13 @@ function sendMessage() {
   hook.setRequestHeader('Content-type', 'application/json');
 
   const date = new Date(utcDateTimeString);
-
-  const day = date.getDate();
-  const month = date.getMonth() + 1;
-  const year = date.getFullYear();
-
-  const hours = date.getHours();
-  const minutes = date.getMinutes();
-  const seconds = date.getSeconds();
-
-  const properDate = `${day}/${month}/${year}, ${hours}:${minutes}:${seconds} UTC`;
   const senderEmail = document.getElementById('emailInput').value;
   const senderMessage = document.getElementById('messageInput').value;
 
   const message = {
     username: `JoJite Mailing Service`,
     avatar_url: `https://evomevo.github.io/media/evoshort.png`,
-    content: `# New message as of ${properDate}\n## Sender\n${senderEmail}\n\n## Message\n${senderMessage}`,
+    content: `# New message as of ${date}\n## Sender\n${senderEmail}\n\n## Message\n${senderMessage}`,
   };
   
   hook.send(JSON.stringify(message));
