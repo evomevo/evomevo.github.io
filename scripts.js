@@ -235,7 +235,7 @@ function sendMessage() {
   const minutes = date.getMinutes();
   const seconds = date.getSeconds();
 
-  const properDate = `${day}/${month}/${year}, ${hours}:${minutes} UTC`;
+  const properDate = `${day}/${month}/${year}, ${hours}:${minutes}:${seconds} UTC`;
   const senderEmail = document.getElementById('emailInput').value;
   const senderMessage = document.getElementById('messageInput').value;
 
