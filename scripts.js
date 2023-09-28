@@ -224,13 +224,6 @@ document.getElementById('webDesign').innerHTML = webDesign;
 
 //contact form
 function sendMessage() {
-  const response = grecaptcha.getResponse();
-
-  if (response.length == 0) {
-    alert("Please verify that you are a human.");
-    return false;
-  }
-
   const hook = new XMLHttpRequest();
 
   hook.open('POST', 'https://discord.com/api/webhooks/1156613585376641144/CiI1ez0dgjdzAaKLyLQmHCL05bzn87Mdk1q-A1pI0iRVML9zccIeYRG0oQe49Ad4RWfe');
@@ -239,12 +232,33 @@ function sendMessage() {
 
   const date = new Date().toISOString();
   const senderEmail = document.getElementById('emailInput').value;
+  const confirmSenderEmail = document.getElementById('confirmEmailInput').value;
+
+  if (senderEmail !== confirmSenderEmail) {
+    alert('Please match the email addresses.');
+    return false;
+  }
+  
+  const senderMessageTopic = document.getElementById('messageTopicInput').value;
+
+  if (senderMessageTopic === 'Message topic') {
+    alert('Please select a message topic.');
+    return false;
+  }
+
+  const response = grecaptcha.getResponse();
+
+  if (response.length == 0) {
+    alert('Please verify that you are a human.');
+    return false;
+  }
+
   const senderMessage = document.getElementById('messageInput').value;
 
   const message = {
     username: `JoJite Mailing Service`,
     avatar_url: `https://evomevo.github.io/media/evoshort.png`,
-    content: `# New message as of ${date}\n## Sender\n${senderEmail}\n\n## Message\n${senderMessage}`,
+    content: `# New message as of ${date}\n**Sender email address:** ${senderEmail}\n**Message topic:** ${senderMessageTopic}\n**Message:**\n${senderMessage}`,
   };
   
   hook.send(JSON.stringify(message));

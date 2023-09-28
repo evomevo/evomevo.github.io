@@ -6,12 +6,12 @@ const tiltEffectSettings = {
   easing: "cubic-bezier(0, 1, .5, 1)"
 };
 
-const tiltelements = document.querySelectorAll("#tilt");
+const tiltelements = document.querySelectorAll('#tilt');
 
 tiltelements.forEach(tiltelement => {
-  tiltelement.addEventListener("mouseenter", tiltelementMouseEnter);
-  tiltelement.addEventListener("mousemove", tiltelementMouseMove);
-  tiltelement.addEventListener("mouseleave", tiltelementMouseLeave);
+  tiltelement.addEventListener('mouseenter', tiltelementMouseEnter);
+  tiltelement.addEventListener('mousemove', tiltelementMouseMove);
+  tiltelement.addEventListener('mouseleave', tiltelementMouseLeave);
 });
 
 function tiltelementMouseEnter(event) {
@@ -49,6 +49,6 @@ function setTransition(event) {
   clearTimeout(tiltelement.transitionTimeoutId);
   tiltelement.style.transition = `transform ${tiltEffectSettings.speed}ms ${tiltEffectSettings.easing}`;
   tiltelement.transitionTimeoutId = setTimeout(() => {
-    tiltelement.style.transition = "";
+    tiltelement.style.transition = '';
   }, tiltEffectSettings.speed);
 }
