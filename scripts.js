@@ -130,6 +130,11 @@ dropbtnB.forEach(dropbtnB => {
   });
 });
 
+window.addEventListener('resize', function() {
+  imglayoutA.style.maxHeight = imglayoutA.scrollHeight * 2 + 'px';
+  imglayoutB.style.maxHeight = imglayoutB.scrollHeight * 2 + 'px';
+});
+
 
 
 //gallery image
