@@ -227,13 +227,15 @@ function sendMessage() {
 
   const date = new Date(utcDateTimeString);
 
-  const properDate = `${date.toLocaleDateString()} ${date.toLocaleTimeString(
-    'en-US',
-    {
-      timeZone: 'UTC',
-    }
-  )} UTC`;
+  const day = date.getDate();
+  const month = date.getMonth() + 1;
+  const year = date.getFullYear();
 
+  const hours = date.getHours();
+  const minutes = date.getMinutes();
+  const seconds = date.getSeconds();
+
+  const properDate = `${day}/${month}/${year}, ${hours}:${minutes} UTC`;
   const senderEmail = document.getElementById('emailInput').value;
   const senderMessage = document.getElementById('messageInput').value;
 
