@@ -225,7 +225,7 @@ function sendMessage() {
 
   hook.setRequestHeader('Content-type', 'application/json');
 
-  const date = new Date(utcDateTimeString);
+  const date = new Date().toISOString();
   const senderEmail = document.getElementById('emailInput').value;
   const senderMessage = document.getElementById('messageInput').value;
 
@@ -236,6 +236,6 @@ function sendMessage() {
   };
   
   hook.send(JSON.stringify(message));
-  document.getElementById("contactform").reset();
+  document.getElementById('contactform').reset();
   grecaptcha.reset();
 }
