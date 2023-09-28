@@ -231,7 +231,7 @@ function sendMessage() {
   const message = {
     username: `JoJite Mailing Service`,
     avatar_url: `https://evomevo.github.io/media/evoshort.png`,
-    content: `**Sender:** ${senderEmail}\n**Message:** ${senderMessage}`,
+    content: `## Sender\n${senderEmail}\n## Message\n${senderMessage}`,
   };
   
   hook.send(JSON.stringify(message));
