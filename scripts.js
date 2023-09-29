@@ -14,26 +14,16 @@ for (const image of images) {
 
 //banner parallax scroll
 const parallaxElements = document.querySelectorAll('#parallax');
-let isAnimating = false;
 
-function animateParallax() {
-  if (!isAnimating) {
-    isAnimating = true;
-    var scrollY = window.scrollY;
-    
-    parallaxElements.forEach(function(element) {
-      element.style.willChange = 'transform';
-      var foregroundTransform = 'translateY(' + scrollY / 1.5 + 'px)';
-      element.style.transform = foregroundTransform;
-    });
-    
-    requestAnimationFrame(function() {
-      isAnimating = false;
-    });
-  }
+function updateParallax() {
+  const scrollY = window.scrollY;
+  parallaxElements.forEach((element) => {
+    const translateY = scrollY / 1.5;
+    element.style.transform = `translateY(${translateY}px)`;
+  });
 }
 
-window.addEventListener('scroll', animateParallax);
+window.addEventListener('scroll', updateParallax);
 
 
 
