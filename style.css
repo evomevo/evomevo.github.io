@@ -73,7 +73,7 @@ footer {
 .banner h1, .banner h3 {
   transition: font-weight 1s cubic-bezier(0.5, 0, 0.5, 1);
 }
-.banner h1:hover, .banner h3:hover {
+.banner h1.scrolled, .banner h3.scrolled {
   font-weight: 500;
 }
 body {

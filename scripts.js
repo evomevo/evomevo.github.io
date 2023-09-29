@@ -13,13 +13,13 @@ for (const image of images) {
 
 
 //banner parallax scroll
-var parallaxElements = document.querySelectorAll("#parallax");
+const parallaxElements = document.querySelectorAll('#parallax');
 
-window.addEventListener("scroll", function() {
+window.addEventListener('scroll', function() {
   var scrollY = window.scrollY;
 
   parallaxElements.forEach(function(element) {
-    var foregroundTransform = "translateY(" + scrollY / 1.5 + "px)";
+    var foregroundTransform = 'translateY(' + scrollY / 1.5 + 'px)';
     element.style.transform = foregroundTransform;
   });
 });
@@ -31,15 +31,18 @@ document.addEventListener('scroll', () => {
   const header = document.querySelector('header');
   const logo = document.querySelector('.logo');
   const bars = document.querySelectorAll('.bar');
+  //const parallaxElements = document.querySelectorAll('#parallax');
 
   if (window.scrollY > 0) {
     header.classList.add('scrolled');
     logo.classList.add('scrolled');
     bars.forEach(bar => bar.classList.add('scrolled'));
+    parallaxElements.forEach(parallax => parallax.classList.add('scrolled'));
   } else {
     header.classList.remove('scrolled');
     logo.classList.remove('scrolled');
     bars.forEach(bar => bar.classList.remove('scrolled'));
+    parallaxElements.forEach(parallax => parallax.classList.remove('scrolled'));
   }
 });
 
