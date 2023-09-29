@@ -140,17 +140,18 @@ a {
   background-size: cover;
 }
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 5px;
+  background: #000;
 }
 ::-webkit-scrollbar-thumb {
-  background: #FFFFFF40;
+  background: #808080;
   border-radius: 10px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #FFFFFF60;
+  background: #707070;
 }
 ::-webkit-scrollbar-thumb:active {
-  background: #FFFFFF80;
+  background: #606060;
 }
 .galimg {
   background-color: #000000A0;
@@ -304,7 +305,7 @@ footer i {
   background-color: #7000E0;
 }
 .navmenu a:active {
-  background-color: #6000BF;
+  background-color: #6000C0;
 }
 .hamburger.active .bar:nth-child(2) {
   opacity: 0;

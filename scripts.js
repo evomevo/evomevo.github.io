@@ -162,10 +162,10 @@ galimg.forEach(galimg => {
 
     const clone = galimg.cloneNode(true);
     clone.classList.add('active');
-    clone.id = 'tilt';
 
     imgmodal.appendChild(clone);
     imgmodal.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
 
     setTimeout(() => {
       imgmodal.style.opacity = 1;
@@ -178,6 +178,7 @@ document.addEventListener('click', (event) => {
     const activeGalimg = document.querySelector('.galimg.active');
     if (activeGalimg) {
       imgmodal.style.opacity = 0;
+      document.body.style.overflow = 'auto';
       setTimeout(() => {
         activeGalimg.remove();
         imgmodal.style.display = 'none';
