@@ -15,15 +15,13 @@ for (const image of images) {
 //banner parallax scroll
 const parallaxElements = document.querySelectorAll('#parallax');
 
-function updateParallax() {
+window.addEventListener('scroll', () => {
   const scrollY = window.scrollY;
-  parallaxElements.forEach((element) => {
-    const translateY = scrollY / 1.5;
-    element.style.transform = `translateY(${translateY}px)`;
-  });
-}
 
-window.addEventListener('scroll', updateParallax);
+  parallaxElements.forEach((element) => {
+    element.style.transform = 'translateY(' + scrollY / 1.5 + 'px)';
+  });
+});
 
 
 
