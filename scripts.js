@@ -14,15 +14,25 @@ for (const image of images) {
 
 //banner parallax scroll
 const parallaxElements = document.querySelectorAll('#parallax');
+let isAnimating = false;
 
-window.addEventListener('scroll', function() {
-  var scrollY = window.scrollY;
+function animateParallax() {
+  if (!isAnimating) {
+    isAnimating = true;
+    var scrollY = window.scrollY;
+    
+    parallaxElements.forEach(function(element) {
+      var foregroundTransform = 'translateY(' + scrollY / 1.5 + 'px)';
+      element.style.transform = foregroundTransform;
+    });
+    
+    requestAnimationFrame(function() {
+      isAnimating = false;
+    });
+  }
+}
 
-  parallaxElements.forEach(function(element) {
-    var foregroundTransform = 'translateY(' + scrollY / 1.5 + 'px)';
-    element.style.transform = foregroundTransform;
-  });
-});
+window.addEventListener('scroll', animateParallax);
 
 
 
