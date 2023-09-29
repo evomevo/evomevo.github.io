@@ -22,6 +22,7 @@ function animateParallax() {
     var scrollY = window.scrollY;
     
     parallaxElements.forEach(function(element) {
+      element.style.willChange = 'transform';
       var foregroundTransform = 'translateY(' + scrollY / 1.5 + 'px)';
       element.style.transform = foregroundTransform;
     });
