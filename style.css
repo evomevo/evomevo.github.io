@@ -30,6 +30,9 @@ input, textarea, select {
 }
 option {
   background-color: #000;
+  font-weight: 500;
+  border: none;
+  padding: 0 10px;
 }
 input:focus, textarea:focus, select:focus {
   outline: none;
@@ -294,9 +297,6 @@ i {
   display: block;
   transition: .2s cubic-bezier(0.5, 0, 0.5, 1);
 }
-.navmenu a:not(:last-child)::after {
-  border-bottom: 1px solid #FFFFFF60 !important;
-}
 .navmenu a:hover {
   background-color: #7000DF;
 }
@@ -370,7 +370,7 @@ i {
   -webkit-background-size: cover;
   background-size: cover;
   overflow-wrap: break-word;
-  box-shadow: inset 0 0 0 5px #8000FF; 
+  box-shadow: inset 0 0 0 5px #8000FF;
   flex: 1;
   transition: .2s cubic-bezier(0.5, 0, 0.5, 1);
 }
