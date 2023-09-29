@@ -395,6 +395,7 @@ i {
   justify-content: center;
   padding-top: 20px;
   flex-wrap: wrap;
+  transform-style: preserve-3d;
 }
 .button {
   font-family: Montserrat;
