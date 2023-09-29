@@ -10,7 +10,6 @@ form {
   flex-direction: column;
   align-items: center;
   gap: 10px;
-  transform-style: preserve-3d;
 }
 input, textarea, select {
   background-color: #000000A0;
@@ -373,8 +372,10 @@ i {
   overflow-wrap: break-word;
   box-shadow: inset 0 0 0 5px #8000FF; 
   flex: 1;
-  transform-style: preserve-3d;
   transition: .2s cubic-bezier(0.5, 0, 0.5, 1);
+}
+.container:hover {
+  transform: scale(1.01);
 }
 .radgradient {
   border-radius: inherit;
@@ -404,7 +405,6 @@ i {
   justify-content: center;
   padding-top: 20px;
   flex-wrap: wrap;
-  transform-style: preserve-3d;
 }
 .button {
   font-family: Montserrat;
