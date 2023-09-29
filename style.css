@@ -68,11 +68,11 @@ footer {
   background-color: #8000FF;
   flex-direction: column;
 }
-.banner h1 {
-  animation: h1WeightAnim 10s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+.banner h1, .banner h3 {
+  transition: font-weight 1s cubic-bezier(0.5, 0, 0.5, 1);
 }
-.banner h3 {
-  animation: h3WeightAnim 10s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+.banner h1:hover, .banner h3:hover {
+  font-weight: 500;
 }
 body {
   font-family: Montserrat;
@@ -503,22 +503,6 @@ pagefade {
   }
   50% {
     background-position: 100% 50%
-  }
-}
-@keyframes h1WeightAnim {
-  0%, 100% {
-    font-weight: 900;
-  }
-  50% {
-    font-weight: 500;
-  }
-}
-@keyframes h3WeightAnim {
-  0%, 100% {
-    font-weight: 700;
-  }
-  50% {
-    font-weight: 500;
   }
 }
 @media screen and (max-width: 1100px) {
