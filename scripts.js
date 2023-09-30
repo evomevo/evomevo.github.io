@@ -12,22 +12,12 @@ for (const image of images) {
 
 
 
-//
-const windowHeight = window.innerHeight;
-const fixedElements = document.querySelector('banner');
-const parallaxElements = document.querySelectorAll('#parallax');
-
-fixedElements.style.height = windowHeight + 'px';
-parallaxElements.style.height = windowHeight + 'px';
-
-
-
 //header scroll
 document.addEventListener('scroll', () => {
   const header = document.querySelector('header');
   const logo = document.querySelector('.logo');
   const bars = document.querySelectorAll('.bar');
-  //const parallaxElements = document.querySelectorAll('#parallax');
+  const parallaxElements = document.querySelectorAll('#parallax');
 
   if (window.scrollY > 0) {
     header.classList.add('scrolled');

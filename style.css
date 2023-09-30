@@ -1,3 +1,7 @@
+html {
+  height: fill-available;
+  height: -webkit-fill-available;
+}
 @font-face {
   font-family: 'Montserrat';
   src: url('media/montserrat/Montserrat-VariableFont_wght.ttf') format('truetype');
@@ -18,9 +22,9 @@ input, textarea, select {
   font-weight: 500;
   line-height: 1.3;
   color: #FFF;
+  width: fill-available;
   width: -moz-available;
   width: -webkit-fill-available;
-  width: fill-available;
   border: none;
   border-radius: 1rem;
   box-shadow: inset 0 0 0 2px #8000FF;
@@ -69,6 +73,7 @@ footer {
   border-radius: 1rem 1rem 0 0;
   background-color: #8000FF;
   flex-direction: column;
+  position: relative;
 }
 .parallax h1, .parallax h3 {
   transition: font-weight 1s cubic-bezier(0.5, 0, 0.5, 1);
@@ -80,7 +85,9 @@ body {
   font-family: Montserrat;
   background: linear-gradient(90deg, #7000E0, #180030, #180030, #7000E0);
   background-size: 200% 200%;
-  animation: bgGradientLoop 30s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  min-height: 100vh;
+  min-height: fill-available;
+  min-height: -webkit-fill-available;
   position: relative;
   margin: 0 auto;
   display: flex;
@@ -88,6 +95,7 @@ body {
   align-items: center;
   background-color: #101010;
   color: #FFF;
+  animation: bgGradientLoop 30s cubic-bezier(0.5, 0, 0.5, 1) infinite;
 }
 .content {
   background: linear-gradient(90deg, #7000E0, #180030, #180030, #7000E0);
