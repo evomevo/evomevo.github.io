@@ -137,6 +137,7 @@ a {
   background-size: cover;
 }
 .parallax {
+  width: 90%;
   position: fixed;
   top: 50%;
   left: 50%;
