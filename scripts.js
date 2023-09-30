@@ -12,25 +12,12 @@ for (const image of images) {
 
 
 
-//banner parallax scroll
-const parallaxElements = document.querySelectorAll('#parallax');
-
-window.addEventListener('scroll', () => {
-  const scrollY = window.scrollY;
-
-  parallaxElements.forEach((element) => {
-    element.style.transform = 'translateY(' + scrollY + 'px)';
-  });
-});
-
-
-
 //header scroll
 document.addEventListener('scroll', () => {
   const header = document.querySelector('header');
   const logo = document.querySelector('.logo');
   const bars = document.querySelectorAll('.bar');
-  //const parallaxElements = document.querySelectorAll('#parallax');
+  const parallaxElements = document.querySelectorAll('#parallax');
 
   if (window.scrollY > 0) {
     header.classList.add('scrolled');

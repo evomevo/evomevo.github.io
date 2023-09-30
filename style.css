@@ -70,10 +70,10 @@ footer {
   background-color: #8000FF;
   flex-direction: column;
 }
-.banner h1, .banner h3 {
+.parallax h1, .parallax h3 {
   transition: font-weight 1s cubic-bezier(0.5, 0, 0.5, 1);
 }
-.banner h1.scrolled, .banner h3.scrolled {
+.parallax h1.scrolled, .parallax h3.scrolled {
   font-weight: 500;
 }
 body {
@@ -108,10 +108,6 @@ a {
 .banner {
   width: 100%;
   height: 100vh;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  display: -o-flex;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -138,6 +134,12 @@ a {
   background-repeat: no-repeat;
   -webkit-background-size: cover;
   background-size: cover;
+}
+.parallax {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 ::-webkit-scrollbar {
   width: 5px;
