@@ -19,7 +19,7 @@ window.addEventListener('scroll', () => {
   const scrollY = window.scrollY;
 
   parallaxElements.forEach((element) => {
-    element.style.transform = 'translateY(' + scrollY / 1.5 + 'px)';
+    element.style.transform = 'translateY(' + scrollY + 'px)';
   });
 });
 
