@@ -233,6 +233,7 @@ p {
   font-size: 17px;
   font-weight: 500;
   line-height: 1.3;
+  transition: .2s cubic-bezier(0.5, 0, 0.5, 1);
 }
 .smalltext {
   font-size: 12px;
@@ -242,6 +243,7 @@ p#footer {
 }
 i {
   color: #FFF;
+  transition: .2s cubic-bezier(0.5, 0, 0.5, 1);
 }
 footer i {
   color: #000;
@@ -431,7 +433,6 @@ footer i {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #000;
   cursor: pointer;
   transition: .2s cubic-bezier(0.5, 0, 0.5, 1);
 }
@@ -458,7 +459,6 @@ footer i {
   border-radius: 50%;
   background-color: #FFF;
   border: none;
-  outline: 0px solid #000;
   width: 45px;
   height: 45px;
   margin: 10px 10px 10px 0;
@@ -470,28 +470,26 @@ footer i {
   transition: .2s cubic-bezier(0.5, 0, 0.5, 1);
 }
 .button:hover, .cirbutton:hover {
-  background-color: #7000E0;
-  outline: 5px solid #FFF;
+  background-color: #FFF;
   transform: scale(1.05);
-  transition: .2s cubic-bezier(0.5, 0, 0.5, 1);
 }
 .button:active, .cirbutton:active {
-  background-color: #7000E0;
-  outline: 3px solid #FFF;
+  background-color: #E0E0E0;
   transform: scale(.95);
-  transition: .2s cubic-bezier(0.5, 0, 0.5, 1);
+}
+.button:hover i, .button:hover p, .cirbutton:hover i, .cirbutton:hover p, .button:active i, .button:active p, .cirbutton:active i, .cirbutton:active p {
+  color: #000;
 }
 .footercirbutton:hover {
-  background-color: #DDD;
-  outline: 5px solid #000;
-  transform: scale(1.05);
-  transition: .2s cubic-bezier(0.5, 0, 0.5, 1);
+  background-color: #000;
+  transform: scale(1.1);
 }
 .footercirbutton:active {
-  background-color: #CCC;
-  outline: 3px solid #000;
+  background-color: #202020;
   transform: scale(.95);
-  transition: .2s cubic-bezier(0.5, 0, 0.5, 1);
+}
+.footercirbutton:hover i, .footercirbutton:hover p, .footercirbutton:active i, .footercirbutton:active p {
+  color: #FFF;
 }
 .button.gallery {
   margin-top: 40px;
