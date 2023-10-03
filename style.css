@@ -146,6 +146,7 @@ a {
   flex-direction: column;
   justify-content: center;
   transform: translate(-50%, -50%);
+  transition: .2s cubic-bezier(0.5, 0, 0.5, 1);
 }
 ::-webkit-scrollbar {
   width: 5px;
