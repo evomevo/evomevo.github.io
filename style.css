@@ -164,17 +164,17 @@ a {
 }
 .galimg {
   background-color: #000000A0;
-  margin: 15px;
+  margin: 10px;
   padding: 5px;
   min-height: 10vmin;
   max-height: 10vmax;
   border-radius: 1rem;
-  outline: 5px solid #8000FF;
+  border: 5px solid #8000FF;
   cursor: pointer;
   transition: .2s cubic-bezier(0.5, 0, 0.5, 1);
 }
 .galimg:hover {
-  outline: 5px solid #FFF;
+  border: 5px solid #FFF;
   transform: scale(1.03);
 }
 .galimg:active {
@@ -188,7 +188,7 @@ a {
   max-width: 80vw;
   max-height: 60svh;
   border-radius: 2rem;
-  outline: 5px solid #FFF;
+  border: 5px solid #FFF;
   cursor: auto;
   perspective: 1000px;
   transition: .2s cubic-bezier(0.5, 0, 0.5, 1);
@@ -403,7 +403,7 @@ footer i {
   transition: .2s cubic-bezier(0.5, 0, 0.5, 1);
 }
 .container:hover {
-  transform: scale(1);
+  transform: scale(1.01);
 }
 .radgradient {
   border-radius: inherit;
@@ -441,7 +441,6 @@ footer i {
   border-radius: 5rem;
   background-color: #8000FF;
   border: none;
-  outline: 0px solid #FFF;
   height: 40px;
   margin: 10px;
   width: fit-content;
@@ -460,7 +459,6 @@ footer i {
   border-radius: 50%;
   background-color: #8000FF;
   border: none;
-  outline: 0px solid #FFF;
   width: 50px;
   height: 50px;
   display: flex;
