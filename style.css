@@ -105,22 +105,22 @@ body {
 a {
   text-decoration: none;
 }
-.banner1 {
+.hero1 {
   background: linear-gradient(#00000090, #00000090), url(media/manilacityscape.png);
 }
-.banner2 {
+.hero2 {
   background: linear-gradient(#00000090, #00000090), url(media/auraambgc.png);
 }
-.banner3 {
+.hero3 {
   background: linear-gradient(#00000090, #00000090), url(media/ayalamallsfeliz.png);
 }
-.banner4 {
+.hero4 {
   background: linear-gradient(#00000090, #00000090), url(media/smcenterpasig.png);
 }
-.banner5 {
+.hero5 {
   background: linear-gradient(#00000090, #00000090), url(media/taytaysky.png);
 }
-.banner {
+.hero {
   background-position: center;
   background-repeat: no-repeat;
   -webkit-background-size: cover;
