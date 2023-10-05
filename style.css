@@ -386,6 +386,7 @@ footer i {
   background-repeat: no-repeat;
   -webkit-background-size: cover;
   background-size: cover;
+  min-height: 100svh;
   margin: 5px 0;
   padding: 50px 20%;
   display: flex;
@@ -393,7 +394,6 @@ footer i {
   justify-content: center;
   align-items: center;
   overflow-wrap: break-word;
-  flex: 1;
 }
 .mobile-nav-item {
   margin: 15px 0;
