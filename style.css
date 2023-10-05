@@ -79,7 +79,7 @@ footer {
 }
 body {
   font-family: Montserrat;
-  background: linear-gradient(90deg, #400090, #180030, #180030, #400090);
+  background: linear-gradient(90deg, #6000C0, #180030, #180030, #6000C0);
   background-size: 200% 200%;
   margin: 0 auto;
   display: flex;
@@ -90,16 +90,16 @@ body {
   animation: bgGradientLoop 30s cubic-bezier(0.5, 0, 0.5, 1) infinite;
 }
 .content {
-  background: linear-gradient(90deg, #400090, #180030, #180030, #400090);
+  background: linear-gradient(90deg, #6000C0, #180030, #180030, #6000C0);
   background-size: 200% 200%;
-  animation: bgGradientLoop 30s cubic-bezier(0.5, 0, 0.5, 1) infinite;
-  padding: 5% 10%;
+  padding: 5px 0;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-flow: column;
   text-align: center;
   position: relative;
+  animation: bgGradientLoop 30s cubic-bezier(0.5, 0, 0.5, 1) infinite;
   z-index: 1;
 }
 a {
@@ -331,14 +331,9 @@ footer i {
   animation-duration: .2s;
 }
 .contentlayout {
+  width: 100%;
   display: flex;
   flex-direction: column;
-}
-.layout {
-  display: flex;
-  flex-direction: row;
-  transition: .2s cubic-bezier(0.5, 0, 0.5, 1);
-  z-index: 0;
 }
 .imglayout {
   display: flex;
@@ -387,39 +382,18 @@ footer i {
 }
 .container {
   background-position: center;
+  background-attachment: fixed;
   background-repeat: no-repeat;
   -webkit-background-size: cover;
   background-size: cover;
-  border-radius: 1rem;
-  margin: 20px;
-  padding: 50px;
+  margin: 5px 0;
+  padding: 50px 20%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   overflow-wrap: break-word;
-  border: solid 5px #8000FF;
   flex: 1;
-  transition: .2s cubic-bezier(0.5, 0, 0.5, 1);
-}
-.container:hover {
-  transform: scale(1.01);
-}
-.radgradient {
-  border-radius: inherit;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: radial-gradient(circle at var(--mouse-x) var(--mouse-y), #8000FF50, #00000000);
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity .2s ease-in-out;
-  z-index: -1;
-}
-.container:hover .radgradient {
-  opacity: 1;
 }
 .mobile-nav-item {
   margin: 15px 0;
@@ -527,9 +501,6 @@ pagefade {
   }
 }
 @media screen and (max-width: 1100px) {
-  .layout {
-    flex-direction: column;
-  }
   .galimg {
     margin: 7px;
   }
@@ -540,9 +511,6 @@ pagefade {
 @media screen and (max-width: 700px) {
   input, textarea, select {
     font-size: 14px;
-  }
-  .content {
-    padding: 2.5% 5%;
   }
   header {
     transition: .2s cubic-bezier(0.5, 0, 0.5, 1);
@@ -564,10 +532,6 @@ pagefade {
   }
   .itemlayout {
     flex-direction: column;
-  }
-  .container {
-    margin: 10px;
-    padding: 25px;
   }
   h1 {
     font-size: 50px;
@@ -606,5 +570,8 @@ pagefade {
   .galimg.active {
     opacity: 1;
     border-radius: 1rem;
+  }
+  .container {
+    padding: 50px 10%;
   }
 }
