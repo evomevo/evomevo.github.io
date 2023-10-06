@@ -82,9 +82,11 @@ dropbtnA.forEach(dropbtnA => {
 });
 
 window.addEventListener('resize', function() {
-  if (imglayoutA.classList.contains('active')) {
-    imglayoutA.style.maxHeight = imglayoutA.scrollHeight * 2 + 'px';
-  }
+  setTimeout(() => {
+    if (imglayoutA.classList.contains('active')) {
+      imglayoutA.style.maxHeight = imglayoutA.scrollHeight * 2 + 'px';
+    }
+  }, 500);
 });
   
 
