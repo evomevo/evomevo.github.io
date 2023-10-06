@@ -38,10 +38,6 @@ document.addEventListener('scroll', () => {
 const header = document.querySelector('header');
 const navmenu = document.querySelector('.navmenu');
 
-window.addEventListener('resize', function() {
-  navmenu.style.setProperty('--header-height', header.offsetHeight + 'px');
-});
-
 navmenu.style.setProperty('--header-height', header.offsetHeight + 'px');
 
 

@@ -48,8 +48,8 @@ select {
 header {
   position: fixed;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  flex-direction: row;
   top: 0;
   right: 0;
   left: 0;
@@ -256,7 +256,8 @@ footer i {
   color: #FFF;
 }
 .logo {
-  width: 200px;
+  width: 150px;
+  margin-left: 30px;
   fill: #FFF;
   transition: fill .2s cubic-bezier(0.5, 0, 0.5, 1);
 }
@@ -273,9 +274,9 @@ footer i {
 }
 .bar {
   display: block;
-  width: 35px;
-  height: 5px;
-  margin: 7px auto;
+  width: 23px;
+  height: 3px;
+  margin: 5px auto;
   justify-content: center;
   align-items: center;
   background-color: #FFF;
@@ -283,12 +284,21 @@ footer i {
   -webkit-transition: .2s cubic-bezier(0.5, 0, 0.5, 1);
   transition: .2s cubic-bezier(0.5, 0, 0.5, 1);
 }
+.hamburger.active .bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+.hamburger.active .bar:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active .bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
 .navmenu {
   overflow: hidden;
   background-color: #8000FF;
-  margin-right: 10%;
+  margin-left: 10%;
   top: calc(var(--header-height) + 10px);
-  right: 0;
+  left: 0;
   position: fixed;
   display: flex;
   width: auto;
@@ -316,15 +326,6 @@ footer i {
 }
 .navmenu a:active {
   background-color: #6000C0;
-}
-.hamburger.active .bar:nth-child(2) {
-  opacity: 0;
-}
-.hamburger.active .bar:nth-child(1) {
-  transform: translateY(12px) rotate(45deg);
-}
-.hamburger.active .bar:nth-child(3) {
-  transform: translateY(-12px) rotate(-45deg);
 }
 .fade {
   animation-name: fade;
@@ -512,24 +513,6 @@ pagefade {
   input, textarea, select {
     font-size: 14px;
   }
-  header {
-    transition: .2s cubic-bezier(0.5, 0, 0.5, 1);
-  }
-  .bar {
-    width: 25px;
-    height: 3px;
-    margin: 5px auto;
-    transition: .2s cubic-bezier(0.5, 0, 0.5, 1);
-  }
-  .hamburger.active .bar:nth-child(1) {
-    transform: translateY(8px) rotate(45deg);
-  }
-  .hamburger.active .bar:nth-child(3) {
-    transform: translateY(-8px) rotate(-45deg);
-  }
-  .logo {
-    width: 150px;
-  }
   .itemlayout {
     flex-direction: column;
   }
@@ -558,10 +541,17 @@ pagefade {
   }
 }
 @media screen and (max-width: 425px) {
+  header {
+    justify-content: space-between;
+    flex-direction: row-reverse;
+  }
+  .logo {
+    margin-left: 0px;
+  }
   .navmenu {
-    right: auto;
+    left: auto;
     margin: 0;
-    width: 90%;
+    width: 80%;
     opacity: 0;
   }
   .navmenu a {
