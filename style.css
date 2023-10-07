@@ -22,9 +22,9 @@ input, textarea, select {
   width: -moz-available;
   width: -webkit-fill-available;
   border: none;
-  border-radius: 1rem;
+  border-radius: 1.3rem;
   box-shadow: inset 0 0 0 2px #8000FF;
-  padding: 10px;
+  padding: 10px 20px;
   resize: none;
   transition: .2s cubic-bezier(0.5, 0, 0.5, 1);
 }
@@ -54,7 +54,7 @@ header {
   right: 0;
   left: 0;
   padding: 10px 10%;
-  border-radius: 0 0 1rem 1rem;
+  border-radius: 0 0 2rem 2rem;
   background-color: #8000FF00;
   z-index: 3;
   transition: .2s cubic-bezier(0.5, 0, 0.5, 1);
@@ -66,7 +66,7 @@ header.scrolled {
 footer {
   display: flex;
   padding: 20px 10%;
-  border-radius: 1rem 1rem 0 0;
+  border-radius: 2rem 2rem 0 0;
   background-color: #8000FF;
   flex-direction: column;
   position: relative;
@@ -154,7 +154,7 @@ a {
 }
 ::-webkit-scrollbar-thumb {
   background: #808080;
-  border-radius: 10px;
+  border-radius: 1rem;
 }
 ::-webkit-scrollbar-thumb:hover {
   background: #707070;
@@ -168,7 +168,7 @@ a {
   padding: 5px;
   min-height: 10vmin;
   max-height: 10vmax;
-  border-radius: 1rem;
+  border-radius: 2rem;
   border: 5px solid #8000FF;
   cursor: pointer;
   transition: .2s cubic-bezier(0.5, 0, 0.5, 1);
@@ -303,7 +303,7 @@ footer i {
   display: flex;
   width: auto;
   flex-direction: column;
-  border-radius: 1rem;
+  border-radius: 2rem;
   cursor: pointer;
   pointer-events: none;
   opacity: 0;
@@ -311,7 +311,7 @@ footer i {
   z-index: 2;
 }
 .navmenu.active {
-  pointer-events: visible;
+  pointer-events: unset;
   opacity: 1;
 }
 .navmenu a {
@@ -556,6 +556,9 @@ pagefade {
   }
   .navmenu a {
     padding: 12px 50px;
+  }
+  .galimg {
+    border-radius: 1rem;
   }
   .galimg.active {
     opacity: 1;
