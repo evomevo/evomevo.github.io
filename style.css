@@ -106,22 +106,23 @@ a {
   text-decoration: none;
 }
 .hero1 {
-  background: linear-gradient(#00000090, #00000090), url(media/manilacityscape.png);
+  background: linear-gradient(#00000060, #00000060), url(media/lagunadebay.png);
 }
 .hero2 {
-  background: linear-gradient(#00000090, #00000090), url(media/auraambgc.png);
+  background: linear-gradient(#00000060, #00000060), url(media/cloudsandgreenery.png);
 }
 .hero3 {
-  background: linear-gradient(#00000090, #00000090), url(media/ayalamallsfeliz.png);
+  background: linear-gradient(#00000060, #00000060), url(media/valley.png);
 }
 .hero4 {
-  background: linear-gradient(#00000090, #00000090), url(media/smcenterpasig.png);
+  background: linear-gradient(#00000060, #00000060), url(media/windmills.png);
 }
 .hero5 {
-  background: linear-gradient(#00000090, #00000090), url(media/taytaysky.png);
+  background: linear-gradient(#00000060, #00000060), url(media/grass.png);
 }
 .hero {
   background-position: center;
+  background-attachment: fixed;
   background-repeat: no-repeat;
   -webkit-background-size: cover;
   background-size: cover;
