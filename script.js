@@ -1,4 +1,4 @@
-//header scroll
+// header scroll
 document.addEventListener('scroll', () => {
     const header = document.querySelector('header');
     const headerElems = document.querySelectorAll('#headerelem');
@@ -18,7 +18,7 @@ document.addEventListener('scroll', () => {
     }
 });
 
-//hamburger menu
+// hamburger menu
 const header = document.querySelector('header');
 const hamburger = document.querySelector('.hamburger');
 const menu = document.querySelector('.hamburgermenu');
@@ -37,7 +37,7 @@ document.body.addEventListener('click', (event) => {
 
 menu.style.setProperty('--header-height', header.offsetHeight + 'px');
 
-//card drag scrolling
+// card drag scrolling
 const cardWrappers = document.querySelectorAll('.cardwrapper');
 
 cardWrappers.forEach(cardWrapper => {
@@ -52,9 +52,6 @@ cardWrappers.forEach(cardWrapper => {
             startX = e.clientX;
             scrollLeft = cardWrapper.scrollLeft;
         });
-        card.addEventListener('mouseleave', () => {
-            dragging = false;
-        });
     });
 
     window.addEventListener('mouseup', () => {
@@ -67,6 +64,6 @@ cardWrappers.forEach(cardWrapper => {
         }
 
         const distance = startX - e.clientX;
-        cardWrapper.scrollLeft = scrollLeft + distance * 2.5;
+        cardWrapper.scrollLeft = scrollLeft + distance * 2;
     });
 });

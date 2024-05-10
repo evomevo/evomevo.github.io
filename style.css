@@ -50,7 +50,6 @@ header {
     right: 0;
     left: 0;
     padding: 10px 13%;
-    border-radius: 0 0 1rem 1rem;
     background-color: #ffffff00;
     z-index: 9;
     transition: .3s cubic-bezier(0.5, 0, 0.5, 1);
@@ -177,7 +176,6 @@ header.scrolled {
     margin: 10px 0 0 0;
     gap: 20px;
     scroll-behavior: smooth;
-    scrollbar-width: 0px;
 }
 .card {
     border-radius: 1rem;
