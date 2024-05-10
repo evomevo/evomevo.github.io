@@ -5,11 +5,11 @@ document.addEventListener('scroll', () => {
     //const bars = document.querySelectorAll('.bar');
   
     if (window.scrollY > 0) {
-        header.classList.add('scrolled');
+        header.classList.add('scrolled', 'shadow');
         logo.classList.add('scrolled');
         //bars.forEach(bar => bar.classList.add('scrolled'));
     } else {
-        header.classList.remove('scrolled');
+        header.classList.remove('scrolled', 'shadow');
         logo.classList.remove('scrolled');
         //bars.forEach(bar => bar.classList.remove('scrolled'));
     }
