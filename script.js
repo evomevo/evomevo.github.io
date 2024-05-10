@@ -1,19 +1,41 @@
 //header scroll
 document.addEventListener('scroll', () => {
     const header = document.querySelector('header');
-    const logo = document.querySelector('.logo');
-    //const bars = document.querySelectorAll('.bar');
-  
+    const headerElems = document.querySelectorAll('#headerelem');
+
+    headerElems.forEach(elem => {
+        if (window.scrollY > 0) {
+            elem.classList.add('scrolled');
+        } else {
+            elem.classList.remove('scrolled');
+        }
+    });
+
     if (window.scrollY > 0) {
         header.classList.add('scrolled', 'shadow');
-        logo.classList.add('scrolled');
-        //bars.forEach(bar => bar.classList.add('scrolled'));
     } else {
         header.classList.remove('scrolled', 'shadow');
-        logo.classList.remove('scrolled');
-        //bars.forEach(bar => bar.classList.remove('scrolled'));
     }
 });
+
+//hamburger menu
+const header = document.querySelector('header');
+const hamburger = document.querySelector('.hamburger');
+const menu = document.querySelector('.hamburgermenu');
+
+hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    menu.classList.toggle('active');
+});
+
+document.body.addEventListener('click', (event) => {
+    if (event.target !== hamburger && event.target !== menu && event.target.closest('.hamburger') !== hamburger) {
+        hamburger.classList.remove('active');
+        menu.classList.remove('active');
+    }
+});
+
+menu.style.setProperty('--header-height', header.offsetHeight + 'px');
 
 //card drag scrolling
 const cardWrappers = document.querySelectorAll('.cardwrapper');
