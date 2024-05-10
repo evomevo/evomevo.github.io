@@ -64,6 +64,6 @@ cardWrappers.forEach(cardWrapper => {
         }
 
         const distance = startX - e.clientX;
-        cardWrapper.scrollLeft = scrollLeft + distance * 2;
+        cardWrapper.scrollLeft = scrollLeft + distance;
     });
 });
