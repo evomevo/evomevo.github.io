@@ -1,3 +1,21 @@
+//header scroll
+document.addEventListener('scroll', () => {
+    const header = document.querySelector('header');
+    const logo = document.querySelector('.logo');
+    //const bars = document.querySelectorAll('.bar');
+  
+    if (window.scrollY > 0) {
+        header.classList.add('scrolled');
+        logo.classList.add('scrolled');
+        //bars.forEach(bar => bar.classList.add('scrolled'));
+    } else {
+        header.classList.remove('scrolled');
+        logo.classList.remove('scrolled');
+        //bars.forEach(bar => bar.classList.remove('scrolled'));
+    }
+});
+
+//card drag scrolling
 const cardWrappers = document.querySelectorAll('.cardwrapper');
 
 cardWrappers.forEach(cardWrapper => {
