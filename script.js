@@ -94,6 +94,7 @@ image.forEach(image => {
 
         setTimeout(() => {
             clone.style.maxHeight = '60svh';
+            clone.style.maxWidth = '80vw'
             test333.style.opacity = '1';
         }, 0);
     });
