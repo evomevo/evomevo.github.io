@@ -67,3 +67,50 @@ cardWrappers.forEach(cardWrapper => {
         cardWrapper.scrollLeft = scrollLeft + distance;
     });
 });
+
+//gallery image
+const image = document.querySelectorAll('.image');
+const imagemodal = document.querySelector('.imagemodal');
+const test333 = document.querySelector('.test333')
+
+image.forEach(image => {
+    image.addEventListener('click', () => {
+        const activeImage = document.querySelector('.image.active');
+        if (activeImage) {
+            setTimeout(() => {
+                activeImage.remove();
+            }, 500);
+        }
+
+        const clone = image.cloneNode(true);
+        clone.classList.add('active');
+        clone.classList.add('shadow');
+
+        test333.appendChild(clone);
+        imagemodal.style.display = 'flex';
+        test333.style.display = 'flex';
+        document.body.style.overflow = 'hidden';
+
+        setTimeout(() => {
+            clone.style.maxHeight = '60svh';
+            test333.style.opacity = '1';
+        }, 0);
+    });
+});
+
+document.addEventListener('click', (event) => {
+    if (!event.target.classList.contains('image') && imagemodal.contains(event.target)) {
+        imagemodal.classList.add('exiting');
+        document.body.style.overflow = 'auto';
+        test333.style.opacity = '0';
+        setTimeout(() => {
+            const activeImage = document.querySelector('.image.active');
+            if (activeImage) {
+                activeImage.style.maxHeight = '0';
+                activeImage.remove();
+            }
+            imagemodal.style.display = 'none';
+            imagemodal.classList.remove('exiting');
+        }, 500);
+    }
+});
