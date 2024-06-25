@@ -51,19 +51,19 @@ header {
     left: 0;
     padding: 10px 13%;
     background-color: #ffffff00;
-    z-index: 9;
-    transition: .3s cubic-bezier(0.5, 0, 0.5, 1);
+    z-index: 10;
+    transition: .25s cubic-bezier(0.5, 0, 0.5, 1);
 }
 header.scrolled {
     background-color: #ffffffd0;
     -webkit-backdrop-filter: blur(20px);
     backdrop-filter: blur(20px);
-    transition: .3s cubic-bezier(0.5, 0, 0.5, 1);
+    transition: .25s cubic-bezier(0.5, 0, 0.5, 1);
 }
 .logo {
     width: 150px;
     fill: #fff;
-    transition: fill .3s cubic-bezier(0.5, 0, 0.5, 1);
+    transition: fill .25s cubic-bezier(0.5, 0, 0.5, 1);
 }
 .logo.scrolled {
     fill: #000;
@@ -75,22 +75,22 @@ header.scrolled {
 }
 .navbar a {
     color: #fff;
-    transition: .3s cubic-bezier(0.5, 0, 0.5, 1);
+    transition: .25s cubic-bezier(0.5, 0, 0.5, 1);
 }
 .navbar a.scrolled {
     color: #000;
-    transition: .3s cubic-bezier(0.5, 0, 0.5, 1);
+    transition: .25s cubic-bezier(0.5, 0, 0.5, 1);
 }
 .hamburger {
     display: none;
     cursor: pointer;
-    transition: .3s cubic-bezier(0, 0, 0.5, 1);
+    transition: .25s cubic-bezier(0, 0, 0.5, 1);
 }
 .hamburger:active {
     transform: scale(.9);
 }
 .active {
-    transition: .3s cubic-bezier(0, 0, 0.5, 1);
+    transition: .25s cubic-bezier(0, 0, 0.5, 1);
 }
 .bar {
     display: block;
@@ -101,11 +101,11 @@ header.scrolled {
     align-items: center;
     background-color: #fff;
     border-radius: 1rem;
-    transition: .3s cubic-bezier(0.5, 0, 0.5, 1);
+    transition: .25s cubic-bezier(0.5, 0, 0.5, 1);
 }
 .bar.scrolled {
     background-color: #000;
-    transition: .3s cubic-bezier(0.5, 0, 0.5, 1);
+    transition: .25s cubic-bezier(0.5, 0, 0.5, 1);
 }
 .hamburger.active .bar:nth-child(1) {
     transform: translateY(8px) rotate(45deg);
@@ -121,25 +121,22 @@ header.scrolled {
     background-color: #ffffffd0;
     -webkit-backdrop-filter: blur(20px);
     backdrop-filter: blur(20px);
-    top: calc(var(--header-height) + 10px);
-    left: 0;
+    top: calc(var(--hamburger-menu-height) * -1);
     position: fixed;
     display: flex;
     width: 100%;
     flex-direction: column;
-    border-radius: 1rem;
     pointer-events: none;
-    opacity: 0;
-    transition: opacity .2s cubic-bezier(0.5, 0, 0.5, 1);
-    z-index: 10;
+    transition: top 1s cubic-bezier(0.25, 1.25, 0.25, 1);
+    z-index: 9;
 }
 .hamburgermenu a {
     padding: 12px 50px;
     color: #000;
 }
 .hamburgermenu.active {
+    top: var(--header-height);
     pointer-events: auto;
-    opacity: 1;
 }
 .div {
     background-position: center;
@@ -197,6 +194,7 @@ header.scrolled {
     background-position: center;
     -webkit-background-size: cover;
     background-size: cover;
+    background-color: #ffffffd0;
     border-radius: 1rem;
     -webkit-transform: translate(0, 0); /* Fallback for older browsers */
     -webkit-transform: translate3d(0, 0, 0); /* Preferred for hardware acceleration */
@@ -206,6 +204,7 @@ header.scrolled {
     margin: 10px 0 0 0;
     max-width: 80vw;
     max-height: 0;
+    padding: 10px;
     transition: max-height 1s cubic-bezier(0.25, 1.25, 0.25, 1);
 }
 .imagemodal {
@@ -222,6 +221,7 @@ header.scrolled {
     animation: blurExit .5s forwards;
 }
 .test333 {
+    background-color: #00000060;
     display: none;
     width: inherit;
     height: inherit;
@@ -280,6 +280,9 @@ header.scrolled {
     background-color: #007aff;
     color: #fff;
 }
+.accentcolor:hover {
+    background-color: #006adc;
+}
 .bottomcardelem {
     margin: 0 0 60px 0;
 }
@@ -287,11 +290,14 @@ header.scrolled {
     box-shadow: rgba(0, 0, 0, 0.25) 0px 30px 30px, rgba(0, 0, 0, 0.12) 0px -10px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 10px 15px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 .hover {
-    transition: .3s cubic-bezier(0, 0, 0.5, 1);
+    box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px;
+    transition: all 1s cubic-bezier(0, 0, 0, 1);
+    animation: buttonHover 1s forwards;
 }
 .hover:hover {
-    transform: scale(1.05);
-    transition: .3s cubic-bezier(0, 0, 0.5, 1);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 30px 30px, rgba(0, 0, 0, 0.12) 0px -10px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 10px 15px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    transition: all 1s cubic-bezier(0, 0, 0, 1);
+    animation: buttonHover 1s forwards;
 }
 .noselect {
     -webkit-user-select: none; /* Safari */

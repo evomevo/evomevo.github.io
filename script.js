@@ -12,9 +12,9 @@ document.addEventListener('scroll', () => {
     });
 
     if (window.scrollY > 0) {
-        header.classList.add('scrolled', 'shadow');
+        header.classList.add('scrolled');
     } else {
-        header.classList.remove('scrolled', 'shadow');
+        header.classList.remove('scrolled');
     }
 });
 
@@ -36,6 +36,7 @@ document.body.addEventListener('click', (event) => {
 });
 
 menu.style.setProperty('--header-height', header.offsetHeight + 'px');
+menu.style.setProperty('--hamburger-menu-height', menu.offsetHeight + 'px');
 
 // card drag scrolling
 const cardWrappers = document.querySelectorAll('.cardwrapper');
@@ -83,8 +84,8 @@ image.forEach(image => {
         }
 
         const clone = image.cloneNode(true);
-        clone.classList.add('active');
-        clone.classList.add('shadow');
+        clone.classList.add('active', 'shadow');
+        clone.classList.remove('hover');
 
         test333.appendChild(clone);
         imagemodal.style.display = 'flex';
@@ -98,19 +99,21 @@ image.forEach(image => {
     });
 });
 
-document.addEventListener('click', (event) => {
-    if (!event.target.classList.contains('image') && imagemodal.contains(event.target)) {
-        imagemodal.classList.add('exiting');
-        document.body.style.overflow = 'auto';
-        test333.style.opacity = '0';
-        setTimeout(() => {
-            const activeImage = document.querySelector('.image.active');
-            if (activeImage) {
-                activeImage.style.maxHeight = '0';
-                activeImage.remove();
-            }
-            imagemodal.style.display = 'none';
-            imagemodal.classList.remove('exiting');
-        }, 500);
-    }
-});
+if (document.contains(imagemodal)) {
+    document.addEventListener('click', (event) => {
+        if (!event.target.classList.contains('image') && imagemodal.contains(event.target)) {
+            imagemodal.classList.add('exiting');
+            document.body.style.overflow = 'auto';
+            test333.style.opacity = '0';
+            setTimeout(() => {
+                const activeImage = document.querySelector('.image.active');
+                if (activeImage) {
+                    activeImage.style.maxHeight = '0';
+                    activeImage.remove();
+                }
+                imagemodal.style.display = 'none';
+                imagemodal.classList.remove('exiting');
+            }, 500);
+        }
+    });
+}
