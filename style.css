@@ -191,9 +191,6 @@ header.scrolled {
     max-height: 200px;
     width: 100%;
     cursor: pointer;
-    -webkit-transform: translate(0, 100%); /* Fallback for older browsers */
-    -webkit-transform: translate3d(0, 100%, 0); /* Preferred for hardware acceleration */
-    transform: translate3d(0, 100%, 0); /* Standard syntax */
 }
 .image {
     object-fit: cover;
@@ -201,6 +198,9 @@ header.scrolled {
     -webkit-background-size: cover;
     background-size: cover;
     border-radius: 1rem;
+    -webkit-transform: translate(0, 0); /* Fallback for older browsers */
+    -webkit-transform: translate3d(0, 0, 0); /* Preferred for hardware acceleration */
+    transform: translate3d(0, 0, 0); /* Standard syntax */
 }
 .image.active {
     margin: 10px 0 0 0;
