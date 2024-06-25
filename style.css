@@ -186,6 +186,28 @@ header.scrolled {
     margin: 10px 0 0 0;
     gap: 20px;
 }
+.imagewrapper .image {
+    min-height: 200px;
+    max-height: 200px;
+    width: 100%;
+    cursor: pointer;
+    -webkit-transform: translate(0, 100%); /* Fallback for older browsers */
+    -webkit-transform: translate3d(0, 100%, 0); /* Preferred for hardware acceleration */
+    transform: translate3d(0, 100%, 0); /* Standard syntax */
+}
+.image {
+    object-fit: cover;
+    background-position: center;
+    -webkit-background-size: cover;
+    background-size: cover;
+    border-radius: 1rem;
+}
+.image.active {
+    margin: 10px 0 0 0;
+    max-width: 80vw;
+    max-height: 0;
+    transition: max-height 1s cubic-bezier(0.25, 1.25, 0.25, 1);
+}
 .imagemodal {
     display: none;
     width: 100%;
@@ -211,25 +233,6 @@ header.scrolled {
 }
 .test333 p {
     color: #fff;
-}
-.imagewrapper .image {
-    min-height: 200px;
-    max-height: 200px;
-    width: 100%;
-    cursor: pointer;
-}
-.image {
-    object-fit: cover;
-    background-position: center;
-    -webkit-background-size: cover;
-    background-size: cover;
-    border-radius: 1rem;
-}
-.image.active {
-    margin: 10px 0 0 0;
-    max-width: 80vw;
-    max-height: 0;
-    transition: max-height 1s cubic-bezier(0.25, 1.25, 0.25, 1);
 }
 .card {
     border-radius: 1rem;
@@ -292,7 +295,6 @@ header.scrolled {
 }
 .noselect {
     -webkit-user-select: none; /* Safari */
-    -ms-user-select: none; /* IE 10 and IE 11 */
     user-select: none; /* Standard syntax */
 }
 @media screen and (max-width: 700px) {
@@ -309,6 +311,13 @@ header.scrolled {
     .herocard {
         min-width: 70%;
         max-width: 70%;
+    }
+    .imagewrapper {
+        display: flex;
+        overflow-x: scroll;
+        border-radius: 1rem;
+        margin: 10px 0 10px 0;
+        gap: 20px;
     }
 }
 @keyframes blurEnter {
