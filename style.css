@@ -62,6 +62,7 @@ header.scrolled {
 }
 .blackenter {
     display: flex;
+    visibility: visible;
     justify-content: center;
     position: fixed;
     background-color: #000;
@@ -73,7 +74,8 @@ header.scrolled {
     animation: websiteLoad .25s forwards;
 }
 .blackexit {
-    display: none;
+    display: flex;
+    visibility: hidden;
     justify-content: center;
     position: fixed;
     background-color: #000;
@@ -372,7 +374,7 @@ header.scrolled {
         opacity: 1;
     } to {
         opacity: 0;
-        display: none;
+        visibility: hidden;
     }
 }
 @keyframes blurEnter {

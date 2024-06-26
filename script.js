@@ -4,7 +4,7 @@ const gallery = document.querySelectorAll('.gallery')
 
 index.forEach(index => {
     index.addEventListener('click', (event) => {
-        black.style.display = 'flex';
+        black.style.visibility = 'visible';
         setTimeout(() => {
             black.style.opacity = '1';
         }, 0);
@@ -15,7 +15,7 @@ index.forEach(index => {
 });
 gallery.forEach(gallery => {
     gallery.addEventListener('click', (event) => {
-        black.style.display = 'flex';
+        black.style.visibility = 'visible';
         setTimeout(() => {
             black.style.opacity = '1';
         }, 0);
