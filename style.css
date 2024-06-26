@@ -60,6 +60,29 @@ header.scrolled {
     backdrop-filter: blur(20px);
     transition: .25s cubic-bezier(0.5, 0, 0.5, 1);
 }
+.blackenter {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    background-color: #000;
+    height: 100vh;
+    width: 100vw;
+    opacity: 1;
+    z-index: 1000;
+    transition: all .25s ease-in-out;
+    animation: websiteLoad .25s forwards;
+}
+.blackexit {
+    display: none;
+    justify-content: center;
+    position: fixed;
+    background-color: #000;
+    height: 100vh;
+    width: 100vw;
+    opacity: 0;
+    z-index: 1000;
+    transition: all .25s ease-in-out;
+}
 .logo {
     width: 150px;
     fill: #fff;
@@ -139,11 +162,6 @@ header.scrolled {
     pointer-events: auto;
 }
 .div {
-    background-position: center;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    -webkit-background-size: cover;
-    background-size: cover;
     min-height: 100svh;
     width: 100%;
     display: flex;
@@ -151,6 +169,11 @@ header.scrolled {
     justify-content: center;
     align-items: center;
     overflow-wrap: break-word;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
 }
 .heroimg1 {
     background-image: linear-gradient(#00000060, #00000060), url(https://pbs.twimg.com/media/GNFt0xXW4AAhFtS?format=png&name=360x360);
@@ -167,6 +190,7 @@ header.scrolled {
     -webkit-backdrop-filter: blur(20px);
     backdrop-filter: blur(20px);
     padding: 30px 30px;
+    margin: 10% 0 10% 0;
     width: 70%
 }
 .cardwrapper {
@@ -176,17 +200,22 @@ header.scrolled {
     margin: 10px 0 0 0;
     gap: 20px;
 }
+.gallerywrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 20px
+}
 .imagewrapper {
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
+    flex-direction: column;
     border-radius: 1rem;
     margin: 10px 0 0 0;
     gap: 20px;
 }
 .imagewrapper .image {
-    min-height: 200px;
-    max-height: 200px;
     width: 100%;
+    aspect-ratio: 1 / 1;
     cursor: pointer;
 }
 .card {
@@ -253,6 +282,15 @@ header.scrolled {
 .test333 p {
     color: #fff;
 }
+.herobuttons {
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    position: relative;
+    margin: 20px 0 0 0;
+    gap: 10px;
+    cursor: pointer;
+}
 .button {
     border-radius: 10rem;
     background-color: #fff;
@@ -260,9 +298,6 @@ header.scrolled {
     width: fit-content;
     padding: 10px 20px;
     cursor: pointer;
-    bottom: 30px;
-    right: 30px;
-    position: absolute;
 }
 .roundbutton {
     border-radius: 50%;
@@ -304,6 +339,11 @@ header.scrolled {
     -webkit-user-select: none; /* Safari */
     user-select: none; /* Standard syntax */
 }
+.absolutepos {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+}
 @media screen and (max-width: 700px) {
     .navbar {
         visibility: hidden;
@@ -327,12 +367,19 @@ header.scrolled {
         gap: 20px;
     }
 }
+@keyframes websiteLoad {
+    from {
+        opacity: 1;
+    } to {
+        opacity: 0;
+        display: none;
+    }
+}
 @keyframes blurEnter {
     from {
         -webkit-backdrop-filter: blur(0px);
         backdrop-filter: blur(0px);
-    }
-    to {
+    } to {
         -webkit-backdrop-filter: blur(20px);
         backdrop-filter: blur(20px);
     }
@@ -341,8 +388,7 @@ header.scrolled {
     from {
         -webkit-backdrop-filter: blur(20px);
         backdrop-filter: blur(20px);
-    }
-    to {
+    } to {
         -webkit-backdrop-filter: blur(0px);
         backdrop-filter: blur(0px);
     }

@@ -1,3 +1,30 @@
+const black = document.querySelector('.blackexit');
+const index = document.querySelectorAll('#index')
+const gallery = document.querySelectorAll('#gallery')
+
+index.forEach(index => {
+    index.addEventListener('click', (event) => {
+        black.style.display = 'flex';
+        setTimeout(() => {
+            black.style.opacity = '1';
+        }, 0);
+        setTimeout(() => {
+            window.location.href = 'index.html';
+        }, 250);
+    });
+});
+gallery.forEach(gallery => {
+    gallery.addEventListener('click', (event) => {
+        black.style.display = 'flex';
+        setTimeout(() => {
+            black.style.opacity = '1';
+        }, 0);
+        setTimeout(() => {
+            window.location.href = 'gallery.html';
+        }, 250);
+    });
+});
+
 // header scroll
 document.addEventListener('scroll', () => {
     const header = document.querySelector('header');
