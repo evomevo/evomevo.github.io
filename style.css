@@ -189,6 +189,24 @@ header.scrolled {
     width: 100%;
     cursor: pointer;
 }
+.card {
+    border-radius: 1rem;
+    background-color: #ffffffd0;
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+    color: #000;
+    min-width: 400px;
+    max-width: 400px;
+    padding: 30px 30px;
+    justify-content: center;
+    align-items: center;
+    overflow-wrap: break-word;
+    position: relative;
+}
+.herocard {
+    min-width: 70%;
+    height: auto;
+}
 .image {
     object-fit: cover;
     background-position: center;
@@ -214,6 +232,7 @@ header.scrolled {
     top: 0;
     position: fixed;
     z-index: 2;
+    -webkit-backdrop-filter: blur(0px);
     backdrop-filter: blur(0px);
     animation: blurEnter .5s forwards;
 }
@@ -233,24 +252,6 @@ header.scrolled {
 }
 .test333 p {
     color: #fff;
-}
-.card {
-    border-radius: 1rem;
-    background-color: #ffffffd0;
-    -webkit-backdrop-filter: blur(20px);
-    backdrop-filter: blur(20px);
-    color: #000;
-    min-width: 400px;
-    max-width: 400px;
-    padding: 30px 30px;
-    justify-content: center;
-    align-items: center;
-    overflow-wrap: break-word;
-    position: relative;
-}
-.herocard {
-    min-width: 70%;
-    height: auto;
 }
 .button {
     border-radius: 10rem;
@@ -328,17 +329,21 @@ header.scrolled {
 }
 @keyframes blurEnter {
     from {
-      backdrop-filter: blur(0px);
+        -webkit-backdrop-filter: blur(0px);
+        backdrop-filter: blur(0px);
     }
     to {
-      backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(20px);
+        backdrop-filter: blur(20px);
     }
 }
 @keyframes blurExit {
     from {
-      backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(20px);
+        backdrop-filter: blur(20px);
     }
     to {
-      backdrop-filter: blur(0px);
+        -webkit-backdrop-filter: blur(0px);
+        backdrop-filter: blur(0px);
     }
 }
