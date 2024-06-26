@@ -1,3 +1,4 @@
+// page transition
 const black = document.querySelector('.blackexit');
 
 function handleLinkClick(linkElements, targetPage) {
@@ -17,7 +18,7 @@ function handleLinkClick(linkElements, targetPage) {
 handleLinkClick(document.querySelectorAll('.index'), 'index.html');
 handleLinkClick(document.querySelectorAll('.gallery'), 'gallery.html');
 
-// header scroll
+// header scroll effect
 document.addEventListener('scroll', () => {
     const header = document.querySelector('header');
     const headerElems = document.querySelectorAll('#headerelem');
