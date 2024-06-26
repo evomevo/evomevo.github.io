@@ -1,6 +1,6 @@
 const black = document.querySelector('.blackexit');
-const index = document.querySelectorAll('#index')
-const gallery = document.querySelectorAll('#gallery')
+const index = document.querySelectorAll('.index')
+const gallery = document.querySelectorAll('.gallery')
 
 index.forEach(index => {
     index.addEventListener('click', (event) => {
