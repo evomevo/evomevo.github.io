@@ -1,29 +1,21 @@
 const black = document.querySelector('.blackexit');
-const index = document.querySelectorAll('.index')
-const gallery = document.querySelectorAll('.gallery')
 
-index.forEach(index => {
-    index.addEventListener('click', (event) => {
-        black.style.visibility = 'visible';
-        setTimeout(() => {
-            black.style.opacity = '1';
-        }, 0);
-        setTimeout(() => {
-            window.location.href = 'index.html';
-        }, 250);
+function handleLinkClick(linkElements, targetPage) {
+    linkElements.forEach(linkElement => {
+        linkElement.addEventListener('click', () => {
+            black.style.visibility = 'visible';
+            setTimeout(() => {
+                black.style.opacity = '1';
+            }, 0);
+            setTimeout(() => {
+                window.location.href = targetPage;
+            }, 250);
+        });
     });
-});
-gallery.forEach(gallery => {
-    gallery.addEventListener('click', (event) => {
-        black.style.visibility = 'visible';
-        setTimeout(() => {
-            black.style.opacity = '1';
-        }, 0);
-        setTimeout(() => {
-            window.location.href = 'gallery.html';
-        }, 250);
-    });
-});
+}
+
+handleLinkClick(document.querySelectorAll('.index'), 'index.html');
+handleLinkClick(document.querySelectorAll('.gallery'), 'gallery.html');
 
 // header scroll
 document.addEventListener('scroll', () => {
