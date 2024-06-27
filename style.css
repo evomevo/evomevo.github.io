@@ -350,6 +350,7 @@ header.scrolled {
 }
 @media screen and (max-width: 700px) {
     .navbar {
+        display: none;
         visibility: hidden;
     }
     .hamburger {
