@@ -196,6 +196,7 @@ header.scrolled {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: center;
     position: relative;
     margin: 10px 0 0 0;
     gap: 10px;
