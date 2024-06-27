@@ -113,8 +113,7 @@ image.forEach(image => {
         document.body.style.overflow = 'hidden';
 
         setTimeout(() => {
-            clone.style.maxHeight = '60svh';
-            clone.style.maxWidth = '80vw'
+            clone.style.transform = 'scale(1)';
             test333.style.opacity = '1';
         }, 0);
     });
@@ -129,7 +128,7 @@ if (document.contains(imagemodal)) {
             setTimeout(() => {
                 const activeImage = document.querySelector('.image.active');
                 if (activeImage) {
-                    activeImage.style.maxHeight = '0';
+                    activeImage.style.transform = 'scale(0.95)';
                     activeImage.remove();
                 }
                 imagemodal.style.display = 'none';

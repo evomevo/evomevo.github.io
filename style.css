@@ -1,8 +1,8 @@
 html {
-    scroll-behavior: smooth;
     --primarycolor: #ddd;
     --secondarycolor: #fff;
     --accentcolor: #007aff;
+    scroll-behavior: smooth;
     font-family: Montserrat;
 }
 body {
@@ -151,7 +151,7 @@ header.scrolled {
     width: 100%;
     flex-direction: column;
     pointer-events: none;
-    transition: top 1s cubic-bezier(0.25, 1.25, 0.25, 1);
+    transition: top .5s cubic-bezier(0.25, 1.25, 0.25, 1);
     z-index: 9;
 }
 .hamburgermenu a {
@@ -268,10 +268,11 @@ header.scrolled {
 }
 .image.active {
     margin: 10px 0 0 0;
-    max-width: 0;
-    max-height: 0;
+    max-width: 80vw;
+    max-height: 60svh;
     padding: 10px;
-    transition: all 1s cubic-bezier(0.25, 1.25, 0.25, 1);
+    transform: scale(0.95);
+    transition: all 1s cubic-bezier(0.25, 2, 0, 1);
 }
 .imagemodal {
     display: none;
@@ -333,11 +334,12 @@ header.scrolled {
 }
 .hover {
     box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px;
-    transition: all 1s cubic-bezier(0, 0, 0, 1);
+    transition: all 1s cubic-bezier(0.25, 3, 0.25, 1);
 }
 .hover:hover {
+    transform: scale(1.025);
     box-shadow: rgba(0, 0, 0, 0.25) 0px 30px 30px, rgba(0, 0, 0, 0.12) 0px -10px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 10px 15px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-    transition: all 1s cubic-bezier(0, 0, 0, 1);
+    transition: all 1s cubic-bezier(0.25, 2, 0.25, 1);
 }
 .noselect {
     -webkit-user-select: none; /* Safari */
