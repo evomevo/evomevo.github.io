@@ -1,9 +1,12 @@
 html {
     scroll-behavior: smooth;
+    --primarycolor: #ddd;
+    --secondarycolor: #fff;
+    --accentcolor: #007aff;
+    font-family: Montserrat;
 }
 body {
-    font-family: Montserrat;
-    background-color: #fff;
+    background-color: var(--secondarycolor);
     margin: 0 auto;
     position: relative;
 }
@@ -55,9 +58,7 @@ header {
     transition: .25s cubic-bezier(0.5, 0, 0.5, 1);
 }
 header.scrolled {
-    background-color: #ffffffd0;
-    -webkit-backdrop-filter: blur(20px);
-    backdrop-filter: blur(20px);
+    background-color: var(--primarycolor);
     transition: .25s cubic-bezier(0.5, 0, 0.5, 1);
 }
 .blackenter {
@@ -87,7 +88,7 @@ header.scrolled {
 }
 .logo {
     width: 150px;
-    fill: #fff;
+    fill: var(--secondarycolor);
     transition: fill .25s cubic-bezier(0.5, 0, 0.5, 1);
 }
 .logo.scrolled {
@@ -99,7 +100,7 @@ header.scrolled {
     gap: 20px;
 }
 .navbar a {
-    color: #fff;
+    color: var(--secondarycolor);
     transition: .25s cubic-bezier(0.5, 0, 0.5, 1);
 }
 .navbar a.scrolled {
@@ -124,7 +125,7 @@ header.scrolled {
     margin: 5px auto;
     justify-content: center;
     align-items: center;
-    background-color: #fff;
+    background-color: var(--secondarycolor);
     border-radius: 1rem;
     transition: .25s cubic-bezier(0.5, 0, 0.5, 1);
 }
@@ -143,9 +144,7 @@ header.scrolled {
 }
 .hamburgermenu {
     overflow: hidden;
-    background-color: #ffffffd0;
-    -webkit-backdrop-filter: blur(20px);
-    backdrop-filter: blur(20px);
+    background-color: var(--primarycolor);
     top: calc(var(--hamburger-menu-height) * -1);
     position: fixed;
     display: flex;
@@ -177,20 +176,41 @@ header.scrolled {
     -webkit-background-size: cover;
     background-size: cover;
 }
+.afterhero {
+    position: relative;
+    z-index: 1;
+}
+.hero {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 70%;
+    height: auto;
+}
+.hero h1, .hero h4 {
+    color: var(--secondarycolor);
+}
+.herobuttons {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    position: relative;
+    margin: 10px 0 0 0;
+    gap: 10px;
+}
 .heroimg1 {
-    background-image: linear-gradient(#00000060, #00000060), url(https://pbs.twimg.com/media/GNFt0xXW4AAhFtS?format=png&name=360x360);
+    background-image: linear-gradient(#00000080, #00000080), url(https://pbs.twimg.com/media/GNFt0xXW4AAhFtS?format=png&name=360x360);
 }
 .heroimg2 {
-    background-image: linear-gradient(#00000060, #00000060), url(https://pbs.twimg.com/media/GOvG6WIaYAAZe9f?format=png&name=small);
+    background-image: linear-gradient(#00000080, #00000080), url(https://pbs.twimg.com/media/GOvG6WIaYAAZe9f?format=png&name=small);
 }
 .heroimg3 {
-    background-image: linear-gradient(#00000060, #00000060), url(https://pbs.twimg.com/media/GNL-xV0XoAASR3H?format=jpg&name=small);
+    background-image: linear-gradient(#00000080, #00000080), url(https://pbs.twimg.com/media/GNL-xV0XoAASR3H?format=jpg&name=small);
 }
 .wrapper {
     border-radius: 1rem;
-    background-color: #ffffffd0;
-    -webkit-backdrop-filter: blur(20px);
-    backdrop-filter: blur(20px);
+    background-color: var(--primarycolor);
     padding: 30px 30px;
     margin: 10% 0 10% 0;
     width: 70%
@@ -216,15 +236,14 @@ header.scrolled {
     gap: 20px;
 }
 .imagewrapper .image {
+    background-color: var(--secondarycolor);
     width: 100%;
     aspect-ratio: 1 / 1;
     cursor: pointer;
 }
 .card {
     border-radius: 1rem;
-    background-color: #ffffffd0;
-    -webkit-backdrop-filter: blur(20px);
-    backdrop-filter: blur(20px);
+    background-color: var(--secondarycolor);
     color: #000;
     min-width: 400px;
     max-width: 400px;
@@ -234,16 +253,12 @@ header.scrolled {
     overflow-wrap: break-word;
     position: relative;
 }
-.herocard {
-    min-width: 70%;
-    height: auto;
-}
 .image {
     object-fit: cover;
     background-position: center;
     -webkit-background-size: cover;
     background-size: cover;
-    background-color: #ffffffd0;
+    background-color: var(--primarycolor);
     border-radius: 1rem;
     -webkit-transform: translate(0, 0); /* Fallback for older browsers */
     -webkit-transform: translate3d(0, 0, 0); /* Preferred for hardware acceleration */
@@ -270,6 +285,9 @@ header.scrolled {
 .imagemodal.exiting {
     animation: blurExit .5s forwards;
 }
+.test333 .image {
+    background-color: var(--primarycolor);
+}
 .test333 {
     background-color: #00000060;
     display: none;
@@ -282,21 +300,12 @@ header.scrolled {
     transition: opacity 0.5s cubic-bezier(0, 0, 0, 1);
 }
 .test333 p {
-    color: #fff;
-}
-.herobuttons {
-    display: flex;
-    flex-direction: row-reverse;
-    flex-wrap: wrap;
-    position: relative;
-    margin: 20px 0 0 0;
-    gap: 10px;
-    cursor: pointer;
+    color: var(--secondarycolor);
 }
 .button {
     border-radius: 10rem;
-    background-color: #fff;
-    color: #000;
+    background-color: var(--accentcolor);
+    color: var(--secondarycolor);
     width: fit-content;
     padding: 10px 20px;
     cursor: pointer;
@@ -312,14 +321,7 @@ header.scrolled {
     aspect-ratio: 1 / 1;
 }
 .wrapperelem {
-    background-color: #eee;
-}
-.accentcolor {
-    background-color: #007aff;
-    color: #fff;
-}
-.accentcolor:hover {
-    background-color: #006adc;
+    background-color: var(--secondarycolor);
 }
 .bottomcardelem {
     margin: 0 0 60px 0;
@@ -330,12 +332,10 @@ header.scrolled {
 .hover {
     box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px;
     transition: all 1s cubic-bezier(0, 0, 0, 1);
-    animation: buttonHover 1s forwards;
 }
 .hover:hover {
     box-shadow: rgba(0, 0, 0, 0.25) 0px 30px 30px, rgba(0, 0, 0, 0.12) 0px -10px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 10px 15px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
     transition: all 1s cubic-bezier(0, 0, 0, 1);
-    animation: buttonHover 1s forwards;
 }
 .noselect {
     -webkit-user-select: none; /* Safari */
@@ -357,7 +357,7 @@ header.scrolled {
         min-width: fit-content;
         overflow-wrap: anywhere;
     }
-    .herocard {
+    .hero {
         min-width: 70%;
         max-width: 70%;
     }
