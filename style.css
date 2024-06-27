@@ -190,6 +190,7 @@ header.scrolled {
 }
 .hero h1, .hero h4 {
     color: var(--secondarycolor);
+    text-align: center
 }
 .herobuttons {
     display: flex;
