@@ -155,7 +155,7 @@ header.scrolled {
     right: 0;
     flex-direction: column;
     pointer-events: none;
-    transition: top .5s cubic-bezier(0.25, 1.25, 0.25, 1);
+    transition: top .25s cubic-bezier(0.5, 0, 0.5, 1);
     z-index: 9;
 }
 .hamburgermenu a {
@@ -165,6 +165,7 @@ header.scrolled {
 .hamburgermenu.active {
     top: var(--header-height);
     pointer-events: auto;
+    transition: top .5s cubic-bezier(0.25, 1.25, 0.25, 1);
 }
 .div {
     min-height: 100svh;
