@@ -55,8 +55,8 @@ document.body.addEventListener('click', (event) => {
     }
 });
 
-menu.style.setProperty('--header-height', header.offsetHeight + 'px');
-menu.style.setProperty('--hamburger-menu-height', menu.offsetHeight + 'px');
+menu.style.setProperty('--header-height', header.offsetHeight + 10 + 'px');
+menu.style.setProperty('--hamburger-menu-height', menu.offsetHeight + 20 + 'px');
 
 // card drag scrolling
 const cardWrappers = document.querySelectorAll('.cardwrapper');
