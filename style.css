@@ -55,12 +55,14 @@ header {
     margin: 10px;
     border-radius: 1rem;
     background-color: #ffffff00;
+    box-shadow: 0 0 100px #ffffff00;
     z-index: 10;
-    transition: .25s cubic-bezier(0.5, 0, 0.5, 1);
+    transition: .5s cubic-bezier(0, 0, 0, 1);
 }
 header.scrolled {
     background-color: var(--primarycolor);
-    transition: .25s cubic-bezier(0.5, 0, 0.5, 1);
+    box-shadow: 0 0 0 var(--primarycolor);
+    transition: .5s cubic-bezier(0, 0, 0, 1);
 }
 .blackenter {
     display: flex;
@@ -68,7 +70,7 @@ header.scrolled {
     justify-content: center;
     position: fixed;
     background-color: #000;
-    height: 100vh;
+    height: 100lvh;
     width: 100vw;
     opacity: 1;
     z-index: 1000;
@@ -81,7 +83,7 @@ header.scrolled {
     justify-content: center;
     position: fixed;
     background-color: #000;
-    height: 100vh;
+    height: 100lvh;
     width: 100vw;
     opacity: 0;
     z-index: 1000;
@@ -90,7 +92,7 @@ header.scrolled {
 .logo {
     width: 150px;
     fill: var(--secondarycolor);
-    transition: fill .25s cubic-bezier(0.5, 0, 0.5, 1);
+    transition: fill .5s cubic-bezier(0, 0, 0, 1);
 }
 .logo.scrolled {
     fill: #000;
@@ -102,22 +104,22 @@ header.scrolled {
 }
 .navbar a {
     color: var(--secondarycolor);
-    transition: .25s cubic-bezier(0.5, 0, 0.5, 1);
+    transition: .5s cubic-bezier(0, 0, 0, 1);
 }
 .navbar a.scrolled {
     color: #000;
-    transition: .25s cubic-bezier(0.5, 0, 0.5, 1);
+    transition: .5s cubic-bezier(0, 0, 0, 1);
 }
 .hamburger {
     display: none;
     cursor: pointer;
-    transition: .25s cubic-bezier(0, 0, 0.5, 1);
+    transition: .5s cubic-bezier(0, 0, 0, 1);
 }
 .hamburger:active {
     transform: scale(.9);
 }
 .active {
-    transition: .25s cubic-bezier(0, 0, 0.5, 1);
+    transition: .5s cubic-bezier(0, 0, 0, 1);
 }
 .bar {
     display: block;
@@ -128,11 +130,11 @@ header.scrolled {
     align-items: center;
     background-color: var(--secondarycolor);
     border-radius: 1rem;
-    transition: .25s cubic-bezier(0.5, 0, 0.5, 1);
+    transition: .5s cubic-bezier(0, 0, 0, 1);
 }
 .bar.scrolled {
     background-color: #000;
-    transition: .25s cubic-bezier(0.5, 0, 0.5, 1);
+    transition: .5s cubic-bezier(0, 0, 0, 1);
 }
 .hamburger.active .bar:nth-child(1) {
     transform: translateY(8px) rotate(45deg);
@@ -155,7 +157,7 @@ header.scrolled {
     right: 0;
     flex-direction: column;
     pointer-events: none;
-    transition: top .25s cubic-bezier(0.5, 0, 0.5, 1);
+    transition: top .5s cubic-bezier(0.5, 0, 0.5, 1);
     z-index: 9;
 }
 .hamburgermenu a {
