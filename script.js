@@ -38,6 +38,16 @@ document.addEventListener('scroll', () => {
     }
 });
 
+// scroll progress bar
+window.onscroll = function() {progressBar()};
+
+function progressBar() {
+    var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+    var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    var scrolled = (winScroll / height) * 100;
+    document.querySelector('.progressbar').style.width = scrolled + "%";
+}
+
 // hamburger menu
 const header = document.querySelector('header');
 const hamburger = document.querySelector('.hamburger');
@@ -55,6 +65,7 @@ document.body.addEventListener('click', (event) => {
     }
 });
 
+header.style.setProperty('--header-height', header.offsetHeight + 10 + 'px');
 menu.style.setProperty('--header-height', header.offsetHeight + 10 + 'px');
 menu.style.setProperty('--hamburger-menu-height', menu.offsetHeight + 20 + 'px');
 
@@ -93,6 +104,8 @@ cardWrappers.forEach(cardWrapper => {
 const image = document.querySelectorAll('.image');
 const imagemodal = document.querySelector('.imagemodal');
 const test333 = document.querySelector('.test333')
+const imagecontainer = document.querySelector('#imagecontainer')
+let alttext = document.getElementById('alttext');
 
 image.forEach(image => {
     image.addEventListener('click', () => {
@@ -104,10 +117,12 @@ image.forEach(image => {
         }
 
         const clone = image.cloneNode(true);
+        alttext.textContent = clone.alt;
         clone.classList.add('active', 'shadow');
         clone.classList.remove('hover');
+        header.classList.add('active');
 
-        test333.appendChild(clone);
+        imagecontainer.appendChild(clone);
         imagemodal.style.display = 'flex';
         test333.style.display = 'flex';
         document.body.style.overflow = 'hidden';
@@ -125,6 +140,7 @@ if (document.contains(imagemodal)) {
             imagemodal.classList.add('exiting');
             document.body.style.overflow = 'auto';
             test333.style.opacity = '0';
+            header.classList.remove('active')
             setTimeout(() => {
                 const activeImage = document.querySelector('.image.active');
                 if (activeImage) {
