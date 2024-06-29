@@ -149,7 +149,7 @@ header.active {
     margin: 5px auto;
     justify-content: center;
     align-items: center;
-    background-color: var(--secondarycolor);
+    background-color: #fff;
     border-radius: 1rem;
     transition: .5s cubic-bezier(0, 0, 0, 1);
 }
