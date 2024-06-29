@@ -305,7 +305,7 @@ header.active {
     max-height: 60svh;
     padding: 10px;
     transform: scale(0.95);
-    transition: all 1s cubic-bezier(0.25, 2, 0, 1);
+    transition: 1s cubic-bezier(0.25, 2, 0, 1), background-color 0s linear;
 }
 .imagemodal {
     display: none;
