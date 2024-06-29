@@ -156,7 +156,7 @@ if (document.contains(imagemodal)) {
 
 // theme switch
 const themeswitch = document.querySelectorAll('.themeswitch');
-let darkmode = localStorage.getItem('darkmode') === 'true';
+let darkmode = sessionStorage.getItem('darkmode') === 'true';
 
 // Function to apply the theme
 const applyTheme = () => {
