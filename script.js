@@ -177,13 +177,13 @@ applyTheme();
 themeswitch.forEach(themeswitch => {
     themeswitch.addEventListener('click', () => {
         darkmode = !darkmode;
-        localStorage.setItem('darkmode', darkmode);
+        sessionStorage.setItem('darkmode', darkmode);
         applyTheme();
     });
 });
 
 if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
     darkmode = true;
-    localStorage.setItem('darkmode', darkmode);
+    sessionStorage.setItem('darkmode', darkmode);
     applyTheme();
 }
