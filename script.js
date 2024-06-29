@@ -141,7 +141,6 @@ if (document.contains(imagemodal)) {
             document.body.style.overflow = 'auto';
             test333.style.opacity = '0';
             header.classList.remove('active')
-            header.classList.add('test')
             setTimeout(() => {
                 const activeImage = document.querySelector('.image.active');
                 if (activeImage) {
@@ -150,8 +149,8 @@ if (document.contains(imagemodal)) {
                 }
                 imagemodal.style.display = 'none';
                 imagemodal.classList.remove('exiting');
-                header.classList.remove('test')
             }, 500);
         }
     });
 }
+
