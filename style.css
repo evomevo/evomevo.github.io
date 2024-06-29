@@ -273,7 +273,7 @@ header.active {
     max-width: 100vh;
     aspect-ratio: 1 / 1;
     cursor: pointer;
-    transition: .5s cubic-bezier(0, 0, 0, 1);
+    transition: 1s cubic-bezier(0.25, 3, 0.25, 1), background-color .5s cubic-bezier(0, 0, 0, 1);
 }
 .card {
     border-radius: 1rem;

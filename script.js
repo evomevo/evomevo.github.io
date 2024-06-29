@@ -158,7 +158,6 @@ if (document.contains(imagemodal)) {
 const themeswitch = document.querySelectorAll('.themeswitch');
 let darkmode = sessionStorage.getItem('darkmode') === 'true';
 
-// Function to apply the theme
 const applyTheme = () => {
     if (darkmode) {
         document.body.style.setProperty('--primarycolor', '#222');
@@ -171,7 +170,6 @@ const applyTheme = () => {
     }
 };
 
-// Apply theme on page load based on localStorage
 applyTheme();
 
 themeswitch.forEach(themeswitch => {
