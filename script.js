@@ -182,8 +182,11 @@ themeswitch.forEach(themeswitch => {
     });
 });
 
-if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-    darkmode = true;
-    sessionStorage.setItem('darkmode', darkmode);
-    applyTheme();
+if (!sessionStorage.getItem('hasVisited')) {
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        let darkmode = true;
+        sessionStorage.setItem('darkmode', darkmode);
+        applyTheme();
+    }
+    sessionStorage.setItem('hasVisited', 'true');
 }
