@@ -156,20 +156,34 @@ if (document.contains(imagemodal)) {
 
 // theme switch
 const themeswitch = document.querySelectorAll('.themeswitch');
-let darkmode = false;
+let darkmode = localStorage.getItem('darkmode') === 'true';
+
+// Function to apply the theme
+const applyTheme = () => {
+    if (darkmode) {
+        document.body.style.setProperty('--primarycolor', '#222');
+        document.body.style.setProperty('--secondarycolor', '#000');
+        document.body.style.setProperty('--other', '#fff');
+    } else {
+        document.body.style.setProperty('--primarycolor', '');
+        document.body.style.setProperty('--secondarycolor', '');
+        document.body.style.setProperty('--other', '');
+    }
+};
+
+// Apply theme on page load based on localStorage
+applyTheme();
 
 themeswitch.forEach(themeswitch => {
     themeswitch.addEventListener('click', () => {
-        if (darkmode) {
-            document.body.style.setProperty('--primarycolor', '');
-            document.body.style.setProperty('--secondarycolor', '');
-            document.body.style.setProperty('--other', '');
-        } else {
-            document.body.style.setProperty('--primarycolor', '#222');
-            document.body.style.setProperty('--secondarycolor', '#000');
-            document.body.style.setProperty('--other', '#fff');
-        }
-
         darkmode = !darkmode;
+        localStorage.setItem('darkmode', darkmode);
+        applyTheme();
     });
 });
+
+if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    darkmode = true;
+    localStorage.setItem('darkmode', darkmode);
+    applyTheme();
+}
