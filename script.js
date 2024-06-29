@@ -127,39 +127,43 @@ image.forEach(image => {
         test333.style.display = 'flex';
         document.body.style.overflow = 'hidden';
 
+        // Function to get the average color of an image
         async function getAverageColor(imageElement) {
             return new Promise(resolve => {
                 const canvas = document.createElement('canvas');
                 const ctx = canvas.getContext('2d');
                 const img = new Image();
-                img.setAttribute('crossOrigin', '')
-                
+                img.setAttribute('crossOrigin', '');
+
                 img.onload = function() {
                     canvas.width = img.width;
                     canvas.height = img.height;
                     ctx.drawImage(img, 0, 0);
-                    
+
                     const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
                     let r = 0, g = 0, b = 0;
-                    
+
+                    // Calculate sum of RGB values
                     for (let i = 0; i < imageData.data.length; i += 4) {
                         r += imageData.data[i];
                         g += imageData.data[i + 1];
                         b += imageData.data[i + 2];
                     }
-                    
+
+                    // Calculate average RGB values
                     const pixelCount = imageData.data.length / 4;
                     r = Math.floor(r / pixelCount);
                     g = Math.floor(g / pixelCount);
                     b = Math.floor(b / pixelCount);
-                    
+
                     resolve({ r, g, b });
                 };
-                
+
                 img.src = imageElement.src;
             });
         }
 
+        // Usage example: set background gradient based on average color of 'clone' image
         getAverageColor(clone).then(avgColor => {
             clone.style.backgroundImage = `linear-gradient(to bottom right, rgb(${avgColor.r}, ${avgColor.g}, ${avgColor.b}), rgba(${avgColor.r}, ${avgColor.g}, ${avgColor.b}, 0.5))`;
         });
