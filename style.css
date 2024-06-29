@@ -1,11 +1,12 @@
 html {
+    scroll-behavior: smooth;
+}
+body {
     --primarycolor: #ddd;
     --secondarycolor: #fff;
     --accentcolor: #007aff;
-    scroll-behavior: smooth;
+    --other: #000;
     font-family: Montserrat;
-}
-body {
     background-color: var(--secondarycolor);
     margin: 0 auto;
     position: relative;
@@ -111,11 +112,11 @@ header.active {
   }
 .logo {
     width: 150px;
-    fill: var(--secondarycolor);
+    fill: #fff;
     transition: fill .5s cubic-bezier(0, 0, 0, 1);
 }
 .logo.scrolled {
-    fill: #000;
+    fill: var(--other);
 }
 .navbar {
     display: flex;
@@ -123,11 +124,11 @@ header.active {
     gap: 20px;
 }
 .navbar a {
-    color: var(--secondarycolor);
+    color: #fff;
     transition: .5s cubic-bezier(0, 0, 0, 1);
 }
 .navbar a.scrolled {
-    color: #000;
+    color: var(--other);
     transition: .5s cubic-bezier(0, 0, 0, 1);
 }
 .hamburger {
@@ -153,7 +154,7 @@ header.active {
     transition: .5s cubic-bezier(0, 0, 0, 1);
 }
 .bar.scrolled {
-    background-color: #000;
+    background-color: var(--other);
     transition: .5s cubic-bezier(0, 0, 0, 1);
 }
 .hamburger.active .bar:nth-child(1) {
@@ -182,7 +183,7 @@ header.active {
 }
 .hamburgermenu a {
     padding: 12px 50px;
-    color: #000;
+    color: var(--other);
 }
 .hamburgermenu.active {
     top: var(--header-height);
@@ -216,8 +217,8 @@ header.active {
     height: auto;
 }
 .hero h1, .hero h4 {
-    color: var(--secondarycolor);
-    text-align: center
+    color: #fff;
+    text-align: center;
 }
 .herobuttons {
     display: flex;
@@ -240,9 +241,11 @@ header.active {
 .wrapper {
     border-radius: 1rem;
     background-color: var(--primarycolor);
+    color: var(--other);
     padding: 30px 30px;
     margin: 10% 0 10% 0;
-    width: 70%
+    width: 70%;
+    transition: .5s cubic-bezier(0, 0, 0, 1);
 }
 .cardwrapper {
     display: flex;
@@ -270,11 +273,12 @@ header.active {
     max-width: 100vh;
     aspect-ratio: 1 / 1;
     cursor: pointer;
+    transition: .5s cubic-bezier(0, 0, 0, 1);
 }
 .card {
     border-radius: 1rem;
     background-color: var(--secondarycolor);
-    color: #000;
+    color: var(--other);
     min-width: 400px;
     max-width: 400px;
     padding: 30px 30px;
@@ -282,6 +286,7 @@ header.active {
     align-items: center;
     overflow-wrap: break-word;
     position: relative;
+    transition: .5s cubic-bezier(0, 0, 0, 1);
 }
 .image {
     object-fit: cover;
@@ -332,11 +337,12 @@ header.active {
 }
 .test333 p, .test333 h3 {
     color: var(--secondarycolor);
+    text-align: center;
 }
 .button {
     border-radius: 10rem;
     background-color: var(--accentcolor);
-    color: var(--secondarycolor);
+    color: #fff;
     width: fit-content;
     padding: 10px 20px;
     cursor: pointer;

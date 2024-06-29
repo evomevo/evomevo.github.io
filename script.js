@@ -154,3 +154,64 @@ if (document.contains(imagemodal)) {
     });
 }
 
+// theme switch
+const themeswitch = document.querySelector('.themeswitch');
+let darkmode = false;
+
+// Function to set a cookie
+function setCookie(name, value, days) {
+    const date = new Date();
+    date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+    const expires = "expires=" + date.toUTCString();
+    document.cookie = name + "=" + value + ";" + expires + ";path=/";
+}
+
+// Function to get a cookie
+function getCookie(name) {
+    const cname = name + "=";
+    const decodedCookie = decodeURIComponent(document.cookie);
+    const ca = decodedCookie.split(';');
+    for (let i = 0; i < ca.length; i++) {
+        let c = ca[i];
+        while (c.charAt(0) === ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(cname) === 0) {
+            return c.substring(cname.length, c.length);
+        }
+    }
+    return "";
+}
+
+// Check if darkmode preference is stored in cookie
+const storedDarkMode = getCookie('darkmode');
+if (storedDarkMode === 'true') {
+    enableDarkMode();
+} else {
+    disableDarkMode();
+}
+
+// Event listener for theme switch
+themeswitch.addEventListener('click', () => {
+    if (darkmode) {
+        disableDarkMode();
+    } else {
+        enableDarkMode();
+    }
+    darkmode = !darkmode;
+    setCookie('darkmode', darkmode.toString(), 30); // Store darkmode preference for 30 days
+});
+
+// Function to enable dark mode
+function enableDarkMode() {
+    document.body.style.setProperty('--primarycolor', '#222');
+    document.body.style.setProperty('--secondarycolor', '#000');
+    document.body.style.setProperty('--other', '#fff');
+}
+
+// Function to disable dark mode
+function disableDarkMode() {
+    document.body.style.setProperty('--primarycolor', '');
+    document.body.style.setProperty('--secondarycolor', '');
+    document.body.style.setProperty('--other', '');
+}
