@@ -1,7 +1,7 @@
 // page transition
 const black = document.querySelector('.blackexit');
 
-function handleLinkClick(linkElements, targetPage) {
+function handleLink(linkElements, targetPage) {
     linkElements.forEach(linkElement => {
         linkElement.addEventListener('click', () => {
             black.style.visibility = 'visible';
@@ -15,8 +15,8 @@ function handleLinkClick(linkElements, targetPage) {
     });
 }
 
-handleLinkClick(document.querySelectorAll('.index'), 'index.html');
-handleLinkClick(document.querySelectorAll('.gallery'), 'gallery.html');
+handleLink(document.querySelectorAll('.index'), 'index.html');
+handleLink(document.querySelectorAll('.gallery'), 'gallery.html');
 
 // header scroll effect
 document.addEventListener('scroll', () => {
@@ -39,14 +39,14 @@ document.addEventListener('scroll', () => {
 });
 
 // scroll progress bar
-window.onscroll = function() {progressBar()};
-
 function progressBar() {
     var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
     var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
     var scrolled = (winScroll / height) * 100;
     document.querySelector('.progressbar').style.width = scrolled + "%";
 }
+
+window.onscroll = function() {progressBar()};
 
 // hamburger menu
 const header = document.querySelector('header');
@@ -106,6 +106,50 @@ const imagemodal = document.querySelector('.imagemodal');
 const test333 = document.querySelector('.test333')
 const imagecontainer = document.querySelector('#imagecontainer')
 let alttext = document.getElementById('alttext');
+const darkeningfactor = 0.25;
+
+function darkenRGB(rgb, factor) {
+    let [r, g, b] = rgb;
+    r = Math.floor(r * (1 - factor));
+    g = Math.floor(g * (1 - factor));
+    b = Math.floor(b * (1 - factor));
+    return [r, g, b];
+}
+
+async function getAverageColor(imageElement) {
+    return new Promise(resolve => {
+        const canvas = document.createElement('canvas');
+        const ctx = canvas.getContext('2d');
+        const img = new Image();
+        img.setAttribute('crossOrigin', '');
+
+        img.onload = function() {
+            canvas.width = img.width;
+            canvas.height = img.height;
+            ctx.drawImage(img, 0, 0);
+
+            const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+            let r = 0, g = 0, b = 0;
+
+            for (let i = 0; i < imageData.data.length; i += 4) {
+                r += imageData.data[i];
+                g += imageData.data[i + 1];
+                b += imageData.data[i + 2];
+            }
+
+            const pixelCount = imageData.data.length / 4;
+            r = Math.floor(r / pixelCount);
+            g = Math.floor(g / pixelCount);
+            b = Math.floor(b / pixelCount);
+
+            [r, g, b] = darkenRGB([r, g, b], darkeningfactor);
+
+            resolve({ r, g, b });
+        };
+
+        img.src = imageElement.src;
+    });
+}
 
 image.forEach(image => {
     image.addEventListener('click', () => {
@@ -127,50 +171,6 @@ image.forEach(image => {
         test333.style.display = 'flex';
         document.body.style.overflow = 'hidden';
 
-        function darkenRGB(rgb, factor) {
-            let [r, g, b] = rgb;
-            r = Math.floor(r * (1 - factor));
-            g = Math.floor(g * (1 - factor));
-            b = Math.floor(b * (1 - factor));
-            return [r, g, b];
-        }
-
-        async function getAverageColor(imageElement) {
-            return new Promise(resolve => {
-                const canvas = document.createElement('canvas');
-                const ctx = canvas.getContext('2d');
-                const img = new Image();
-                img.setAttribute('crossOrigin', '');
-
-                img.onload = function() {
-                    canvas.width = img.width;
-                    canvas.height = img.height;
-                    ctx.drawImage(img, 0, 0);
-
-                    const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
-                    let r = 0, g = 0, b = 0;
-
-                    for (let i = 0; i < imageData.data.length; i += 4) {
-                        r += imageData.data[i];
-                        g += imageData.data[i + 1];
-                        b += imageData.data[i + 2];
-                    }
-
-                    const pixelCount = imageData.data.length / 4;
-                    r = Math.floor(r / pixelCount);
-                    g = Math.floor(g / pixelCount);
-                    b = Math.floor(b / pixelCount);
-
-                    [r, g, b] = darkenRGB([r, g, b], darkeningFactor);
-
-                    resolve({ r, g, b });
-                };
-
-                img.src = imageElement.src;
-            });
-        }
-        
-        const darkeningFactor = 0.25;
         getAverageColor(clone).then(avgColor => {
             clone.style.backgroundColor = `rgb(${avgColor.r}, ${avgColor.g}, ${avgColor.b})`;
         });
@@ -207,7 +207,7 @@ const themeswitch = document.querySelectorAll('.themeswitch');
 let darkmode = sessionStorage.getItem('darkmode') === 'true';
 
 const applyTheme = () => {
-    if (darkmode) {
+    if (darkmode, darkmode == true) {
         document.body.style.setProperty('--primarycolor', '#222');
         document.body.style.setProperty('--secondarycolor', '#000');
         document.body.style.setProperty('--other', '#fff');
@@ -218,6 +218,14 @@ const applyTheme = () => {
     }
 };
 
+if (!sessionStorage.getItem('hasVisited')) {
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        darkmode = true;
+        sessionStorage.setItem('darkmode', darkmode);
+    }
+    sessionStorage.setItem('hasVisited', 'true');
+}
+
 applyTheme();
 
 themeswitch.forEach(themeswitch => {
@@ -227,12 +235,3 @@ themeswitch.forEach(themeswitch => {
         applyTheme();
     });
 });
-
-if (!sessionStorage.getItem('hasVisited')) {
-    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        let darkmode = true;
-        sessionStorage.setItem('darkmode', darkmode);
-        applyTheme();
-    }
-    sessionStorage.setItem('hasVisited', 'true');
-}
