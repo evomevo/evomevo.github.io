@@ -13,7 +13,7 @@ body {
 }
 h1 {
     margin: 0;
-    font-size: 60px;
+    font-size: 50px;
     font-weight: 900;
     line-height: 1.3;
 }
@@ -255,23 +255,14 @@ header.active {
     gap: 20px;
 }
 .gallerywrapper {
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     margin: 10px 0 10px 0;
     gap: 20px
 }
-.imagewrapper {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    border-radius: 1rem;
-    gap: 20px;
-}
-.imagewrapper .image {
+.gallerywrapper .image {
     background-color: var(--secondarycolor);
     width: 100%;
-    max-height: 100vh;
-    max-width: 100vw;
     aspect-ratio: 1 / 1;
     cursor: pointer;
     transition: 1s cubic-bezier(0.25, 3, 0.25, 1), background-color .5s cubic-bezier(0, 0, 0, 1);
@@ -389,6 +380,21 @@ header.active {
     right: 30px;
 }
 @media screen and (max-width: 700px) {
+    h1 {
+        font-size: 40px;
+    }
+    h2 {
+        font-size: 30px;
+    }
+    h3 {
+        font-size: 25px;
+    }
+    h4 {
+        font-size: 20px;
+    }
+    p {
+        font-size: 15px;
+    }
     .navbar {
         display: none;
         visibility: hidden;
@@ -405,10 +411,8 @@ header.active {
         max-width: 70%;
     }
     .gallerywrapper {
-        gap: 10px
-    }
-    .imagewrapper {
         gap: 10px;
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     }
 }
 @keyframes websiteLoad {
