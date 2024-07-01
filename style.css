@@ -70,7 +70,7 @@ a {
     cursor: pointer;
     transition: .5s cubic-bezier(0, 0, 0, 1);
 }
-.wrapper a:after, .navbar a:after {
+ul a:after {
     background: none repeat scroll 0 0 transparent;
     bottom: 0;
     content: "";
@@ -81,7 +81,7 @@ a {
     width: 0;
     transition: width 0.3s ease 0s, background-color .5s cubic-bezier(0, 0, 0, 1);
 }
-.wrapper a:hover:after, .navbar a:hover:after {
+ul a:hover:after {
     width: 100%; 
     left: 0; 
 }
