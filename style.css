@@ -190,7 +190,7 @@ header.active {
     pointer-events: auto;
     transition: top .5s cubic-bezier(0.25, 1.25, 0.25, 1);
 }
-.div {
+.bgimg {
     min-height: 100svh;
     width: 100%;
     display: flex;
@@ -229,13 +229,13 @@ header.active {
     margin: 10px 0 0 0;
     gap: 10px;
 }
-.heroimg1 {
+.bgimg1 {
     background-image: linear-gradient(#00000080, #00000080), url(https://pbs.twimg.com/media/GNFt0xXW4AAhFtS?format=png&name=360x360);
 }
-.heroimg2 {
+.bgimg2 {
     background-image: linear-gradient(#00000080, #00000080), url(https://pbs.twimg.com/media/GOvG6WIaYAAZe9f?format=png&name=small);
 }
-.heroimg3 {
+.bgimg3 {
     background-image: linear-gradient(#00000080, #00000080), url(https://pbs.twimg.com/media/GNL-xV0XoAASR3H?format=jpg&name=small);
 }
 .wrapper {
@@ -313,10 +313,10 @@ header.active {
 .imagemodal.exiting {
     animation: blurExit .5s forwards;
 }
-.test333 .image {
+.modalcontents .image {
     background-color: var(--primarycolor);
 }
-.test333 {
+.modalcontents {
     background-color: #00000060;
     display: none;
     width: inherit;
@@ -327,7 +327,7 @@ header.active {
     align-items: center;
     transition: opacity 0.5s cubic-bezier(0, 0, 0, 1);
 }
-.test333 p, .test333 h3 {
+.modalcontents p, .modalcontents h3 {
     color: #fff;
     text-align: center;
 }
@@ -339,15 +339,27 @@ header.active {
     padding: 10px 20px;
     cursor: pointer;
 }
-.roundbutton {
+.button.big {
+    border-radius: 1rem;
+    padding: 20px 40px;
+}
+.button.round {
     border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 70px;
+    height: 70px;
+    padding: 0;
     aspect-ratio: 1 / 1;
+}
+.button.round.small {
+    width: 40px;
+    height: 40px;
+    padding: 0;
+}
+.fortnite {
+    animation: colorRotate 2s ease-in-out infinite;
 }
 .wrapperelem {
     background-color: var(--secondarycolor);
@@ -360,15 +372,12 @@ header.active {
 }
 .hover {
     box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px;
-    transition: all 1s cubic-bezier(0.25, 3, 0.25, 1);
-    -webkit-transform: translate(0, 0); /* Fallback for older browsers */
-    -webkit-transform: translate3d(0, 0, 0); /* Preferred for hardware acceleration */
-    transform: translate3d(0, 0, 0); /* Standard syntax */
+    transition: 1s cubic-bezier(0.25, 3, 0.25, 1);
 }
 .hover:hover {
     transform: scale(1.025);
     box-shadow: rgba(0, 0, 0, 0.25) 0px 30px 30px, rgba(0, 0, 0, 0.12) 0px -10px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 10px 15px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-    transition: all 1s cubic-bezier(0.25, 2, 0.25, 1);
+    transition: 1s cubic-bezier(0.25, 2, 0.25, 1);
 }
 .noselect {
     -webkit-user-select: none; /* Safari */
@@ -378,6 +387,11 @@ header.active {
     position: absolute;
     bottom: 30px;
     right: 30px;
+}
+.boop {
+    position: fixed;
+    padding: 0 20%;
+    bottom: 30px;
 }
 @media screen and (max-width: 700px) {
     h1 {
@@ -421,6 +435,14 @@ header.active {
     } to {
         opacity: 0;
         visibility: hidden;
+    }
+}
+@keyframes colorRotate {
+    0%, 100% {
+        background-color: #007aff;
+    }
+    50% {
+        background-color: #208cff;
     }
 }
 @keyframes blurEnter {

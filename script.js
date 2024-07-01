@@ -103,7 +103,7 @@ cardWrappers.forEach(cardWrapper => {
 //gallery image
 const image = document.querySelectorAll('.image');
 const imagemodal = document.querySelector('.imagemodal');
-const test333 = document.querySelector('.test333')
+const modalcontents = document.querySelector('.modalcontents')
 const imagecontainer = document.querySelector('#imagecontainer')
 let alttext = document.getElementById('alttext');
 const darkeningfactor = 0.25;
@@ -168,7 +168,7 @@ image.forEach(image => {
 
         imagecontainer.appendChild(clone);
         imagemodal.style.display = 'flex';
-        test333.style.display = 'flex';
+        modalcontents.style.display = 'flex';
         document.body.style.overflow = 'hidden';
 
         getAverageColor(clone).then(avgColor => {
@@ -177,7 +177,7 @@ image.forEach(image => {
 
         setTimeout(() => {
             clone.style.transform = 'scale(1)';
-            test333.style.opacity = '1';
+            modalcontents.style.opacity = '1';
         }, 0);
     });
 });
@@ -187,7 +187,7 @@ if (document.contains(imagemodal)) {
         if (!event.target.classList.contains('image') && imagemodal.contains(event.target)) {
             imagemodal.classList.add('exiting');
             document.body.style.overflow = 'auto';
-            test333.style.opacity = '0';
+            modalcontents.style.opacity = '0';
             header.classList.remove('active')
             setTimeout(() => {
                 const activeImage = document.querySelector('.image.active');
