@@ -50,6 +50,7 @@ p {
     font-weight: 500;
 }
 a {
+    color: var(--other);
     text-decoration: none;
     cursor: pointer;
 }
@@ -126,6 +127,9 @@ header.active {
 }
 .logo.scrolled {
     fill: var(--other);
+}
+.logo.special {
+    fill: #fff;
 }
 .navbar {
     display: flex;
@@ -215,15 +219,6 @@ header.active {
     color: var(--other);
     text-align: center;
     transition: .5s cubic-bezier(0, 0, 0, 1);
-}
-.herobuttons {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    position: relative;
-    margin: 10px 0 0 0;
-    gap: 10px;
 }
 .bgimg {
     min-height: 100svh;
@@ -337,6 +332,15 @@ header.active {
 .modalcontents p, .modalcontents h3 {
     color: #fff;
     text-align: center;
+}
+.buttonrow {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
+    margin: 10px 0 0 0;
+    gap: 10px;
 }
 .button {
     border-radius: 10rem;
