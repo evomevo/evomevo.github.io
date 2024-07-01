@@ -188,7 +188,6 @@ header.active {
     display: block;
     width: 23px;
     height: 3px;
-    margin: 5px auto;
     justify-content: center;
     align-items: center;
     background-color: var(--other);
@@ -454,7 +453,11 @@ header.active {
         visibility: hidden;
     }
     .hamburger {
-        display: block;
+        height: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 5px;
     }
     .card {
         min-width: fit-content;
