@@ -49,22 +49,43 @@ p {
     font-size: 17px;
     font-weight: 500;
 }
+ul {
+    display: table;
+    margin: 0;
+}
+.navbar ul {
+    padding: 0;
+    list-style: none;
+}
+li {
+    position: relative;
+}
 a {
     color: var(--other);
     text-decoration: none;
     cursor: pointer;
 }
+.wrapper a:after, .navbar a:after {
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: flex;
+    height: 2px;
+    position: absolute;
+    background-color: var(--other);
+    width: 0;
+    transition: width 0.3s ease 0s, background-color .5s cubic-bezier(0, 0, 0, 1);
+}
+.wrapper a:hover:after, .navbar a:hover:after {
+    width: 100%; 
+    left: 0; 
+}
 header {
     overflow: hidden;
     position: fixed;
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    justify-content: space-between;
     top: 0;
     left: 0;
     right: 0;
-    padding: 10px 13%;
     margin: 10px;
     border-radius: 1rem;
     background-color: #ffffff00;
@@ -79,6 +100,14 @@ header.scrolled {
 }
 header.active {
     top: calc(var(--header-height) * -1);
+    transition: .5s cubic-bezier(0, 0, 0, 1);
+}
+.babaji {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 13% 10px 13%;
     transition: .5s cubic-bezier(0, 0, 0, 1);
 }
 .blackenter {
@@ -107,12 +136,9 @@ header.active {
     transition: all .25s ease-in-out;
 }
 .progresscontainer {
-    overflow: hidden;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
+    width: calc(100% - 30px);
     height: 5px;
+    margin: 5px 0 0 15px;
 }
 .progressbar {
     height: 100%;
@@ -137,6 +163,9 @@ header.active {
     gap: 20px;
 }
 .navbar a {
+    display: flex;
+    align-items: center;
+    height: 50px;
     color: var(--other);
     transition: .5s cubic-bezier(0, 0, 0, 1);
 }
@@ -174,7 +203,7 @@ header.active {
     transform: translateY(8px) rotate(45deg);
 }
 .hamburger.active .bar:nth-child(2) {
-    opacity: 0;
+    transform: rotate(45deg);
 }
 .hamburger.active .bar:nth-child(3) {
     transform: translateY(-8px) rotate(-45deg);
