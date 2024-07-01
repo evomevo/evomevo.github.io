@@ -1,6 +1,15 @@
 html {
     scroll-behavior: smooth;
 }
+.test158 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    filter: blur(100px);
+    z-index: -1;
+}
 body {
     --primarycolor: #ddd;
     --secondarycolor: #fff;
@@ -10,6 +19,7 @@ body {
     background-color: var(--secondarycolor);
     margin: 0 auto;
     position: relative;
+    transition: background-color .5s cubic-bezier(0, 0, 0, 1);
 }
 h1 {
     margin: 0;
@@ -109,10 +119,10 @@ header.active {
     background-color: var(--accentcolor);
     border-radius: 1rem;
     width: 0%;
-  }
+}
 .logo {
     width: 150px;
-    fill: #fff;
+    fill: var(--other);
     transition: fill .5s cubic-bezier(0, 0, 0, 1);
 }
 .logo.scrolled {
@@ -124,7 +134,7 @@ header.active {
     gap: 20px;
 }
 .navbar a {
-    color: #fff;
+    color: var(--other);
     transition: .5s cubic-bezier(0, 0, 0, 1);
 }
 .navbar a.scrolled {
@@ -149,7 +159,7 @@ header.active {
     margin: 5px auto;
     justify-content: center;
     align-items: center;
-    background-color: #fff;
+    background-color: var(--other);
     border-radius: 1rem;
     transition: .5s cubic-bezier(0, 0, 0, 1);
 }
@@ -190,20 +200,6 @@ header.active {
     pointer-events: auto;
     transition: top .5s cubic-bezier(0.25, 1.25, 0.25, 1);
 }
-.bgimg {
-    min-height: 100svh;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    overflow-wrap: break-word;
-    background-position: center;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    -webkit-background-size: cover;
-    background-size: cover;
-}
 .afterhero {
     position: relative;
     z-index: 1;
@@ -217,8 +213,9 @@ header.active {
     height: auto;
 }
 .hero h1, .hero h4 {
-    color: #fff;
+    color: var(--other);
     text-align: center;
+    transition: .5s cubic-bezier(0, 0, 0, 1);
 }
 .herobuttons {
     display: flex;
@@ -229,8 +226,19 @@ header.active {
     margin: 10px 0 0 0;
     gap: 10px;
 }
-.bgimg1 {
-    background-image: linear-gradient(#00000080, #00000080), url(https://pbs.twimg.com/media/GNFt0xXW4AAhFtS?format=png&name=360x360);
+.bgimg {
+    min-height: 100svh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow-wrap: break-word;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
 }
 .bgimg2 {
     background-image: linear-gradient(#00000080, #00000080), url(https://pbs.twimg.com/media/GOvG6WIaYAAZe9f?format=png&name=small);
