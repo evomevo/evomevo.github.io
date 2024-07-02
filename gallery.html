@@ -47,16 +47,16 @@
             </div>
         </header>
         <div class="hamburgermenu">
-            <a aria-label="Goes to Home Page" class="index"><h4>Home</h4></a>
-            <a aria-label="Goes to Gallery (Disabled)"><h4>Gallery</h4></a>
-            <a aria-label="Theme switch" class="themeswitch"><h4>Switch Theme!!!</h4></a>
+            <a aria-label="Goes to Home page" class="index"><h4>Home</h4></a>
+            <a aria-label="Goes to Gallery page (Disabled)"><h4>Gallery</h4></a>
+            <a aria-label="Theme switcher" class="themeswitch"><h4>Switch Theme!!!</h4></a>
         </div>
         <div class="bgimg">
             <div class ="hero">
                 <h1>Gallery</h1>
                 <h4>Do you love art? I sure do!</h4>
             </div>
-            <a href="#scroll" class="round button boop"><i class="fa-solid fa-chevron-down fa-xl noselect";"></i></a>
+            <a aria-label="Directs to next section" onclick="document.getElementById('scroll').scrollIntoView({ behavior: 'smooth' })" class="round button boop"><i class="fa-solid fa-chevron-down fa-xl noselect";"></i></a>
             <svg class="test158" preserveAspectRatio="xMidYMid slice" viewBox="10 10 80 80">
                 <defs>
                     <style>
@@ -87,8 +87,8 @@
                 <div class="wrapper shadow">
                     <h1>Table of Contents</h1>
                     <ul>
-                        <li><a href="#graphicdesign"><h4>Graphic Design</h4></a></li>
-                        <li><a href="#photography"><h4>Photography</h4></a></li>
+                        <li><a aria-label="Directs to Graphic Design section" onclick="document.getElementById('graphicdesign').scrollIntoView({ behavior: 'smooth' })"><h4>Graphic Design</h4></a></li>
+                        <li><a aria-label="Directs to Photography section" onclick="document.getElementById('photography').scrollIntoView({ behavior: 'smooth' })"><h4>Photography</h4></a></li>
                     </ul>
                 </div>
             </div>
