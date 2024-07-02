@@ -1,13 +1,24 @@
 // page transition
-const black = document.querySelector('.blackexit');
+const blackenter = document.querySelector('.blackenter');
+const blackexit = document.querySelector('.blackexit');
+
+addEventListener('DOMContentLoaded', () => {
+    blackenter.style.opacity = '0';
+    blackenter.style.visibility = 'hidden';
+    
+    applyTheme();
+
+    setTimeout(() => {
+        document.body.classList.remove('notransition');
+        document.body.classList.add('transition');
+    }, 250);
+});
 
 function handleLink(linkElements, targetPage) {
     linkElements.forEach(linkElement => {
         linkElement.addEventListener('click', () => {
-            black.style.visibility = 'visible';
-            setTimeout(() => {
-                black.style.opacity = '1';
-            }, 0);
+            blackexit.style.visibility = 'visible';
+            blackexit.style.opacity = '1';
             setTimeout(() => {
                 window.location.href = targetPage;
             }, 250);
@@ -206,7 +217,7 @@ if (document.contains(imagemodal)) {
 const themeswitch = document.querySelectorAll('.themeswitch');
 let darkmode = sessionStorage.getItem('darkmode') === 'true';
 
-const applyTheme = () => {
+function applyTheme() {
     if (darkmode, darkmode == true) {
         document.body.style.setProperty('--primarycolor', '#222');
         document.body.style.setProperty('--secondarycolor', '#000');
@@ -225,8 +236,6 @@ if (!sessionStorage.getItem('hasVisited')) {
     }
     sessionStorage.setItem('hasVisited', 'true');
 }
-
-applyTheme();
 
 themeswitch.forEach(themeswitch => {
     themeswitch.addEventListener('click', () => {

@@ -19,6 +19,11 @@ body {
     background-color: var(--secondarycolor);
     margin: 0 auto;
     position: relative;
+}
+body.notransition *:not(.blackenter) {
+    transition: none !important;
+}
+body.transition {
     transition: background-color .5s cubic-bezier(0, 0, 0, 1);
 }
 h1 {
@@ -126,8 +131,7 @@ header.active {
     width: 100vw;
     opacity: 1;
     z-index: 1000;
-    transition: all .25s ease-in-out;
-    animation: websiteLoad .25s forwards;
+    transition: .25s ease-in-out;
 }
 .blackexit {
     display: flex;
@@ -139,7 +143,7 @@ header.active {
     width: 100vw;
     opacity: 0;
     z-index: 1000;
-    transition: all .25s ease-in-out;
+    transition: .25s ease-in-out;
 }
 .progresscontainer {
     width: calc(100% - 30px);
@@ -497,14 +501,14 @@ header.active {
         grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     }
 }
-@keyframes websiteLoad {
+/*@keyframes websiteLoad {
     from {
         opacity: 1;
     } to {
         opacity: 0;
         visibility: hidden;
     }
-}
+}*/
 @keyframes colorRotate {
     0%, 100% {
         background-color: #007aff;
