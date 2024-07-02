@@ -13,6 +13,7 @@ body {
     --primarycolor: #ddd;
     --secondarycolor: #fff;
     --accentcolor: #007aff;
+    --darkaccentcolor: #005abb;
     --other: #000;
     font-family: Montserrat;
     background-color: var(--secondarycolor);
@@ -322,9 +323,13 @@ header.active {
     background-size: cover;
     background-color: var(--primarycolor);
     border-radius: 1rem;
-    -webkit-transform: translate(0, 0); /* Fallback for older browsers */
-    -webkit-transform: translate3d(0, 0, 0); /* Preferred for hardware acceleration */
-    transform: translate3d(0, 0, 0); /* Standard syntax */
+    box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px;
+    transition: 1s cubic-bezier(0.25, 3, 0.25, 1);
+}
+.image:hover {
+    transform: scale(1.025);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 30px 30px, rgba(0, 0, 0, 0.12) 0px -10px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 10px 15px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    transition: 1s cubic-bezier(0.25, 2, 0.25, 1);
 }
 .image.active {
     margin: 10px 0 0 0;
@@ -376,6 +381,7 @@ header.active {
     gap: 10px;
 }
 .button {
+    overflow: hidden;
     border-radius: 10rem;
     background-color: var(--accentcolor);
     color: #fff;
@@ -402,8 +408,31 @@ header.active {
     height: 40px;
     padding: 0;
 }
-.fortnite {
-    animation: colorRotate 2s ease-in-out infinite;
+.button::after {
+    background-color: var(--other);
+    border-radius: 3rem;
+    content: '';
+    display: block;
+    height: 110%;
+    width: 110%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: translate(-95%, -95%);
+    transform-origin: top left;
+    z-index: 0;
+    transition: transform 0.2s ease;
+    will-change: transform;
+}
+.button:hover {
+    background-color: var(--darkaccentcolor);
+    color: var(--secondarycolor);
+}
+.button:hover::after {
+    transform: translate(-5%, -5%);
+}
+.button p, .button i {
+    z-index: 1;
 }
 .wrapperelem {
     background-color: var(--secondarycolor);
@@ -413,15 +442,6 @@ header.active {
 }
 .shadow {
     box-shadow: rgba(0, 0, 0, 0.25) 0px 30px 30px, rgba(0, 0, 0, 0.12) 0px -10px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 10px 15px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-}
-.hover {
-    box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px;
-    transition: 1s cubic-bezier(0.25, 3, 0.25, 1);
-}
-.hover:hover {
-    transform: scale(1.025);
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 30px 30px, rgba(0, 0, 0, 0.12) 0px -10px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 10px 15px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-    transition: 1s cubic-bezier(0.25, 2, 0.25, 1);
 }
 .noselect {
     -webkit-user-select: none; /* Safari */
